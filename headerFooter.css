@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  header {
+    display: flex;
+    background-color: #042834;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .menu {
+    display: flex;
+    padding-right: 80px;
+  }
+
+  .menu ul {
+    display: flex;
+  }
+
+  .menu ul li {
+    margin: 0px 20px 0px 20px;
+    list-style: none;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .menu ul li:hover {
+    background-color: #18404e;
+  }
+
+  header h3 {
+    margin: 30px;
+  }
+
+  header h3 a {
+    color: aliceblue;
+    text-decoration: none;
+  }
+
+  .leftMenu {
+    display: flex;
+    align-items: center;
+    padding-right: 80px;
+  }
+
+  .rightMenu {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    height: 30px;
+    border-radius: 5px;
+    background-color: #18404e;
+    border: none;
+    color: aliceblue;
+    margin-right: 8px;
+  }
+  .btns button {
+    height: 40px;
+    margin: 0px 10px 0px 10px;
+    width: 100px;
+    color: aliceblue;
+    background-color: #042834;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .btns button:hover {
+    background-color: #18404e;
+  }
+
+  footer {
+    display: flex;
+    background-color: #042834;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    color: aliceblue;
+  }
+
+  .footer1 em {
+    margin-left: 8px;
+    font-size: 18px;
+  }
+
+  .footer1 {
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    color: aliceblue;
+  }
+
+  .footer2 h4{
+    font-size: 24px;
+  }
+  
+  .footer3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 60px;
+  }
+
+  .footer3 h3 {
+    color: aliceblue;
+  }
+
+  .footerNav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footerNav ul li {
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .footerNav ul li a{
+    color: aliceblue;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 3px;
+  }
+  
+  
