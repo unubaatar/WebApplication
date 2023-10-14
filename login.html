@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Anime" />
-    <meta name="keyword" content="animuk.mn, animuk, Animuk.mn, Animuk">
-    <link rel="stylesheet" href="headerFooter.css">
+    <meta name="keyword" content="animuk.mn, animuk, Animuk.mn, Animuk" />
+    <link rel="stylesheet" href="headerFooter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Animuk.mn</title>
   </head>
   <body>
@@ -42,20 +49,46 @@
       </div>
     </header>
     <section>
-      <h3>Нэвтрэх</h3>
-      <form action="">
-        <label for="phone">Утасны дугаар</label><br />
-        <input
-          type="tel"
-          id="phone"
-          pattern="\(\d{3})+\d{4}-\d{4}"
-          required
-        /><br />
-        <label for="password">Нууц үг</label><br />
-        <input type="text" id="password" /><br />
-        <input type="submit" value="Нэвтрэх" /><br />
-        <input type="submit" onclick="" value="Бүртгүүлэх" />
-      </form>
+      <main>
+        <form>
+          <section class="formContainer">
+            <br />
+            <center><h3>Нэвтрэх</h3></center>
+            <article class="formField">
+              <label for="phone"
+                ><i class="fa-solid fa-phone"></i> Утасны дугаар
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                pattern="\(\d{3})+\d{4}-\d{4}"
+              />
+            </article>
+            <article class="formField">
+              <label for="password">
+                <i class="fa-solid fa-lock"></i>Нууц үг</label
+              >
+              <input type="password" id="password" />
+            </article>
+            <input
+              class="formFieldButton"
+              type="submit"
+              value="Нэвтрэх"
+              style="background-color: #db504a"
+            /><br />
+              <input
+                class="formFieldButton"
+                type="submit"
+                value="Бүртгүүлэх"
+                style="background-color: #ffd977"
+            />
+          </section>
+        </form>
+        <img
+          src="https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png"
+          alt=""
+        />
+      </main>
     </section>
     <footer>
       <section class="footer1">
@@ -76,11 +109,12 @@
       </section>
       <section class="footer2">
         <h4>Дэлхийн шилдэг анимуудыг танд хүргэнэ</h4>
-        <br><br>
+        <br /><br />
         <p>&copy;copyright 2023- Allright is reserved by animuk.mn</p>
       </section>
       <section class="footer3">
-        <h3>Бидэнтэй холбогдох</h3><br>
+        <h3>Бидэнтэй холбогдох</h3>
+        <br />
         <nav class="footerNav">
           <ul>
             <li>Холбогдох дугаар: 88443062</li>
@@ -118,3 +152,56 @@
     </footer>
   </body>
 </html>
+
+<style scoped>
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #00171f;
+    color: aliceblue;
+  }
+  .formContainer {
+    margin-right: 200px;
+    width: 250px;
+  }
+  .formField {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .formField input {
+    margin-top: 8px;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    padding-left: 8px;
+    position: relative;
+  }
+
+  .formFieldButton {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    color: #040d25;
+    font-weight: 450;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .formField i {
+    margin-right: 8px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+</style>

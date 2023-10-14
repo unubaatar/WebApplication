@@ -5,6 +5,8 @@
   }
 
   header {
+    width: 100%;
+    position: fixed;
     display: flex;
     background-color: #042834;
     align-items: center;
@@ -61,13 +63,15 @@
     align-items: center;
   }
 
-  input {
+  .rightMenu input {
     height: 30px;
     border-radius: 5px;
     background-color: #18404e;
     border: none;
     color: aliceblue;
     margin-right: 8px;
+    padding-left: 8px;
+    font-size: 18px;
   }
   .btns button {
     height: 40px;
@@ -86,6 +90,8 @@
   }
 
   footer {
+    width: 100%;
+    position: fixed;
     display: flex;
     background-color: #042834;
     justify-content: space-between;

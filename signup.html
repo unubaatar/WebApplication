@@ -1,57 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Anime" />
-    <meta name="keyword" content="animuk.mn, animuk, Animuk.mn, Animuk">
-    <link rel="stylesheet" href="headerFooter.css">
+    <meta name="keyword" content="animuk.mn, animuk, Animuk.mn, Animuk" />
+    <link rel="stylesheet" href="headerFooter.css" />
     <title>Animuk.mn</title>
-</head>
-<body>  
-  <header>
-    <div class="rightMenu">
-      <h3><a href="index.html">Animuk.mn</a></h3>
-      <input type="text" aria-label="Search" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fill="white"
-          d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"
-        />
-      </svg>
-    </div>
-    <div class="leftMenu">
-      <nav class="menu">
-        <ul>
-          <li><a href="filter.html">Anime list</a></li>
-          <li><a href="shopping.html">Shopping</a></li>
-          <li><a href="service.html">Service</a></li>
-        </ul>
-      </nav>
-      <nav class="btns">
-        <button>Login</button>
-        <button>Sign Up</button>
-      </nav>
-    </div>
-  </header>
-    <section>
-        <h3>Шинээр бүртгэл үүсгэх</h3>
-        <form action="">
-            <label for="input">Овог<input type="text"></label>
-            <label for="input">Нэр<input type="text"></label>
-            <label for="input">Утас<input type="text"></label>
-            <label for="input">Мейл хаяг<input type="text"></label>
-            <label for="input">Нууц үг<input type="text"></label>
-            <label for="input">Нууц үгээ дахин оруулна уу<input type="text"></label>
-            <button>Бүртгүүлэх</button>
+  </head>
+  <body>
+    <header>
+      <div class="rightMenu">
+        <h3><a href="index.html">Animuk.mn</a></h3>
+        <input type="text" aria-label="Search" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="white"
+            d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"
+          />
+        </svg>
+      </div>
+      <div class="leftMenu">
+        <nav class="menu">
+          <ul>
+            <li><a href="filter.html">Anime list</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="service.html">Service</a></li>
+          </ul>
+        </nav>
+        <nav class="btns">
+          <button>Login</button>
+          <button>Sign Up</button>
+        </nav>
+      </div>
+    </header>
+    <main>
+        <section class="signUpForm">
+         <h3>Шинээр бүртгэл үүсгэх</h3>
+          <form action="">
+          <div class="formFieldsCombo">
+            <article class="dualFields">
+              <label for="input">Овог</label><input type="text" />
+            </article>
+            <article class="dualFields">
+              <label for="input">Нэр</label><input type="text" />
+            </article class="dualFields">
+          </div>
+          <div class="formFieldsCombo">
+            <article class="dualFields">
+              <label for="input">Утас</label><input type="text" />
+            </article>
+            <article class="dualFields">
+              <label for="input">Мейл хаяг</label><input type="text" />
+            </article>
+          </div>
+          <div class="formFieldsCombo">
+            <article class="dualFields">
+              <label for="input">Нууц үг</label><input type="password" />
+            </article>
+            <article class="dualFields">
+              <label for="input"
+              >Дахин давтана уу</label>
+              <input type="password"
+            />
+            </article> 
+          </div>
+          <center><button>Бүртгүүлэх</button></center>
         </form>
-        <img src="" alt="">
-    </section>
+        </section>
+
+
+      <img
+        src="https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png"
+        alt=""
+      />
+    </main>
     <footer>
       <section class="footer1">
         <a href="index.html">
@@ -71,11 +99,12 @@
       </section>
       <section class="footer2">
         <h4>Дэлхийн шилдэг анимуудыг танд хүргэнэ</h4>
-        <br><br>
+        <br /><br />
         <p>&copy;copyright 2023- Allright is reserved by animuk.mn</p>
       </section>
       <section class="footer3">
-        <h3>Бидэнтэй холбогдох</h3><br>
+        <h3>Бидэнтэй холбогдох</h3>
+        <br />
         <nav class="footerNav">
           <ul>
             <li>Холбогдох дугаар: 88443062</li>
@@ -113,3 +142,68 @@
     </footer>
   </body>
 </html>
+
+<style scoped>
+  main {
+    height: 80vh;
+    background-color: #00171f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+  }
+
+  .signUpForm {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    width: 500px;
+  }
+
+  .formFieldsCombo {
+    display: flex;
+    width: 100%;
+  }
+
+  .dualFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 50%;
+  }
+  .dualFields input {
+    height: 40px;
+    margin: 10px 0px 10px 0px;
+    width: 80%;
+    padding-left: 8px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .dualFields label {
+    font-size: 14px;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+  .signUpForm h3 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  form button {
+    width: 50%;
+    height: 50px;
+    margin-top: 20px;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    color: #040d25;
+    font-weight: 450;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ffd977
+  }
+</style>
