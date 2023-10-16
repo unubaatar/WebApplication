@@ -91,7 +91,6 @@
 
   footer {
     width: 100%;
-    position: fixed;
     display: flex;
     background-color: #042834;
     justify-content: space-between;
