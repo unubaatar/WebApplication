@@ -39,7 +39,7 @@
 
     <main>
       <nav>
-        <ul>
+        <ul class="filter">
           <li>Catogories</li>
           <li>Acessories</li>
           <li>Necklaces</li>
@@ -179,6 +179,13 @@
     background-color: #00171F;
     color: aliceblue;
   }
+  .filter{
+    list-style: none;
+    display: flex;
+  }
+  .filter li{
+    margin: 20px;
+  }
   .info{
     display: flex;
   }
@@ -187,9 +194,10 @@
   }
   #itemImage{
     display: flex;
-    object-fit: contain;
+    /* object-fit: contain; */
     width: 300px;
     height: 400px;
+    border-radius: 15px;
   }
   .itemDetail{
     display: flex;
@@ -218,7 +226,7 @@
   }
   .similarItem{
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 50px;
   }
 </style>
