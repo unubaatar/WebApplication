@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Anime" />
     <meta name="keywords" content="animuk.mn, animuk, Animuk.mn, Animuk" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+
+    <!-- ? -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- for google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+
+    <!-- for header and footer of page -->
     <link rel="stylesheet" href="headerFooter.css" />
+    
     <title>Animuk.mn</title>
   </head>
 
@@ -39,15 +45,15 @@
       </div>
     </header>
 
-    <article id="content-info">
+    <article class = "content-info">
       <img
         src="https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png"
         alt=""
       />
-      <p>Saturday August 5</p>
+      <p>Saturday, August 5, 2023 at 12pm - 8pm</p>
     </article>
 
-    <section id="user-status">
+    <section class="user-status">
       <p>User status</p>
       <ul>
         <li>Үзсэн аниме тоо: <strong>10</strong></li>
@@ -67,6 +73,7 @@
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
     </section>
+
     <section class="content-images">
       <h3>Сүүлд үзсэн</h3>
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
@@ -76,6 +83,7 @@
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
     </section>
+
     <section class="content-images">
       <h3>Их хандалттай</h3>
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
@@ -85,6 +93,7 @@
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
     </section>
+
     <section class="content-images">
       <h3>Сүүлд гарсан</h3>
       <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
@@ -129,7 +138,7 @@
 </html>
 
 <style>
-  .content-images h3 {
+  /* .content-images h3 {
     margin-left: 20px;
   }
   .content-images img {
@@ -138,22 +147,38 @@
     margin: 10px 10px 20px 20px;
     border-radius: 5px;
   }
-  #content-info {
-    margin: 50px;
+  
+   */
+  * {
+    margin: 0;
+    padding: 0;
   }
-  #content-info img {
+  body {
+        background-color: #00171F;
+        font-family: 'Inter', sans-serif;
+        color: white;
+  }
+  .content-info {
+    margin-left: 60px;  
+    & img {
     width: 600px;
     height: auto;
+    margin-top: 100px;
+    border-radius: 1rem;
+    }
   }
-  #content-info p {
-    font-size: 20px;
+  .user-status {
+    text-align: center;
   }
-  #user-status {
-    position: relative;
-    top: -300px;
-    left: 1000px;
-  }
-  #user-status li {
-    font-size: 18px;
+  .content-images {
+    display: flex;
+    & h3 {
+      margin-top: 40px;
+    }
+    & span {
+      display: flex;
+      border-radius: 1.5rem;
+      height: 300px;
+    }
   }
 </style>
