@@ -43,7 +43,7 @@
         <section class="animeInfo">
           <h3>Дэлгэрэнгүй мэдээлэл</h3>
           <article class="animeDetails">
-            <img class="animeImage" src="/img/login6.jpg" alt="Anime img" />
+            <img class="animeImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMQzJOzMPBDYMMY9RawEi-rRw09yctZrAyY8t5WE5mMCm60_F30FVk2DLi3u91W0cVwWc&usqp=CAU" alt="Anime img" />
             <ul>
               <li>
                 Нэр: <span><strong>Attack on titan</strong></span>
@@ -150,14 +150,16 @@
 
 
 
-      <!-- <section>
+      <section>
         <h3>Аниме дүрүүд</h3>
-        <article><img src="/img/char1.jpg" alt="Character" /><em></em></article>
-        <article><img src="/img/char2.jpg" alt="Character" /><em></em></article>
-        <article><img src="/img/ch3.jpg" alt="Character" /><em></em></article>
-        <article><img src="/img/ch4.jpg" alt="Character" /><em></em></article>
-        <article><img src="/img/ch5.jpg" alt="Character" /><em></em></article>
-        <article><img src="/img/ch6.jpg" alt="Character" /><em></em></article>
+        <div class="characterList">
+          <article><img src="/WebApplication/img/char1.jpg" alt="Character" /><em></em></article>
+          <article><img src="/WebApplication/img/char2.jpg" alt="Character" /><em></em></article>
+          <article><img src="/WebApplication/img/ch3.jpg" alt="Character" /><em></em></article>
+          <article><img src="/WebApplication/img/ch4.jpg" alt="Character" /><em></em></article>
+          <article><img src="/WebApplication/img/ch5.jpg" alt="Character" /><em></em></article>
+          <article><img src="/WebApplication/img/ch6.jpg" alt="Character" /><em></em></article>
+        </div>
       </section>
       <section>
         <h3>Төстэй аниме</h3>
@@ -166,7 +168,7 @@
         <span><img src="" alt="" /><em></em></span>
         <span><img src="" alt="" /><em></em></span>
         <span><img src="" alt="" /><em></em></span>
-      </section> -->
+      </section>
     </main>
 
     <footer>
@@ -214,7 +216,7 @@
   }
 
   main {
-    height: 60vh;
+    height: 100vh;
     padding: 100px 0px;
     display: flex;
     flex-direction: column;
@@ -229,7 +231,7 @@
     display: flex;
   }
   .animeInfo {
-    margin-right: 120px;
+    margin-right: 60px;
   }
 
   .animeImage {
@@ -325,5 +327,16 @@
 
   .animeDetails ul li {
     color: aliceblue ;
+  }
+
+  .characterList {
+    display: flex;
+  }
+
+  .characterList  img {
+    object-fit: contain;
+    width: 150px;
+    height: 200px;
+    margin: 0px 20px;
   }
 </style>
