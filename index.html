@@ -46,14 +46,11 @@
     </header>
 
     <article class = "content-info">
-      <img
-        src="https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png"
-        alt=""
-      />
-      <p>Saturday, August 5, 2023 at 12pm - 8pm</p>
-    </article>
-
-    <section class="user-status">
+      <article>
+        <img src="https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png" alt=""/>
+        <p>Saturday, August 5, 2023 at 12pm - 8pm</p>
+      </article>    
+      <section class="user-status">
       <p>User status</p>
       <ul>
         <li>Үзсэн аниме тоо: <strong>10</strong></li>
@@ -63,45 +60,50 @@
         <li>Дуртай дууны төрөл: <strong>Rock</strong></li>
       </ul>
     </section>
+    </article>
 
-    <section class="content-images">
+    
+
+    <section class="contents">
       <h3>Санал болгох аниме</h3>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-    </section>
+      <section>   
+        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
+      </section>
 
-    <section class="content-images">
       <h3>Сүүлд үзсэн</h3>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-    </section>
+      <section>
+        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
+      </section>
 
-    <section class="content-images">
       <h3>Их хандалттай</h3>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-    </section>
+      <section>
+        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
+      </section>
 
-    <section class="content-images">
       <h3>Сүүлд гарсан</h3>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
+      <section>
+        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
+        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
+      </section>
     </section>
 
     <footer>
@@ -138,47 +140,50 @@
 </html>
 
 <style>
-  /* .content-images h3 {
-    margin-left: 20px;
-  }
-  .content-images img {
-    width: 200px;
-    height: auto;
-    margin: 10px 10px 20px 20px;
-    border-radius: 5px;
-  }
-  
-   */
   * {
     margin: 0;
     padding: 0;
   }
+
   body {
         background-color: #00171F;
         font-family: 'Inter', sans-serif;
         color: white;
   }
+
   .content-info {
-    margin-left: 60px;  
+    margin-left: 60px; 
+    padding-top: 100px;
+    display: flex; 
     & img {
     width: 600px;
     height: auto;
-    margin-top: 100px;
     border-radius: 1rem;
     }
-  }
-  .user-status {
-    text-align: center;
-  }
-  .content-images {
-    display: flex;
-    & h3 {
-      margin-top: 40px;
+    & .user-status {
+      text-align: left;
+      & ul>li {
+        list-style: none;
+      }
+      & p {
+        text-align: center;
+      }
     }
-    & span {
-      display: flex;
+  }
+  
+  .contents {
+    & h3 {
+      text-align: center;
+    }
+    & section {
+      margin-left: 50px;
+      align-items: center;
+    }
+    & img {
       border-radius: 1.5rem;
-      height: 300px;
+      height: 250px;
+      width: 200px;
+      padding: 10px;
     }
   }
 </style>
