@@ -1,3 +1,12 @@
+:root {
+  --main-color: white;
+  --main-bg-color:  #042834;
+  --secondary-bg-color: #18404e;
+  --menu-font-size: 1.2rem;
+  --margin-padding: 1.2rem;
+  --header-height: 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,18 +14,18 @@
   }
 
   header {
-    width: 100%;
-    position: fixed;
     display: flex;
-    background-color: #042834;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    height: 4rem;    
+    width: 100%;
+    background-color: var(--main-bg-color) ;
+    position: fixed;
   }
 
   .menu {
     display: flex;
-    padding-right: 80px;
+    padding-right: calc(var(--margin-padding) * 4);
   }
 
   .menu ul {
@@ -24,23 +33,23 @@
   }
 
   .menu ul li {
-    margin: 0px 20px 0px 20px;
-    list-style: none;
-    height: 40px;
     display: flex;
+    height: 40px;
     align-items: center;
-    border-radius: 5px;
+    margin: 0px var(--margin-padding);
+    list-style: none;
+    border-radius: 0.4rem;
   }
 
   .menu ul li a {
+    padding: var(--margin-padding);
+    color: var(--main-color);
+    font-size: var(--menu-font-size);
     text-decoration: none;
-    color: aliceblue;
-    font-size: 20px;
-    padding: 20px;
   }
 
   .menu ul li:hover {
-    background-color: #18404e;
+    background-color: var(--secondary-bg-color);
   }
 
   header h3 {
@@ -48,7 +57,7 @@
   }
 
   header h3 a {
-    color: aliceblue;
+    color: var(--main-color);
     text-decoration: none;
   }
 
@@ -65,20 +74,20 @@
 
   .rightMenu input {
     height: 30px;
-    border-radius: 5px;
-    background-color: #18404e;
+    background-color: var(--secondary-bg-color);
     border: none;
-    color: aliceblue;
+    color: var(--main-color);
     margin-right: 8px;
     padding-left: 8px;
     font-size: 18px;
   }
+
   .btns button {
     height: 40px;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px;
     width: 100px;
-    color: aliceblue;
-    background-color: #042834;
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -86,17 +95,17 @@
   }
 
   .btns button:hover {
-    background-color: #18404e;
+    background-color: var(--secondary-bg-color);
   }
 
   footer {
     width: 100%;
     display: flex;
-    background-color: #042834;
+    background-color: var(--main-bg-color);
     justify-content: space-between;
     align-items: center;
     height: 200px;
-    color: aliceblue;
+    color: var(--main-color);
   }
 
   .footer1 em {
@@ -116,7 +125,7 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    color: aliceblue;
+    color: var(--main-color);
   }
 
   .footer2 h4{
@@ -131,7 +140,7 @@
   }
 
   .footer3 h3 {
-    color: aliceblue;
+    color: var(--main-color);
   }
 
   .footerNav ul {
@@ -143,13 +152,13 @@
 
   .footerNav ul li {
     display: flex;
-    color: aliceblue;
+    color: var(--main-color);
     align-items: center;
     margin-bottom: 8px;
   }
 
   .footerNav ul li a{
-    color: aliceblue;
+    color: var(--main-color);
     list-style: none;
     text-decoration: none;
     margin-left: 3px;
