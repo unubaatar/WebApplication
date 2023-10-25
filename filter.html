@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="headerFooter.css" />
+    <script src="https://kit.font-awesome.com/a076d05399.js"></script>
     <title>Animuk.mn</title>
   </head>
   <body>
@@ -36,8 +37,8 @@
         </nav>
       </div>
     </header>
-    <nav class="main-nav">
-      <select name="filter">
+
+      <!-- <select name="filter">
         filter
       </select>
       <select name="episode">
@@ -47,11 +48,44 @@
         Төрөл
       </select>
       <select name="season">
-        Улиралын тоо
-      </select>
-    </nav>
+        Улирлын тоо
+      </select> -->
+
+    <!-- Filter -->
+    <div class="main-nav">
+      <button>Filter <span class="fas fa-caret-down"></span></button>
+      <div class="main-nav-menu">
+        <ul>
+          <li><a href="">Төрөл<span class="fas fa-caret-right"></span></a></li>
+            <div class="dropdown-menu-1">
+                <ul id="menu-1">
+                  <li><a href="">Адал явдал</a></li>
+                  <li><a href="">Аймшиг</a></li>
+                  <li><a href="">Түүхэн</a></li>
+                  <li><a href="">Тулаан</a></li>
+                </ul>
+            </div>
+          <li><a href="">Ангийн тоо<span class="fas fa-caret-right"></span></a></li> 
+            <div class="dropdown-menu-2">
+              <!-- <ul id="menu2">
+                <li><a href="">1-20</a></li>
+                <li><a href="">20-50</a></li>
+                <li><a href="">50-100</a></li>
+              </ul> -->
+            </div>       
+          <li><a href="">Улирлын тоо<span class="fas fa-caret-right"></span></a></li> 
+              <div class="dropdown-menu-3">
+                <!-- <ul id="menu-3">
+                  <li><a href="">1-5</a></li>
+                  <li><a href="">5-10</a></li>
+                </ul> -->
+              </div>         
+        </ul>
+      </div>
+    </div>
+
     <section class="main-section">
-      <h3 class="main">Шүүж гарсан анимийн төрлүүд</h3>
+      <h3 class="main">Шүүж гарсан анимууд</h3>
       <article>
         <span><img src="/img/manga4.jpg" alt="" /></span>
         <span><img src="/img/manga4.jpg" alt="" /></span>
@@ -102,6 +136,7 @@
       </section>
     </footer>
   </body>
+
   <style>
     /* CSS reset */
     * {
@@ -119,10 +154,82 @@
         background-color: var(--back-color);
     }
 
+    /* Main nav style */
     .main-nav {
-      display: flex;
+      width: 100px;
+      height: 100px;
+      line-height: 40px;
       padding-top: 6.25rem;
       padding-left: 9.375rem;
+      position: relative;
+    }
+
+    .main-nav button{
+      display: block;
+      width: 200px;
+      height: 40px;
+      background-color: var(--secondary-bg-color);
+      color: var(--main-color);
+      font-size: 22px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+    }
+    .main-nav button:hover{
+      background-color: var(--main-bg-color);
+    }
+
+    /* Main nav menu */
+    .main-nav-menu{
+      display: none;
+      position: relative;
+    }
+    .main-nav-menu ul{
+      display: block;
+      width: 200px;
+      margin-top: 10px;
+      list-style: none;
+      background-color: var(--secondary-bg-color);
+    }
+    .main-nav-menu ul li{
+      padding: 10px;
+      cursor: pointer;
+    }
+    .main-nav-menu ul li a{
+      color: var(--color);
+      text-decoration: none;
+    }
+    .main-nav:hover .main-nav-menu{
+      display: block;
+    }
+    
+    /* Dropdown menu1 */
+    .main-nav-menu li:hover{
+      background-color: var(--main-bg-color);
+    }
+    .dropdown-menu-1{
+      display: none;
+    }
+    .dropdown-menu-1 ul{
+      position: absolute;
+      top: 20px;
+      left: 200px;
+      width: 200px;
+      margin-top: 10px;
+      list-style: none;
+      background-color: var(--secondary-bg-color);
+    }
+    .dropdown-menu-1 ul li{
+      padding: 10px;
+      cursor: pointer;
+    }
+    .main-nav-menu:hover .dropdown-menu-1{
+      display: block;
+    }
+
+    .fas{
+      float: right;
+      margin-right: 8px;
     }
 
     .main-section {
