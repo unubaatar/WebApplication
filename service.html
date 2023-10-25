@@ -41,56 +41,53 @@
 
     <main>
       <!--Үзүүлэх үйлчилгээ-->
-      <section class="service-info">
-        <h3>Хэрэглэгчид олгож байгаа үйлчилгээ</h3>
-        <ul>
-          <li>Хүссэн анимуудаа чанартай орчуулгатайгаар үзэх боломж</li>
-          <li>Японы соёлын тухай мэдээ мэдээлэл авах</li>
-          <li>Хүссэн анимийхаа бүтээгдэхүүн худалдан авалт хийх</li>
-          <li>
-            Хэрэглэгч дуртай аниме дээрээ санал өгч, дүгнэн бусадтай үзэл бодлоо
-            солилцох боломж
-          </li>
-        </ul>
+      
+      <section class="service-info-containers">
+        <article>
+          <h3>Хэрэглэгчид олгож байгаа үйлчилгээ</h3>
+          <ul>
+            <li>Хүссэн анимуудаа чанартай орчуулгатайгаар үзэх боломж</li>
+            <li>Японы соёлын тухай мэдээ мэдээлэл авах</li>
+            <li>Хүссэн анимийхаа бүтээгдэхүүн худалдан авалт хийх</li>
+            <li>
+              Хэрэглэгч дуртай аниме дээрээ санал өгч, дүгнэн бусадтай үзэл бодлоо
+              солилцох боломж
+            </li>
+          </ul>
+        </article>
       </section>
 
       <!--Багцууд-->
       <section class="bagts">
         <h3>Багцууд</h3>
-        <article>
-          <p>1 сар</p>
-          <span>
-            <img src="" alt="" />
+        <div class="bagts-container">
+          <article>
+            <p>12 сар</p>
+            <img src="/img/manga4.jpg" alt="" />
             <button>Багц авах</button>
-          </span>
-        </article>
-        <article>
-          <p>3 сар</p>
-          <span>
-            <img src="" alt="" />
+          </article>
+          <article>
+            <p>12 сар</p>
+            <img src="/img/manga2.jpg" alt="" />
             <button>Багц авах</button>
-          </span>
-        </article>
-        <article>
-          <p>6 сар</p>
-          <span>
-            <img src="" alt="" />
+          </article>
+          <article>
+            <p>12 сар</p>
+            <img src="/img/manga3.jpg" alt="" />
             <button>Багц авах</button>
-          </span>
-        </article>
-        <article>
-          <p>12 сар</p>
-          <span>
-            <img src="" alt="" />
+          </article>
+          <article>
+            <p>12 сар</p>
+            <img src="/img/manga1.jpg" alt="" />
             <button>Багц авах</button>
-          </span>
-        </article>
+          </article>
+        </div>
       </section>
 
-      <section id="recommendation">
+      <section class="recommendation">
         <h3>Хэрэв та бүртгүүлж амжаагүй бол бүртгүүлээрэй.</h3>
         <a href="signUp.html">
-          <button><strong>Бүртгүүлэх</strong></button>
+          <button>Бүртгүүлэх</button>
         </a>
       </section>
     </main>
@@ -129,14 +126,94 @@
   </body>
 </html>
 
-<style>
+<style scoped>
   main {
     background-color: #00171f;
     color: aliceblue;
+    & h3 {
+      text-align: center;
+      padding: 20px 0px;
+    }
+    & .service-info-containers {
+      display: flex;
+      justify-content: center;
+      padding-top: 80px;
+      & ul li {
+        list-style: none;
+        margin-bottom: 4px;
+      }
+    }
   }
-  .service-info {
-    padding: 80px 50px;
-    text-align: center;
+
+  .bagts {
+    & h3 {
+      text-align: center;
+    }
+    & .bagts-container {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+
+  .bagts-container {
+    & article {
+      position: relative; 
+      & button {
+        position: absolute;
+        bottom: 8%;
+        left: 20%;
+        width: 60%;
+        height: 40px;
+        background-color: red;
+        border: none;
+        color: azure;
+        font: 28px;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      & p {
+        position: absolute;
+        top: 3%;
+        left: 35%;
+        color: black;
+        width: 30%;
+        text-align: center;
+        background-color: red;
+        font-weight: 600;
+        padding: 4px;
+        border-radius: 3px;
+      }
+    } 
+  }
+
+  .recommendation {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 36px;
+    align-items: center;
+    & h3 {
+      text-align: center;
+    }
+    & button {
+      padding: 8px;
+      font-size: 20px;
+      background-color: #ffd977;
+      color: #18404E;
+      border: none;
+      border-radius: 10px;
+      width: 200px;
+      max-width: 200px;
+      min-width: 100px;
+      cursor: pointer;
+    }
+  }
+
+
+
+  /* .service-info {
+
   }
   .service-info ul li {
     list-style: none;
@@ -162,8 +239,8 @@
     border: none;
     width: 150px;
     height: 30px;
-    /* max-height: 30px;
-      max-width: 150px; */
+    max-height: 30px;
+      max-width: 150px;
     border-radius: 10px;
   }
   #recommendation {
@@ -175,5 +252,5 @@
     background-color: #ffd977;
     border: none;
     border-radius: 20px;
-  }
+  } */
 </style>
