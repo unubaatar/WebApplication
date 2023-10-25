@@ -104,7 +104,7 @@
     background-color: var(--main-bg-color);
     justify-content: space-between;
     align-items: center;
-    height: 200px;
+    height: 12.5rem;
     color: var(--main-color);
   }
 
@@ -162,5 +162,26 @@
     list-style: none;
     text-decoration: none;
     margin-left: 3px;
+  }
+
+  @media  (max-width: 600px) {
+    footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 500px;
+    }
+    .footer1 {
+      font-size: 0.5rem;
+    }
+    .footer2 {
+      font-size: 0.6rem;
+    }
+    .footer2 h4 {
+      word-wrap: break-word;
+    }
+    .footer3 {
+      font-size: 1rem;
+    }
   }
   
