@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="headerFooter.css" />
     <title>Animuk.mn</title>
   </head>
-
   <body>
     <header>
       <div class="rightMenu">
@@ -37,7 +36,7 @@
         </nav>
       </div>
     </header>
-    <nav>
+    <nav class="main-nav">
       <select name="filter">
         filter
       </select>
@@ -51,28 +50,27 @@
         Улиралын тоо
       </select>
     </nav>
-    <section>
-      <h3>Шүүж гарсан анимийн төрлүүд</h3>
+    <section class="main-section">
+      <h3 class="main">Шүүж гарсан анимийн төрлүүд</h3>
       <article>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
       </article>
       <article>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
       </article>
       <article>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
-        <span><img src="" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
+        <span><img src="/img/manga4.jpg" alt="" /></span>
       </article>
     </section>
-
     <footer>
       <section class="footer1">
         <a href="index.html">
@@ -104,4 +102,48 @@
       </section>
     </footer>
   </body>
+  <style>
+    /* CSS reset */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --color: white;
+      --back-color: #00171F;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--color);
+        background-color: var(--back-color);
+    }
+
+    .main-nav {
+      display: flex;
+      padding-top: 100px;
+      padding-left: 150px;
+    }
+
+    .main-section {
+      padding-bottom: 50px;
+      & .main {
+        padding-top: 100px;
+        margin-left: 40px;
+        text-align: center;
+      }
+      & article {
+        display: flex;
+      }
+      & img {
+        border-radius: 1.5rem;
+        align-items: center;
+        max-width: 100%;
+        height: 15rem;
+        width: 12rem;
+        padding: 1.3rem;           
+        margin-left: 100px;
+      }
+    }
+  </style>
 </html>
