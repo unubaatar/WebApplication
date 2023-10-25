@@ -118,16 +118,16 @@
           <!-- quantity section -->
           <label class="quantity" for="quantity">
             <button>-</button>
-            <input type="text"/>
+            <input type="text" placeholder="1" style="text-align: center;">
             <button>+</button>
           </label>
-          <button class="purchaseBtn">Худалдан авах</button>
+          <button class="purchaseBtn"><i class="fa-solid fa-cart-shopping"></i>Худалдан авах</button>
         </ul>
       </article>
       </section>
       <!-- tostei baraa section -->
       <section class="similarItem">
-        <!-- flexbox minimumsize ogoh -->
+        <!-- flexbox minimum size ogoh -->
         <h3>Төстэй бараанууд</h3> 
         <div class="similarItem-container">
           <div><img src="/img/accessories3.webp" alt=""></div>
@@ -135,6 +135,7 @@
           <div><img src="/img/accessories5.webp" alt=""></div>
           <div><img src="/img/accessories6.webp" alt=""></div>
         </div>
+        <i class="fa-solid fa-angle-right fa-2xl"></i>
       </section>
     </div>
   </main>
@@ -220,10 +221,13 @@
     margin-top: 0.75rem;
     font-size: medium;
   }
+  
   .star{
     margin-top: 1.25rem;
     color: #FFF730;
   }
+
+  /* Quantity section style */
   .quantity{
     margin-top: 1.25rem;
   }
@@ -232,7 +236,12 @@
     width: 2.5rem;
     background: none;
     border: 0.0625rem solid;
+    border-radius: 5px;
     color: aliceblue;
+    background-color: #18404E;
+  }
+  .quantity button:hover{
+    background-color: #3b7489;
   }
   .quantity input{
     height: 1.875rem;
@@ -240,7 +249,10 @@
     background-color: #18404E;
     color: aliceblue;
     border: none;
+    text-decoration: aliceblue;
   }
+
+  /* Hudaldan avah button style */
   .purchaseBtn{
     color: #18404E;
     background-color: #DB504A;
@@ -250,6 +262,11 @@
     font-size: 1.125rem;
     margin-top: 8.125rem;
   }
+  .purchaseBtn i{
+    margin-right: 8px;
+  }
+
+  /* Tostei baraa section style */
   .similarItem h3{
     text-align: center;
     padding-bottom: 1.25rem;
@@ -267,6 +284,8 @@
     margin: 0.625rem;
     text-align: center;
     line-height: 4.6875rem;
+    min-width: 150px;
+    display: flex;
   }
   .similarItem {
     margin: 1rem;
@@ -275,5 +294,6 @@
     display: flex;
     height: 10.625rem;    
     width: 9.375rem;
+    border-radius: 3px;
   }
 </style>
