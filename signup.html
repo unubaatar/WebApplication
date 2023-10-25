@@ -36,27 +36,26 @@
           <form action="">
           <div class="formFieldsCombo">
             <article class="dualFields">
-              <label for="input">Овог</label><input type="text" />
+              <label for="input"><i class="fa-solid fa-user"></i>Овог</label><input type="text" />
             </article>
             <article class="dualFields">
-              <label for="input">Нэр</label><input type="text" />
+              <label for="input"><i class="fa-solid fa-user"></i>Нэр</label><input type="text" />
             </article class="dualFields">
           </div>
           <div class="formFieldsCombo">
             <article class="dualFields">
-              <label for="input">Утас</label><input type="text" />
+              <label for="input"><i class="fa-solid fa-phone"></i>Утасны дугаар</label><input type="text" />
             </article>
             <article class="dualFields">
-              <label for="input">Мейл хаяг</label><input type="text" />
+              <label for="input"><i class="fa-solid fa-envelope"></i>Мейл хаяг</label><input type="text" />
             </article>
           </div>
           <div class="formFieldsCombo">
             <article class="dualFields">
-              <label for="input">Нууц үг</label><input type="password" />
+              <label for="input"><i class="fa-solid fa-lock"></i>Нууц үг</label><input type="password" />
             </article>
             <article class="dualFields">
-              <label for="input"
-              >Дахин давтана уу</label>
+              <label for="input"><i class="fa-solid fa-lock"></i>Дахин давтана уу</label>
               <input type="password"
             />
             </article> 
@@ -133,7 +132,7 @@
     flex-direction: column;
     justify-content: left;
     width: 50%;
-       & input {
+       /* & input {
         height: 2.5rem;
         margin: 0.625rem 0rem 0.625rem 0rem;
         width: 80%;
@@ -141,9 +140,17 @@
         font-size: 10.5rem;
         border-radius: 0.625rem;
         border: none;
+        } */
   }
+  .dualFields input{
+    height: 2.5rem;
+        margin: 0.625rem 0rem 0.625rem 0rem;
+        width: 80%;
+        padding-left: 0.5rem;
+        font-size: 10.5rem;
+        border-radius: 0.625rem;
+        border: none;   
   }
-
 
   .dualFields label {
     font-size: 0.875rem;
@@ -155,6 +162,9 @@
   .signUpForm h3 {
     text-align: center;
     font-size: 1.75rem;
+  }
+  .signUpForm i{
+    margin-right: 8px;
   }
 
   form button {
