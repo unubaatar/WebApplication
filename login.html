@@ -14,12 +14,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Animuk.mn</title>
+    <title>Animuk</title>
   </head>
   <body>
     <!--login form-->
     <header>
       <div class="rightMenu">
+        <i class="fa-solid fa-bars sidebarActivator" id="activator" onclick="appearSideBarView()"></i>
         <h3><a href="index.html">Animuk.mn</a></h3>
         <input type="text" aria-label="Search" />
         <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
@@ -38,6 +39,17 @@
         </nav>
       </div>
     </header>
+    <nav class="sidebar" id="sidebarId">
+      <ul>
+        <i class="fa-solid fa-xmark sidebarActivator" id="remover" onclick="hideSideBarView()"></i>
+        <li><a href="filter.html">Anime list</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+
       <main>
         <form>
           <section class="formContainer">
@@ -108,7 +120,9 @@
           </nav>
         </section>
       </footer>
+      <script src="headerFooter.js"></script>
   </body>
+  <script src="headerFooter.js"></script>
 </html>
 
 <style scoped>
@@ -119,7 +133,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 60vh;
     padding: 5rem 0rem;
     background-color: #00171f;
     color: aliceblue;
@@ -168,6 +182,27 @@
   }
 
   @media  (max-width: 600px) {
-    
+    img {
+      display: none;
+    }
+    .formContainer {
+      margin: auto;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width:1080px) {
+    img {
+      display: none;
+    }
+    .formContainer {
+      margin: auto;
+    }
+  }
+
+
+  @media (min-width: 1080px) {
+
   }
 </style>
+
+
