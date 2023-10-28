@@ -92,6 +92,11 @@
             <img src="/img/manga1.jpg" alt="" />
             <button>Багц авах</button>
           </article>
+          <article>
+            <p>12 сар</p>
+            <img src="/img/manga5.jpg" alt="" />
+            <button>Багц авах</button>
+          </article>
         </div>
       </section>
 
@@ -143,8 +148,10 @@
     background-color: #00171f;
     color: aliceblue;
     & h3 {
+      font-style: italic;
       text-align: center;
       padding: 20px 0px;
+      font-size: 32px;
     }
     & .service-info-containers {
       display: flex;
@@ -153,6 +160,7 @@
       & ul li {
         list-style: none;
         margin-bottom: 4px;
+        padding: 4px 16px;
       }
     }
   }
@@ -160,10 +168,16 @@
   .bagts {
     & h3 {
       text-align: center;
+      font-size: 36px;
     }
     & .bagts-container {
       display: flex;
       justify-content: space-around;
+      padding: 16px;
+      & img {
+        width: 200px;
+        height: 260px;
+      }
     }
   }
 
@@ -177,25 +191,30 @@
         left: 20%;
         width: 60%;
         height: 40px;
-        background-color: red;
-        border: none;
-        color: azure;
-        font: 28px;
+        background-color: white;
+        border: 2px solid purple;
+        color: purple;
         font-weight: 600;
-        border-radius: 10px;
+        font-size: 16px;
+        border-radius: 16px;
         cursor: pointer;
+      }
+      & button:hover {
+        background-color: purple;
+        color: white;
       }
       & p {
         position: absolute;
         top: 3%;
-        left: 35%;
+        left: 15%;
         color: black;
-        width: 30%;
+        width: 70%;
         text-align: center;
         background-color: red;
         font-weight: 600;
         padding: 4px;
-        border-radius: 3px;
+        border-radius: 16px;
+        color: white;
       }
     } 
   }
@@ -207,6 +226,7 @@
     align-items: center;
     & h3 {
       text-align: center;
+      margin-top: 16px;
     }
     & button {
       padding: 8px;
@@ -219,6 +239,42 @@
       max-width: 200px;
       min-width: 100px;
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 840px) {
+    .bagts-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      & article {
+        margin: 16px;
+        & img {
+          height: 320px !important;
+          width: 220px !important;
+        }
+      }
+    }
+    .service-info-containers article {
+      & h3 {
+        font-size: 24px;
+      }
+      & ul {
+        padding: 0px 16px;
+        & li {
+          padding: 4px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 840px) and (max-width: 1080px) {
+    .bagts-container article {
+      & img {
+        height: 240px !important;
+        width: 160px !important;
+      }
     }
   }
 </style>
