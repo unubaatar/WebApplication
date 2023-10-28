@@ -241,8 +241,8 @@
         font-size: 12px;
       }
       & h4 {
-        word-wrap: break-word;
         font-size: 18px; 
+        padding: 0px 16px;
       }
     }
 

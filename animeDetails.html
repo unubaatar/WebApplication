@@ -88,7 +88,7 @@
             </ul>
           </article>
           <article class="watchAccessBuySection">
-            <button class="playButton addComment"><i class="fa-solid fa-play" style="color: #042834;"></i>PLAY</button>
+            <button class="playButton addComment"><i class="fa-solid fa-play" style="color: #042834;"></i><p>PLAY</p></button>
             <ul>
               <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
               <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
@@ -96,7 +96,7 @@
               <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
               <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
             </ul>
-            <button class="addComment"><i class="fa-solid fa-cart-shopping"></i>Худалдан авах</button>
+            <button class="addComment"><i class="fa-solid fa-cart-shopping"></i><p>Худалдан авах</p> </button>
         </article>
         </section>
         <!-- setgegdluud section -->
@@ -164,26 +164,27 @@
         </section>
       </div>
 
-      <section class="animeCharacters">
-        <h3>Аниме дүрүүд</h3>
-        <div class="characterList">
-          <article class="character"><img src="/img/ch3.jpg" alt="Character" /><em>Character Name</em></article>
-          <article class="character"><img src="/img/ch6.jpg" alt="Character" /><em>Character Name</em></article>
-          <article class="character"><img src="/img/ch4.jpg" alt="Character" /><em>Character Name</em></article>
-          <article class="character"><img src="/img/ch5.jpg" alt="Character" /><em>Character Name</em></article>
-          <article class="character"><img src="/img/char1.jpg" alt="Character" /><em>Character Name</em></article>
-          <article class="character"><img src="/img/char2.jpg" alt="Character" /><em>Character Name</em></article>
-        </div>
-      </section>
-      <section class="animeCharacters">
-        <h3>Төстэй аниме</h3>
-        <div class="characterList">
-          <article class="character"><img src="/img/ch3.jpg" alt="Character" /><em>Character Name</em></article>
-          <article class="character"><img src="/img/ch6.jpg" alt="Character" /><em>Character Name</em></article>
-          <article class="character"><img src="/img/ch4.jpg" alt="Character" /><em>Character Name</em></article>
-        </div>
-      </section>
-      </section>
+
+      <div class="suggestion">
+        <section class="animeCharacters">
+          <h3>Аниме дүрүүд</h3>
+          <div class="characterList">
+            <article class="character"><img src="/img/ch3.jpg" alt="Character" /><em>Character Name</em></article>
+            <article class="character"><img src="/img/ch6.jpg" alt="Character" /><em>Character Name</em></article>
+            <article class="character"><img src="/img/ch4.jpg" alt="Character" /><em>Character Name</em></article>
+            <article class="character"><img src="/img/ch5.jpg" alt="Character" /><em>Character Name</em></article>
+          </div>
+        </section>
+        <section class="animeCharacters">
+          <h3>Төстэй аниме</h3>
+          <div class="characterList">
+            <article class="character"><img src="/img/manga3.jpg" alt="Character" /><em>Character Name</em></article>
+            <article class="character"><img src="/img/manga4.jpg" alt="Character" /><em>Character Name</em></article>
+            <article class="character"><img src="/img/manga5.jpg" alt="Character" /><em>Character Name</em></article>
+            <article class="character"><img src="/img/manga2.jpg" alt="Character" /><em>Character Name</em></article>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer>
@@ -272,6 +273,12 @@
     align-items: center;
   }
 
+  .watchAccessBuySection button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .watchAccessBuySection ul {
     display: flex;
   }
@@ -282,7 +289,7 @@
 
   .comments {
     display: grid;
-    grid-template-columns: 21.875rem 21.875rem;
+    grid-template-columns: 300px 300px;
     gap: 1.25rem;
   }
 
@@ -329,8 +336,8 @@
   }
 
   .playButton {
-    width: 6.25rem !important;
-    height: 2.5rem !important;
+    width: 6.25rem;
+    height: 2.5rem;
   }
 
   .playButton i {
@@ -369,8 +376,8 @@
   }
 
   .character img {
-    width: 9.375rem;
-    height: 12.5rem;
+    width: 140px !important;
+    height: 200px !important;
     border-radius: 0.625rem;
     padding-bottom: 0.5rem;
   }
@@ -382,4 +389,119 @@
   .animeDetail i{
     color: aliceblue;
   }
+
+  .suggestion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 600px) {
+    .upperInfo {
+      display: flex;
+      flex-direction: column; 
+    }
+
+    .animeInfo {
+      margin-right: 0rem;
+      & h3 {
+        font-size: 16px;
+      }
+      & .animeDetails {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        & img {
+          object-fit: contain;
+          height: 280px;
+          width: 150px;
+          margin-right: 0rem;
+        }
+        & ul li {
+          font-size: 12px;
+        }
+      } 
+
+      .watchAccessBuySection {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        & .addComment {
+          width: 84px;
+          margin: 0px 16px;
+           & p {
+             display: none;
+          }
+        }
+        & ul {
+          margin: 16px;
+        } 
+        & .playButton {
+          width: 84px;
+          & i {
+            margin-right: 0rem;
+          }
+        }
+      }
+    }
+    .comments {
+        grid-template-columns: auto;
+        margin: 0px 18px;
+      }
+      .commentInfo {
+      margin-top: 32px;
+    }
+    .suggestion {
+      display: flex;
+      flex-direction: column;
+    }
+    .character img {
+    width: 80px !important;
+    height: 120px !important;
+    }
+    .character em {
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1200px) {
+    .animeInfo {
+      margin: auto;
+    }
+    .upperInfo {
+      display: flex;
+      flex-direction: column; 
+    }
+    .comments {
+        grid-template-columns: auto;
+        margin: 0px 18px;
+      }
+    .commentInfo {
+      margin-top: 32px;
+    }
+  }
+
+  @media (min-width: 960px) and (max-width: 1200px) {
+    .suggestion {
+      display: flex;
+      flex-direction: column;
+    }
+    .character img {
+      width: 200px !important;
+      height: 280px !important;
+    }
+  }
+
+  @media  (min-width: 600px) and (max-width: 960px) {
+    .suggestion {
+      display: flex;
+      flex-direction: column;
+    }
+    .character img {
+    width: 140px !important;
+    height: 200px !important;
+    }
+  }
+
+
 </style>
