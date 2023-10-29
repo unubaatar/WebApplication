@@ -6,29 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Anime" />
     <meta name="keywords" content="animuk.mn, animuk, Animuk.mn, Animuk" />
-
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- ? -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- for google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- for header and footer of page -->
     <link rel="stylesheet" href="headerFooter.css" />
-    
+
     <title>Animuk.mn</title>
   </head>
 
   <body>
     <header>
       <div class="rightMenu">
+        <i
+          class="fa-solid fa-bars sidebarActivator"
+          id="activator"
+          onclick="appearSideBarView()"
+        ></i>
         <h3><a href="index.html">Animuk.mn</a></h3>
         <input type="text" aria-label="Search" />
-        <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+        <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
       </div>
       <div class="leftMenu">
         <nav class="menu">
@@ -39,73 +55,122 @@
           </ul>
         </nav>
         <nav class="btns">
-          <button>Login</button>
-          <button>Sign Up</button>
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
         </nav>
       </div>
     </header>
 
-    <article class = "content-info">
-      <article>
-        <img src="https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png" alt=""/>
-        <p>Saturday, August 5, 2023 at 12pm - 8pm</p>
-      </article>    
-      <section class="user-status">
-      <p>User status</p>
+    <nav class="sidebar" id="sidebarId">
       <ul>
-        <li>Үзсэн аниме тоо: <strong>10</strong></li>
-        <li>Дуртай төрөл: <strong>Action</strong></li>
-        <li>Нийт сэтгэгдлийн тоо: <strong>9</strong></li>
-        <li>Дуртай аниме: <strong>Bleach</strong></li>
-        <li>Дуртай дууны төрөл: <strong>Rock</strong></li>
+        <i
+          class="fa-solid fa-xmark sidebarActivator"
+          id="remover"
+          onclick="hideSideBarView()"
+        ></i>
+        <li>
+          <a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a>
+        </li>
+        <li>
+          <a href="shopping.html"
+            ><i class="fa-solid fa-cart-shopping"></i>Shopping</a
+          >
+        </li>
+        <li>
+          <a href="service.html"
+            ><i class="fa-regular fa-credit-card"></i>Service</a
+          >
+        </li>
+        <li>
+          <a href="login.html"><i class="fa-solid fa-user"></i>Login</a>
+        </li>
+        <li style="border-bottom: 2px solid #00171f">
+          <a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
+        </li>
       </ul>
-    </section>
-    </article>
+    </nav>
 
-    
+    <article class="content-info">
+      <article>
+        <img
+          src="https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png"
+          alt=""
+        />
+        <p>Saturday, August 5, 2023 at 12pm - 8pm</p>
+      </article>
+      <section class="user-status">
+        <p>User status</p>
+        <ul>
+          <li>
+            <i class="fa-solid fa-play"></i>Үзсэн аниме тоо: <strong>10</strong>
+          </li>
+          <li>
+            <i class="fa-solid fa-heart"></i>Дуртай төрөл:
+            <strong>Action</strong>
+          </li>
+          <li>
+            <i class="fa-solid fa-comment"></i>Нийт сэтгэгдлийн тоо:
+            <strong>9</strong>
+          </li>
+          <li>
+            <i class="fa-solid fa-star"></i>Дуртай аниме:
+            <strong>Bleach</strong>
+          </li>
+          <li>
+            <i class="fa-solid fa-music"></i>Дуртай дууны төрөл:
+            <strong>Rock</strong>
+          </li>
+        </ul>
+      </section>
+    </article>
 
     <section class="contents">
       <h3>Санал болгох аниме</h3>
-      <section>   
-        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga3.jpg" alt="Recommended anime" /></span>
-      </section>
+
+      <ul>
+        <li><img src="/img/manga3.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga3.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga3.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga3.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga3.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga3.jpg" alt="Recommended anime" /></li>
+      </ul>
 
       <h3>Сүүлд үзсэн</h3>
-      <section>
-        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga5.jpg" alt="Recommended anime" /></span>
-      </section>
+      <ul>
+        <li><img src="/img/manga5.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga5.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga5.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga5.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga5.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga5.jpg" alt="Recommended anime" /></li>
+      </ul>
 
       <h3>Их хандалттай</h3>
-      <section>
-        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/login6.jpg" alt="Recommended anime" /></span>
-      </section>
+      <ul>
+        <li><img src="/img/login6.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/login6.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/login6.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/login6.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/login6.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/login6.jpg" alt="Recommended anime" /></li>
+      </ul>
 
       <h3>Сүүлд гарсан</h3>
-      <section>
-        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
-        <span><img src="/img/manga2.jpg" alt="Recommended anime" /></span>
-      </section>
+      <ul>
+        <li><img src="/img/manga2.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga2.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga2.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga2.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga2.jpg" alt="Recommended anime" /></li>
+        <li><img src="/img/manga2.jpg" alt="Recommended anime" /></li>
+      </ul>
     </section>
 
     <footer>
       <section class="footer1">
         <a href="index.html">
-          <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff"></i>
         </a>
         <em>ANIMUK.MN</em>
       </section>
@@ -121,11 +186,11 @@
           <ul>
             <li>Холбогдох дугаар: 88443062</li>
             <li>
-              <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+              <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
               <a href="#">animuk</a>
             </li>
             <li>
-              <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+              <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
               <a href="#">animuk</a>
             </li>
           </ul>
@@ -133,6 +198,7 @@
       </section>
     </footer>
   </body>
+  <script src="headerFooter.js"></script>
 </html>
 
 <style>
@@ -142,36 +208,63 @@
   }
 
   body {
-        background-color: #00171F;
-        font-family: 'Inter', sans-serif;
-        color: white;
+    background-color: #00171f;
+    font-family: "Inter", sans-serif;
+    color: white;
   }
 
   .content-info {
-    margin-left: 3.75rem; 
     padding-top: 6.25rem;
-    display: flex; 
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     & img {
-    width: 37.5rem;
-    height: auto;
-    border-radius: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 32px;
+    }
+    & p {
+      text-align: center;
     }
 
     & .user-status {
+      display: flex;
+      flex-direction: column;
       text-align: left;
-
-      & ul>li {
+      & ul {
+        & li {
         list-style: none;
-      }
-
+        margin: 28px 0px;
+        }
+      } 
       & p {
         text-align: center;
+        font-size: 24px;
+        font-style: italic;
       }
     }
   }
-  
+
   .contents {
+    margin: 16px 0px 64px 0px;
+    & h3 {
+      text-align: center;
+      padding: 32px 0px;
+    }
+    & ul {
+      display: flex;
+      justify-content: space-around;
+      & li {
+        list-style: none;
+        & img {
+          height: 300px;
+          width: 200px;
+        }
+      }
+    } 
+  }
+
+  /* .contents {
     & h3 {
       text-align: center;
     }
@@ -180,12 +273,76 @@
       margin-left: 3.125rem;
       align-items: center;
     }
-    
+
     & img {
       border-radius: 1.5rem;
       height: 15.625rem;
       width: 12.5rem;
       padding: 0.625rem;
     }
+  } */
+
+  @media (min-width: 720px) and (max-width: 1320px) {
+    .contents ul {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 16px;
+    }
+    .content-info img {
+      width: 400px;
+    }
   }
+
+  
+  @media (min-width: 440px) and (max-width: 720px) {
+    .contents ul {
+      display: grid;
+      grid-template-columns: auto auto;
+      & li {
+        margin-bottom: 32px;
+      }
+    }
+    .content-info {
+      & img {
+        width: 280px;
+      }
+      & .user-status {
+      font-size: 14px;
+        & p {
+          margin-bottom: 0px;
+        }
+      }  
+      }
+      & p {
+        font-size: 14px;
+        margin-bottom: 32px;
+      }
+    }
+
+    
+  @media (max-width: 440px) {
+    .contents ul {
+      display: grid;
+      grid-template-columns: auto auto ;
+      & li {
+        margin-bottom: 16px;
+        & img {
+          width: 120px;
+          height: 150px;
+          }
+        }
+      }
+
+      .content-info {
+      & img {
+        width: 250px;
+      }
+      & .user-status {
+      font-size: 14px;
+      & p {
+        margin-top: 16px;
+      }
+        }  
+      }
+    }
 </style>

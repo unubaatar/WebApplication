@@ -18,6 +18,7 @@
   <body>
     <header>
       <div class="rightMenu">
+        <i class="fa-solid fa-bars sidebarActivator" id="activator" onclick="appearSideBarView()"></i>
         <h3><a href="index.html">Animuk.mn</a></h3>
         <input type="text" aria-label="Search" />
         <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
@@ -30,12 +31,22 @@
             <li><a href="service.html">Service</a></li>
           </ul>
         </nav>
-        <nav class="btns">
-          <button>Login</button>
-          <button>Sign Up</button>
+        <nav class="btns">          
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
         </nav>
       </div>
     </header>
+    <nav class="sidebar" id="sidebarId">
+      <ul>
+        <i class="fa-solid fa-xmark sidebarActivator" id="remover" onclick="hideSideBarView()"></i>
+        <li><a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a></li>
+        <li><a href="shopping.html"><i class="fa-solid fa-cart-shopping"></i>Shopping</a></li>
+        <li><a href="service.html"><i class="fa-regular fa-credit-card"></i>Service</a></li>
+        <li><a href="login.html"><i class="fa-solid fa-user"></i>Login</a></li>
+        <li style="border-bottom: 2px solid #00171f;"><a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a></li>
+      </ul>
+    </nav>
 
     <main>
       <nav>
@@ -118,16 +129,16 @@
           <!-- quantity section -->
           <label class="quantity" for="quantity">
             <button>-</button>
-            <input type="text"/>
+            <input type="text" placeholder="1" style="text-align: center;">
             <button>+</button>
           </label>
-          <button class="purchaseBtn">Худалдан авах</button>
+          <button class="purchaseBtn"><i class="fa-solid fa-cart-shopping"></i>Худалдан авах</button>
         </ul>
       </article>
       </section>
       <!-- tostei baraa section -->
       <section class="similarItem">
-        <!-- flexbox minimumsize ogoh -->
+        <!-- flexbox minimum size ogoh -->
         <h3>Төстэй бараанууд</h3> 
         <div class="similarItem-container">
           <div><img src="/img/accessories3.webp" alt=""></div>
@@ -135,6 +146,7 @@
           <div><img src="/img/accessories5.webp" alt=""></div>
           <div><img src="/img/accessories6.webp" alt=""></div>
         </div>
+        <i class="fa-solid fa-angle-right fa-2xl"></i>
       </section>
     </div>
   </main>
@@ -170,7 +182,7 @@
       </section>
     </footer>
   </body>
-
+  <script src="headerFooter.js"></script>
 </html>
 
 <style scoped>
@@ -221,10 +233,13 @@
     margin-top: 0.75rem;
     font-size: medium;
   }
+  
   .star{
     margin-top: 1.25rem;
     color: #FFF730;
   }
+
+  /* Quantity section style */
   .quantity{
     margin-top: 1.25rem;
   }
@@ -233,7 +248,12 @@
     width: 2.5rem;
     background: none;
     border: 0.0625rem solid;
+    border-radius: 5px;
     color: aliceblue;
+    background-color: #18404E;
+  }
+  .quantity button:hover{
+    background-color: #3b7489;
   }
   .quantity input{
     height: 1.875rem;
@@ -241,7 +261,10 @@
     background-color: #18404E;
     color: aliceblue;
     border: none;
+    text-decoration: aliceblue;
   }
+
+  /* Hudaldan avah button style */
   .purchaseBtn{
     color: #18404E;
     background-color: #DB504A;
@@ -251,6 +274,11 @@
     font-size: 1.125rem;
     margin-top: 8.125rem;
   }
+  .purchaseBtn i{
+    margin-right: 8px;
+  }
+
+  /* Tostei baraa section style */
   .similarItem h3{
     text-align: center;
     padding-bottom: 1.25rem;
@@ -268,6 +296,8 @@
     margin: 0.625rem;
     text-align: center;
     line-height: 4.6875rem;
+    min-width: 150px;
+    display: flex;
   }
   .similarItem {
     margin: 1rem;
@@ -276,5 +306,6 @@
     display: flex;
     height: 10.625rem;    
     width: 9.375rem;
+    border-radius: 3px;
   }
 </style>
