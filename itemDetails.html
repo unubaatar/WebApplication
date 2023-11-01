@@ -21,7 +21,7 @@
         <i class="fa-solid fa-bars sidebarActivator" id="activator" onclick="appearSideBarView()"></i>
         <h3><a href="index.html">Animuk.mn</a></h3>
         <input type="text" aria-label="Search" />
-        <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+        <i class="fa-solid fa-magnifying-glass" style="color: var(--main-color)"></i>
       </div>
       <div class="leftMenu">
         <nav class="menu">
@@ -186,14 +186,20 @@
 </html>
 
 <style scoped>
+  :root {
+      --main-color: white;
+      --main-bg-color: #042834;
+      --secondary-bg-color: #18404e;
+  }
   main {
     height: 60vh; 
-    padding: 8rem 0rem;
+    padding: 8rem 0;
     display: flex;
     flex-direction: column;
     background-color: #00171F;
-    color: aliceblue;
+    color: var(--main-color);
   }
+  
   /* Item filter */
   .filter{
     list-style: none;
@@ -206,11 +212,11 @@
     display: flex;
     margin: 1.875rem;
   }
+
   /* Item information */
   .itemDetail{
     display: flex;
     margin-left: 150px;
-    color: var(--main-color);
   }
   #itemImage{
     display: flex;
@@ -245,7 +251,7 @@
     height: 1.875rem;
     width: 2.5rem;
     background: none;
-    border: 0.0625rem solid;
+    border: solid 0.0625rem;
     border-radius: 5px;
     color: var(--main-color);
     background-color: var(--secondary-bg-color);
@@ -256,8 +262,8 @@
   .quantity input{
     height: 1.875rem;
     width: 7rem;
-    background-color: var(--secondary-bg-color);
     color: var(--main-color);
+    background-color: var(--secondary-bg-color);
     border: none;
     text-decoration: var(--main-color);
   }
@@ -265,10 +271,10 @@
   /* Hudaldan avah button style */
   .purchaseBtn{
     display: block;
-    color: var(--secondary-bg-color);
-    background-color: #DB504A;
     height: 2.5rem;
     width: 14rem;
+    color: var(--secondary-bg-color);
+    background-color: #DB504A;
     border: none;
     border-radius: 0.9375rem;
     font-size: 1.125rem;
