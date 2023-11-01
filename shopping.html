@@ -64,7 +64,8 @@
         <article>
           <a href="itemDetails.html"><img src="/img/bestseller5.jpeg" alt=""></a>
         </article>
-        <i class="fa-solid fa-angle-right fa-2xl"></i>
+        <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
       <p>Clothes</p>
       <section>    
@@ -83,7 +84,8 @@
         <article>
           <a href="itemDetails.html"><img src="/img/clothes1.jpg" alt=""></a>
         </article>
-        <i class="fa-solid fa-angle-right fa-2xl"></i>
+        <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
       <p>Manga & Books</p>
       <section>  
@@ -102,7 +104,8 @@
           <article>
             <a href="itemDetails.html"><img src="/img/manga5.jpg" alt="Manga&books"></a>
           </article>
-          <i class="fa-solid fa-angle-right fa-2xl"></i>
+          <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+          <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
       <p>Accessories</p>
       <section>
@@ -121,7 +124,8 @@
         <article>
           <a href="itemDetails.html"><img src="/img/accessories5.webp" alt="Accessories"></a>
         </article>
-        <i class="fa-solid fa-angle-right fa-2xl"></i>
+        <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
       <p>Figures</p>
       <section>     
@@ -140,7 +144,8 @@
         <article>
           <a href="itemDetails.html"><img src="/img/figure5.webp" alt=""></a>
         </article>
-        <i class="fa-solid fa-angle-right fa-2xl"></i>
+        <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
   </section>
   
@@ -250,6 +255,19 @@
           margin: 6.25rem;
           color: var(--color);        
         }
+    }
+
+    .downAngle {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .downAngle {
+        display: block;
+      }
+      .upAngle {
+        display: none;
+      }
     }
 
     @media (max-width: 1200px) {
