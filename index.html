@@ -30,7 +30,7 @@
 
     <!-- for header and footer of page -->
     <link rel="stylesheet" href="headerFooter.css" />
-
+    <script src="animeInfo.js"></script>
     <title>Animuk.mn</title>
   </head>
 
@@ -42,7 +42,8 @@
           id="activator"
           onclick="appearSideBarView()"
         ></i>
-        <h3><a href="index.html"><img src="/img/logo.png" alt="logo" style="width: 100%; height: 68px;"></a></h3>
+        <!-- <h3><a href="index.html"><img src="/img/logo.png" alt="logo" style="width: 100%; height: 68px;"></a></h3> -->
+        <h3>ANIMUK</h3>
         <input type="text" aria-label="Search" />
         <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
       </div>
@@ -126,354 +127,13 @@
 
     <section class="contents">
       <h3>Санал болгох аниме</h3>
-
-      <ul>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <ul id="malRank"></ul>
       <h3>Сүүлд үзсэн</h3>
-      <ul>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <ul id="target"></ul>
       <h3>Их хандалттай</h3>
-      <ul>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <ul id="mostViews"></ul>
       <h3>Сүүлд гарсан</h3>
-      <ul>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/Gk8r4bp/manga2.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/Gk8r4bp/manga2.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/Gk8r4bp/manga2.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/Gk8r4bp/manga2.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/Gk8r4bp/manga2.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="anime-card">
-            <div class="anime-card-inner anime-card-front">
-              <img src="https://i.ibb.co/Gk8r4bp/manga2.jpg" alt="Recommended anime" />
-            </div>
-            <div class="anime-card-inner anime-card-back">
-              <div class="anime-card-back-content">
-                <p><strong>Нэр: </strong>Lorem, ipsum.</p><br>
-                <p><strong>Төрөл: </strong>Lorem.</p>
-              </div>
-              <button class="anime-card-button">Дэлгэрэнгүй</button>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <ul id="recentlyAdded"></ul>
     </section>
     <footer>
       <section class="footer1">
@@ -542,10 +202,10 @@
       text-align: left;
       & ul {
         & li {
-        list-style: none;
-        margin: 28px 0px;
+          list-style: none;
+          margin: 28px 0px;
         }
-      } 
+      }
       & p {
         text-align: center;
         font-size: 24px;
@@ -570,19 +230,20 @@
           width: 200px;
         }
       }
-    } 
+    }
   }
-  .user-status ul i{
+  .user-status ul i {
     margin-right: 8px;
   }
-
 
   .anime-card {
     perspective: 1000px;
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
-    box-shadow: 3px 3px 10px rgba(232, 229, 229, 0.05), 3px 3px 50px rgba(232, 229, 229, 0.05), 3px 3px 100px rgba(232, 229, 229, 0.05);
+    box-shadow: 3px 3px 10px rgba(232, 229, 229, 0.05),
+      3px 3px 50px rgba(232, 229, 229, 0.05),
+      3px 3px 100px rgba(232, 229, 229, 0.05);
     background-color: antiquewhite;
     height: 300px;
     width: 200px;
@@ -591,7 +252,9 @@
   }
   .anime-card:hover {
     transform: rotateY(180deg);
-    box-shadow: 3px 3px 10px rgba(232, 232, 229, 0.3), 3px 3px 50px rgba(232, 229, 229, 0.3), 3px 3px 100px rgba(232, 229, 229, 0.3);
+    box-shadow: 3px 3px 10px rgba(232, 232, 229, 0.3),
+      3px 3px 50px rgba(232, 229, 229, 0.3),
+      3px 3px 100px rgba(232, 229, 229, 0.3);
   }
   .anime-card-inner {
     display: flex;
@@ -599,7 +262,7 @@
     align-items: center;
     flex-direction: column;
     text-align: start;
-    position: absolute; 
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
@@ -612,7 +275,7 @@
     overflow: hidden;
   }
   .anime-card-back {
-    background: linear-gradient(225deg, rgb(102, 238, 220), #1a32e6);;
+    background: linear-gradient(225deg, rgb(102, 238, 220), #1a32e6);
     transform: rotateY(-180deg);
     transform-style: preserve-3d;
     padding: 2rem;
@@ -645,7 +308,6 @@
     }
   }
 
-  
   @media (min-width: 440px) and (max-width: 720px) {
     .contents ul {
       display: grid;
@@ -659,42 +321,52 @@
         width: 280px;
       }
       & .user-status {
-      font-size: 14px;
+        font-size: 14px;
         & p {
           margin-bottom: 0px;
         }
-      }  
-      }
-      & p {
-        font-size: 14px;
-        margin-bottom: 32px;
       }
     }
+    & p {
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+  }
 
-    
   @media (max-width: 440px) {
     .contents ul {
       display: grid;
-      grid-template-columns: auto auto ;
+      grid-template-columns: auto auto;
       & li {
         margin-bottom: 16px;
         & img {
           width: 120px;
           height: 150px;
-          }
         }
       }
+    }
 
-      .content-info {
+    .content-info {
       & img {
         width: 250px;
       }
       & .user-status {
-      font-size: 14px;
-      & p {
-        margin-top: 16px;
-      }
-        }  
+        font-size: 14px;
+        & p {
+          margin-top: 16px;
+        }
       }
     }
+  }
 </style>
+
+<script>
+  const app1 = new App("recentlyAdded");
+  app1.initAddedRecently();
+  const app2 = new App("mostViews");
+  app2.initMostViews();
+  const app3 = new App("malRank");
+  app3.initMalRank();
+  const app4 = new App("target");
+  app4.init();
+</script>
