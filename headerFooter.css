@@ -156,6 +156,7 @@
     align-items: center;
     height: 12.5rem;
     color: var(--main-color);
+    z-index: 10;
   }
 
   .footer1 em {

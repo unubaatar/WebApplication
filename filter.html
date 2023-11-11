@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="headerFooter.css" />
-    <script src="https://kit.font-awesome.com/a076d05399.js"></script>
+    <!-- <script src="https://kit.font-awesome.com/a076d05399.js"></script> -->
     <title>Animuk.mn</title>
   </head>
   <body>
@@ -38,6 +38,7 @@
         </nav>
       </div>
     </header>
+
     <nav class="sidebar" id="sidebarId">
       <ul>
         <i class="fa-solid fa-xmark sidebarActivator" id="remover" onclick="hideSideBarView()"></i>
@@ -48,73 +49,32 @@
         <li style="border-bottom: 2px solid #00171f;"><a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a></li>
       </ul>
     </nav>
-      <!-- <select name="filter">
-        filter
-      </select>
-      <select name="episode">
-        Ангийн тоо
-      </select>
-      <select name="type">
-        Төрөл
-      </select>
-      <select name="season">
-        Улирлын тоо
-      </select> -->
-
-    <!-- Filter -->
-    <div class="main-nav">
-      <button>Filter <span class="fas fa-caret-down"></span></button>
-      <div class="main-nav-menu">
-        <ul>
-          <li><a href="">Төрөл<span class="fas fa-caret-right"></span></a></li>
-            <div class="dropdown-menu-1">
-                <ul id="menu-1">
-                  <li><a href="">Адал явдал</a></li>
-                  <li><a href="">Аймшиг</a></li>
-                  <li><a href="">Түүхэн</a></li>
-                  <li><a href="">Тулаан</a></li>
-                </ul>
-            </div>
-          <li><a href="">Ангийн тоо<span class="fas fa-caret-right"></span></a></li> 
-            <div class="dropdown-menu-2">
-              <!-- <ul id="menu2">
-                <li><a href="">1-20</a></li>
-                <li><a href="">20-50</a></li>
-                <li><a href="">50-100</a></li>
-              </ul> -->
-            </div>       
-          <li><a href="">Улирлын тоо<span class="fas fa-caret-right"></span></a></li> 
-              <div class="dropdown-menu-3">
-                <!-- <ul id="menu-3">
-                  <li><a href="">1-5</a></li>
-                  <li><a href="">5-10</a></li>
-                </ul> -->
-              </div>         
-        </ul>
-      </div>
-    </div>
-
-    <section class="main-section">
-      <h3 class="main">Шүүж гарсан анимууд</h3>
-      <article>
-        <span><img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Filtered anime" /></span>
-      </article>
-      <article>
-        <span><img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Filtered anime" /></span>
-      </article>
-      <article>
-        <span><img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Filtered anime" /></span>
-        <span><img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Filtered anime" /></span>
-      </article>
+    <main style="display: flex;">  
+    <section class="main-nav">
+      <ul id="categoryList">
+        <li>Drama</li>
+        <li>Sci-Fi</li>
+        <li>Romance</li>
+        <li>Action</li>
+        <li>Superpower</li>
+        <li>School</li>
+        <li>Space</li>
+        <li>Adventure</li>
+        <li>Fantasy</li>
+        <li>Comedy</li>
+        <li>Magic</li>
+        <li>Shonen</li>
+      </ul>
     </section>
+    <section class="main-section">
+      <article class="filterTitle">
+        <h3 class="main">Шүүж гарсан анимууд</h3>
+        <input type="text" id="filteredType" disabled>
+      </article>
+      <ul id="filteredAnimeList"></ul>
+    </section>
+    
+    </main>
     <footer>
       <section class="footer1">
         <a href="index.html">
@@ -146,53 +106,144 @@
       </section>
     </footer>
   </body>
-  <script src="headerFooter.js"></script>
+</html>
 
-  <style>
-    /* CSS reset */
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    :root {
-      --color: white;
-      --back-color: #00171F;
+<style>
+  /* CSS reset */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --color: white;
+    --back-color: #00171F;
+  }
+
+  body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--color);
+      background-color: var(--back-color);
+  }
+
+  /* Main nav style */
+  .main-nav {
+    background-color: #18404e;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & ul {
+      padding-top: 80px;
+      width: 100%;
+      & li {
+      width: 100%;
+      color: white;
+      padding: 24px;
+      font-size: 16px;
+      list-style: none;
+      cursor: pointer;
+      }
+      & li:hover {
+        background-color: #00171f;
+      }
     }
 
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        color: var(--color);
-        background-color: var(--back-color);
-    }
+  }
 
-    /* Main nav style */
-    .main-nav {
-      width: 100px;
-      height: 100px;
-      line-height: 40px;
-      padding-top: 6.25rem;
-      padding-left: 9.375rem;
-    }
-
-    .main-section {
-      padding-bottom: 3.125rem;
-      & .main {
-        padding-top: 6.25rem;
-        /* margin-left: 2.5rem; */
+  .main-section {
+    width: 85%;
+    & .filterTitle {
+      padding-top: 96px;
+      display: flex;
+      justify-content: center;
+      justify-content: center;
+      align-items: center;
+      & h3 {
+        margin: 0px 32px;
+        font-size: 24px;
+      }
+      & input {
+        margin: 0px 32px;
+        height: 40px;
+        width: 20%;
+        border-radius: 24px;
+        background-color: azure;
         text-align: center;
+        font-size: 24px;
       }
-      & article {
-        display: flex;
-      }
+    } 
+  }
+
+  .anime-card {
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    height: 300px;
+    width: 200px;
+    cursor: pointer;
+    border: none;
+  }
+  .anime-card:hover {
+    transform: rotateY(180deg);
+  }
+  .anime-card-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  .anime-card-back {
+    background: linear-gradient(225deg, rgb(102, 238, 220), #1a32e6);
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 1.5rem;
+  }
+
+  .anime-card-back-content {
+    color: black;
+  }
+
+  .anime-card-button {
+    background: linear-gradient(45deg, rgb(238, 131, 102), #e61a3c);
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+    transform: translateZ(50px);
+    transition: all 0.5 ease;
+    color: #fff;
+  } 
+
+  #filteredAnimeList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 48px;
+    & li {
+      list-style: none;
+      margin: 2rem;
       & img {
         border-radius: 1.5rem;
         align-items: center;
-        max-width: 100%;
-        height: 15rem;
-        width: 12rem;
-        padding: 1.3rem;           
-        margin-left: 6.25rem;
+        height: 300px;
+        width: 200px;       
       }
     }
-  </style>
-</html>
+  }
+  
+</style>
+
+<script src="filter.js"></script>
