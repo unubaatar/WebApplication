@@ -41,6 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 MyAnimeList Rank: <span><strong>${animeDetails.malRank}</strong></span>
               </li>  
             </ul>
+            </article>
+            <article class="watchAccessBuySection">
+              <button class="playButton addComment"><i class="fa-solid fa-play" style="color: #042834;"></i><p>PLAY</p></button>
+              <ul>
+                <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
+                <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
+                <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
+                <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
+                <li><i class="fa-regular fa-star" style="color: #fbff00"></i></li>
+              </ul>
+              <button class="addComment"><i class="fa-solid fa-cart-shopping"></i><p>Худалдан авах</p> </button>
+          </article>
     `;
 });
 
