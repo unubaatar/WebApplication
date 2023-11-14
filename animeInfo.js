@@ -200,6 +200,8 @@ class Anime {
     return categoryList;
   }
 
+
+
   render = function () {
     return `
         <li>
@@ -214,7 +216,7 @@ class Anime {
               <p><strong>Ангийн тоо: </strong>${this.totalEpisode}</p>
               <p><strong>Төрөл: <br></strong>${this.getCatogeries()}</p>
             </div>
-            <button class="anime-card-button">Дэлгэрэнгүй</button>
+            <button class="anime-card-button" onclick= "moveToAnimeDetailPage('${this.name}')" >Дэлгэрэнгүй</button>
           </div>
         </div>
       </li>
@@ -225,6 +227,7 @@ class Anime {
 class App {
   constructor(targetId) {
     this.target = targetId;
+    this.data = {};
   }
 
   init = function() {
@@ -275,5 +278,26 @@ class App {
     });
     return sortedArray;
   };
+}
 
+// ene zuer try hiilt shuu api s function oo tatahjiisii
+getData = async function() {
+  try {
+    const response = await fetch("https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86");
+    let data = await response.json();
+    console.log(data.record)
+    const animesList = data.record;
+  } catch {
+    console.log("error");
+  }
+}
+
+
+// enuuger anime iin delgerengu page iihe dataga url aar damjulad avn deer render dree onclick der ni zaagd ugcin
+moveToAnimeDetailPage = function(name) {
+  console.log("hello");
+  let currentURL = window.location.href;
+  let newUrl = currentURL.replace("index.html" , "animeDetails.html");
+  newUrl += `?name=${name}`
+  window.location.href = newUrl;
 }
