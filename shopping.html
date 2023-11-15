@@ -11,6 +11,7 @@
   <script src="headerFooter.js"></script>
   <title>Animuk.mn</title>
 </head>
+<script src="productInfo.js"></script>
 
 <body>
   <header>
@@ -50,106 +51,30 @@
   <section class="contents">
     <h2>Categories</h2> 
       <p>Best sellers</p>    
-      <section>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/56bzv6R/accessories1.webp" alt="accessories1" /></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/Wvxyg5r/bestseller4.jpg" alt="Best seller"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/Jv35f2r/bestseller3.jpg" alt="Best seller"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/1TLYVQg/figure2.webp" alt="Best seller"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/Vqb9r3z/bestseller1.jpg" alt="Best seller"></a>
-        </article>
+      <section id="bestSellerSection">
         <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
         <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
       <p>Clothes</p>
-      <section>    
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/hB67NN1/clothes1.jpg" alt="Clothes"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/86jjkj1/bestseller6.jpg" alt="Clothes"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/zxJk6GX/clothes4.jpg" alt="Clothes"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/Wvxyg5r/bestseller4.jpg" alt="Clothes"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/86jjkj1/bestseller6.jpg" alt="Clothes"></a>
-        </article>
+      <section id="clothesSection">    
         <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
         <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
       <p>Manga & Books</p>
-      <section>  
-          <article>
-            <a href="itemDetails.html"><img src="https://i.ibb.co/tLJ0jSh/manga1.jpg" alt="Manga&books"></a>
-          </article>
-          <article>
-            <a href="itemDetails.html"><img src="https://i.ibb.co/Gk8r4bp/manga2.jpg" alt="Manga&books"></a>
-          </article>
-          <article>
-            <a href="itemDetails.html"><img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Manga&books"></a>
-          </article>
-          <article>
-            <a href="itemDetails.html"><img src="https://i.ibb.co/92fBnJS/manga4.jpg" alt="Manga&books"></a>
-          </article>
-          <article>
-            <a href="itemDetails.html"><img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Manga&books"></a>
-          </article>
+      <section id="mangaSection">  
           <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
           <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
       <p>Accessories</p>
-      <section>     
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/y50ycHy/accessories2.webp" alt="Accessories"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/56bzv6R/accessories1.webp" alt="Accessories"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/TqSr5tq/accessories4.webp" alt="Accessories"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/fQ8nKHK/accessories5.webp" alt="Accessories"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/HgB4mF8/accessories3.webp" alt="Accessories"></a>
-        </article>
+      <section id="accessoriesSection">     
         <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
         <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
       <p>Figures</p>
-      <section>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/Jv35f2r/bestseller3.jpg" alt="Figures"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/jL06Q4M/bestseller5.jpg" alt="Figures"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/1TLYVQg/figure2.webp" alt="Figures"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/1q1ZS9S/figure3.jpg" alt="Figures"></a>
-        </article>
-        <article>
-          <a href="itemDetails.html"><img src="https://i.ibb.co/bLcCcP8/figure5.webp" alt="Figures"></a>
-        </article>
+      <section id="figuresSection">
         <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
         <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
       </section>
-
   </section>
   <footer>
     <section class="footer1">
@@ -287,11 +212,18 @@
           }
       } 
     }
-  </style>
-
-  <!-- JavaScript -->
-  <script>
-
-  </script>
-  
+  </style>  
 </html>
+
+<script>
+  const app1 = new App("bestSellerSection");
+  app1.init("Clothes");
+  const app2 = new App("clothesSection");
+  app2.init("Clothes");
+  const app3 = new App("mangaSection");
+  app3.init("Manga");
+  const app4 = new App("accessoriesSection");
+  app4.init("Accessories");
+  const app5 = new App("figuresSection");
+  app5.init("Figures");
+</script>
