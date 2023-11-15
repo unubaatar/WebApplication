@@ -361,29 +361,13 @@
 </style>
 
 <script>
-
-  const app1 = new App("recentlyAdded");
-  app1.initAddedRecently();
-  const app2 = new App("mostViews");
-  app2.initMostViews();
-  const app3 = new App("malRank");
-  app3.initMalRank();
-  const app4 = new App("target");
-  app4.init();  
+  const app1 = new App("malRank");
+  app1.init("MalRank");
+  const app2 = new App("target");
+  app2.init("RecentlyAdded"); 
+  const app3 = new App("mostViews");
+  app3.init("MostViews"); 
+  const app4 = new App("recentlyAdded");
+  app4.init("RecentlyAdded");
 </script>
 
-
-<script>
-  // ene zuer try hiilt shuu api s function oo tatahjiisii
-getData = async function() {
-  try {
-    const response = await fetch("https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86");
-    let data = await response.json();
-    console.log(data.record)
-    const animesList = data.record;
-  } catch {
-    console.log("error");
-  }
-}
-getData();
-</script>

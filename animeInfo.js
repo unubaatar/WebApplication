@@ -1,3 +1,5 @@
+const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
+
 animeList = [
   {
       "name": "Bleach",
@@ -260,6 +262,7 @@ animeList = [
   }
 ]
 
+
 class Anime {
   constructor(animeListItem) {
     this.name = animeListItem.name;
@@ -308,53 +311,50 @@ class Anime {
 class App {
   constructor(targetId) {
     this.target = targetId;
-    this.data = {};
+    this.apiUrl = apiUrl;
   }
 
-  init = function() {
-    const trgt = document.getElementById(this.target);
-    let count = 0;
-    for (const anime of animeList) {
-      if (count === 6) {
-        break;
+  init = function(sortType) {
+    fetch(this.apiUrl).then(response => response.json()).then(data => {
+      let animes = data.record;
+      const trgt = document.getElementById(this.target);
+      let sortedAnimeList = this.sortAnimeType(animes ,sortType);
+      let count = 0;
+      for (const anime of sortedAnimeList) {
+        if (count === 6) {
+          break;
+        }
+        const renderedAnime = new Anime(anime);
+        trgt.insertAdjacentHTML("beforeend", renderedAnime.render());
+        count++;
       }
-      const renderedAnime = new Anime(anime);
-      trgt.insertAdjacentHTML("beforeend", renderedAnime.render());
-      count++;
+    })
+  }
+
+  sortAnimeType = function(list ,sortType) {
+    switch(sortType) {
+      case "RecentlyAdded": return this.sortByDate(list);
+      case "MalRank": return this.sortByMalRank(list);
+      case "MostViews": return this.sortByViews(list);
     }
   }
 
-  initAddedRecently = function () {
-    const initAddedRecentlyAnimes = this.sortByDate();
-    this.init();
-  };
-
-  initMostViews = function () {
-    const initAddedRecentlyAnimes = this.sortByViews();
-    this.init();
-  };
-
-  initMalRank = function () {
-    const initAddedRecentlyAnimes = this.sortByMalRank();
-    this.init();
-  };
-
-  sortByDate = function () {
-    const sortedArray = animeList.sort((anime1, anime2) => {
+  sortByDate = function(list) {
+    const sortedArray = list.sort((anime1, anime2) => {
       return anime2.releasedDate - anime1.releasedDate;
     });
     return sortedArray;
   };
 
-  sortByViews = function () {
-    const sortedArray = animeList.sort((anime1, anime2) => {
+  sortByViews = function(list) {
+    const sortedArray = list.sort((anime1, anime2) => {
       return anime2.views - anime1.views;
     });
     return sortedArray;
   };
 
-  sortByMalRank = function () {
-    const sortedArray = animeList.sort((anime1, anime2) => {
+  sortByMalRank = function(list) {
+    const sortedArray = list.sort((anime1, anime2) => {
       return anime1.malRank - anime2.malRank;
     });
     return sortedArray;

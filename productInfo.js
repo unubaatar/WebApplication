@@ -41,8 +41,6 @@ moveToItemDetails = function(name) {
 }
 
 
-
-
 const productList = [
     {   
         "name": "AOT logo hoodie",
