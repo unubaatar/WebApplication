@@ -1,92 +1,95 @@
+const apiProductUrl = "https://api.jsonbin.io/v3/b/6554eaff12a5d3765999df9e";
+
 document.addEventListener("DOMContentLoaded" , function() {
     const urlParams = new URLSearchParams(window.location.search);
     const productName = urlParams.get("name");
-    const productInstance = getProductInfoByName(productName);
-    const productViewSection = document.getElementById("itemDetailSection");
-    productViewSection.innerHTML = `
-      <section class="itemDetail">
-      <img id="itemImage" src="${productInstance.img}" alt="Item">
-      
-      <article  class="detailInfo">
-        <ul>
-          <h3>${productInstance.name}</h3>
-          <li>Material: <strong>${productInstance.material}</strong> </li>
-          <li>Color: <strong>${productInstance.color}</strong> </li>
-          <li>Size: <strong>4*3cm</strong> </li>
-          <span class="star">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
-              />
-            </svg>
-          </span>
-          <div><em>${productInstance.price}&#8366;</em></div>
-        </ul>
-            <section class="quantity" for="quantity">
-              <button onclick="decreaseItemCount()">-</button>
-              <input id="productCountInput" type="text" value = "1" style="text-align: center;">
-              <button  onclick="increaseItemCount()">+</button>
-            </section>
-            <button class="purchaseBtn"><i class="fa-solid fa-cart-shopping"></i>Худалдан авах</button>
-      </article>
-    </section> 
-    `
-    
+    fetch(apiProductUrl).then(response => response.json()).then(data => {
+      let productList = data.record;
+      const productInstance = getProductInfoByName(productList , productName);
+      const productViewSection = document.getElementById("itemDetailSection");
+      productViewSection.innerHTML = `
+        <section class="itemDetail">
+        <img id="itemImage" src="${productInstance.img}" alt="Item">
+        
+        <article  class="detailInfo">
+          <ul>
+            <h3>${productInstance.name}</h3>
+            <li>Material: <strong>${productInstance.material}</strong> </li>
+            <li>Color: <strong>${productInstance.color}</strong> </li>
+            <li>Size: <strong>4*3cm</strong> </li>
+            <span class="star">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24Z"
+                />
+              </svg>
+            </span>
+            <div><em>${productInstance.price}&#8366;</em></div>
+          </ul>
+              <section class="quantity" for="quantity">
+                <button onclick="decreaseItemCount()">-</button>
+                <input id="productCountInput" type="text" value = "1" style="text-align: center;">
+                <button  onclick="increaseItemCount()">+</button>
+              </section>
+              <button class="purchaseBtn"><i class="fa-solid fa-cart-shopping"></i>Худалдан авах</button>
+        </article>
+      </section> 
+      `
+    })  
 })
 
-
-getProductInfoByName = function(productName) {
-    return productList.find(function(product) {
+getProductInfoByName = function( list ,productName) {
+    return list.find(function(product) {
         if(product.name === productName) {
             return product;
         }
@@ -108,6 +111,8 @@ decreaseItemCount = function() {
     }
     document.getElementById("productCountInput").value = count;
 }
+
+
 
 const productList = [
     {   
