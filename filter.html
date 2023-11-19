@@ -51,6 +51,7 @@
         <li style="border-bottom: 2px solid #00171f;"><a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a></li>
       </ul>
     </nav>
+
     <main style="display: flex;">  
     <section class="main-nav">
       <ul id="categoryList">
@@ -64,19 +65,36 @@
         <li>Adventure</li>
         <li>Fantasy</li>
         <li>Comedy</li>
-        <li>Magic</li>
         <li>Shonen</li>
       </ul>
     </section>
-    <section class="main-section">
-      <article class="filterTitle">
-        <h3 class="main">Шүүж гарсан анимууд</h3>
-        <input type="text" id="filteredType" disabled>
+    <section class="containerMainSection" style="width: 85%;"> 
+      <article class="animeSelectionContainer">
+        <p>Шүүлтүүр</p>
+        <select name="animes" id="animeSelection">
+          <option value="Drama">Drama</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Romance">Romance</option>
+          <option value="Action">Action</option>
+          <option value="Superpower">Superpower</option>
+          <option value="School">School</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Shonen">Shonen</option>
+          <option value="Space">Adventure</option>
+        </select>
       </article>
-      <ul id="filteredAnimeList"></ul>
+      <section class="main-section">
+        <article class="filterTitle">
+          <h3 class="main">Шүүж гарсан анимууд</h3>
+          <input type="text" id="filteredType" disabled>
+        </article>
+        <ul id="filteredAnimeList"></ul>
+      </section>
     </section>
-    
     </main>
+
     <footer>
       <section class="footer1">
         <a href="index.html">
@@ -153,9 +171,9 @@
   }
 
   .main-section {
-    width: 85%;
+    width: 100%;
     & .filterTitle {
-      padding-top: 96px;
+      margin-top: 120px;
       display: flex;
       justify-content: center;
       justify-content: center;
@@ -232,6 +250,7 @@
 
   #filteredAnimeList {
     display: flex;
+    min-height: 70vh;
     flex-wrap: wrap;
     margin: 0px 48px;
     & li {
@@ -246,6 +265,52 @@
     }
   }
   
+
+  .animeSelectionContainer {
+    margin-top: 100px;
+    padding-bottom: 16px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    & #animeSelection {
+      height: 30px;
+      width: 150px;
+      border-radius: 20px;
+      padding: 4px;
+      margin-left: 36px;
+    }
+    & p {
+      margin-left: 36px ;
+      font-size: 20px;
+    }
+  }
+
+
+  @media (max-width :960px) {
+    .containerMainSection {
+      width: 100% !important;
+    }
+    .filterTitle {
+      margin-top: 0px !important;
+    }
+    .animeSelectionContainer {
+      display: flex;
+    }
+    .main-nav {
+      display: none;
+    }
+    .filterTitle {
+      flex-direction: column;
+      & h3 {
+        font-size: 16px !important;
+      }
+      & input {
+        margin-top: 24px !important;
+        max-width: 240px;
+        min-width: 150px;
+      }
+    }
+  }
 </style>
 
 <script src="filter.js"></script>
