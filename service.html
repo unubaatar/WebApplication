@@ -20,11 +20,20 @@
   <body>
     <header>
       <div class="rightMenu">
-        <i class="fa-solid fa-bars sidebarActivator" id="activator" onclick="appearSideBarView()"></i>
+        <i
+          class="fa-solid fa-bars sidebarActivator"
+          id="activator"
+          onclick="appearSideBarView()"
+        ></i>
         <h3>
-          <a href="index.html"><img src="https://i.ibb.co/hD8WWBT/logo-no-bck.png" alt="logo" style="width: 100px; height: 68px;"></a>
+          <a href="index.html"
+            ><img
+              src="https://i.ibb.co/hD8WWBT/logo-no-bck.png"
+              alt="logo"
+              style="width: 100px; height: 68px"
+          /></a>
         </h3>
-        <input type="text" aria-label="Search" placeholder="Search..."/>
+        <input type="text" aria-label="Search" placeholder="Search..." />
         <i class="fa-solid fa-magnifying-glass" style="color: #6d6b6b"></i>
       </div>
       <div class="leftMenu">
@@ -35,7 +44,7 @@
             <li><a href="service.html">Service</a></li>
           </ul>
         </nav>
-        <nav class="btns">          
+        <nav class="btns">
           <a href="login.html">Login</a>
           <a href="signup.html">Sign Up</a>
         </nav>
@@ -43,18 +52,176 @@
     </header>
     <nav class="sidebar" id="sidebarId">
       <ul>
-        <i class="fa-solid fa-xmark sidebarActivator" id="remover" onclick="hideSideBarView()"></i>
-        <li><a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a></li>
-        <li><a href="shopping.html"><i class="fa-solid fa-cart-shopping"></i>Shopping</a></li>
-        <li><a href="service.html"><i class="fa-regular fa-credit-card"></i>Service</a></li>
-        <li><a href="login.html"><i class="fa-solid fa-user"></i>Login</a></li>
-        <li style="border-bottom: 2px solid #00171f;"><a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a></li>
+        <i
+          class="fa-solid fa-xmark sidebarActivator"
+          id="remover"
+          onclick="hideSideBarView()"
+        ></i>
+        <li>
+          <a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a>
+        </li>
+        <li>
+          <a href="shopping.html"
+            ><i class="fa-solid fa-cart-shopping"></i>Shopping</a
+          >
+        </li>
+        <li>
+          <a href="service.html"
+            ><i class="fa-regular fa-credit-card"></i>Service</a
+          >
+        </li>
+        <li>
+          <a href="login.html"><i class="fa-solid fa-user"></i>Login</a>
+        </li>
+        <li style="border-bottom: 2px solid #00171f">
+          <a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
+        </li>
       </ul>
     </nav>
 
     <main>
       <!--Үзүүлэх үйлчилгээ-->
-      
+
+      <section class="overlayInfo" id="overlayInfo1"  onclick="closeSelectServiceVariant1()">
+        <div class="overlayContainer">
+          <section class="overlayContent">
+            <h3>1 сарын Animuk багц</h3>
+            <p class="price">Багц худалдан авах үнэ: 6900₮</p>
+            <div class="overlayBody">
+              <ul class="overlayList">
+                <li>Бүх төрлийн аниме үзэх эрх</li>
+                <li>Худалдан авалт хийх эрх</li>
+                <li>Хэрэглэгчийн буланд нэгдэх</li>
+                <li>Мэдээлэл цаг алдалгүй авах</li>
+              </ul>
+              <article>
+                <img
+                  class="qrCode"
+                  src="https://i.ibb.co/JFq7zKh/qrTest.png"
+                  alt=""
+                />
+              </article>
+            </div>
+            <article class="transactionDesc">
+              5926252543 Б.Өнөбаатар хаан банк дансанд гүйлгээний утга дээр
+              нэвтрэх нэрээ оруулан шилжүүлснээр эрх баталгаажна.
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="overlayInfo" id="overlayInfo2"  onclick="closeSelectServiceVariant2()">
+        <div class="overlayContainer">
+          <section class="overlayContent">
+            <h3>3 сарын Animuk багц</h3>
+            <p class="price">Багц худалдан авах үнэ: 12900₮</p>
+            <div class="overlayBody">
+              <ul class="overlayList">
+                <li>Бүх төрлийн аниме үзэх эрх</li>
+                <li>Худалдан авалт хийх эрх</li>
+                <li>Хэрэглэгчийн буланд нэгдэх</li>
+                <li>Мэдээлэл цаг алдалгүй авах</li>
+              </ul>
+              <article>
+                <img
+                  class="qrCode"
+                  src="https://i.ibb.co/JFq7zKh/qrTest.png"
+                  alt=""
+                />
+              </article>
+            </div>
+            <article class="transactionDesc">
+              5926252543 Б.Өнөбаатар хаан банк дансанд гүйлгээний утга дээр
+              нэвтрэх нэрээ оруулан шилжүүлснээр эрх баталгаажна.
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="overlayInfo" id="overlayInfo3"  onclick="closeSelectServiceVariant3()">
+        <div class="overlayContainer">
+          <section class="overlayContent">
+            <h3>6 сарын Animuk багц</h3>
+            <p class="price">Багц худалдан авах үнэ: 19900₮</p>
+            <div class="overlayBody">
+              <ul class="overlayList">
+                <li>Бүх төрлийн аниме үзэх эрх</li>
+                <li>Худалдан авалт хийх эрх</li>
+                <li>Хэрэглэгчийн буланд нэгдэх</li>
+                <li>Мэдээлэл цаг алдалгүй авах</li>
+              </ul>
+              <article>
+                <img
+                  class="qrCode"
+                  src="https://i.ibb.co/JFq7zKh/qrTest.png"
+                  alt=""
+                />
+              </article>
+            </div>
+            <article class="transactionDesc">
+              5926252543 Б.Өнөбаатар хаан банк дансанд гүйлгээний утга дээр
+              нэвтрэх нэрээ оруулан шилжүүлснээр эрх баталгаажна.
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="overlayInfo" id="overlayInfo4"  onclick="closeSelectServiceVariant4()">
+        <div class="overlayContainer">
+          <section class="overlayContent">
+            <h3>1 жилийн Animuk багц</h3>
+            <p class="price">Багц худалдан авах үнэ: 29900₮</p>
+            <div class="overlayBody">
+              <ul class="overlayList">
+                <li>Бүх төрлийн аниме үзэх эрх</li>
+                <li>Худалдан авалт хийх эрх</li>
+                <li>Хэрэглэгчийн буланд нэгдэх</li>
+                <li>Мэдээлэл цаг алдалгүй авах</li>
+              </ul>
+              <article>
+                <img
+                  class="qrCode"
+                  src="https://i.ibb.co/JFq7zKh/qrTest.png"
+                  alt=""
+                />
+              </article>
+            </div>
+            <article class="transactionDesc">
+              5926252543 Б.Өнөбаатар хаан банк дансанд гүйлгээний утга дээр
+              нэвтрэх нэрээ оруулан шилжүүлснээр эрх баталгаажна.
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="overlayInfo" id="overlayInfo5" onclick="closeSelectServiceVariant5()">
+        <div class="overlayContainer">
+          <section class="overlayContent">
+            <h3>2 жилийн Animuk багц </h3>
+            <p class="price">Багц худалдан авах үнэ: 49900₮</p>
+            <div class="overlayBody">
+              <ul class="overlayList">
+                <li>Бүх төрлийн аниме үзэх эрх</li>
+                <li>Худалдан авалт хийх эрх</li>
+                <li>Хэрэглэгчийн буланд нэгдэх</li>
+                <li>Мэдээлэл цаг алдалгүй авах</li>
+              </ul>
+              <article>
+                <img
+                  class="qrCode"
+                  src="https://i.ibb.co/JFq7zKh/qrTest.png"
+                  alt=""
+                />
+              </article>
+            </div>
+            <article class="transactionDesc">
+              5926252543 Б.Өнөбаатар хаан банк дансанд гүйлгээний утга дээр
+              нэвтрэх нэрээ оруулан шилжүүлснээр эрх баталгаажна.
+            </article>
+          </section>
+        </div>
+      </section>
+
       <section class="service-info-containers">
         <article>
           <h3>Хэрэглэгчид олгож байгаа үйлчилгээ</h3>
@@ -63,8 +230,8 @@
             <li>Японы соёлын тухай мэдээ мэдээлэл авах</li>
             <li>Хүссэн анимийхаа бүтээгдэхүүн худалдан авалт хийх</li>
             <li>
-              Хэрэглэгч дуртай аниме дээрээ санал өгч, дүгнэн бусадтай үзэл бодлоо
-              солилцох боломж
+              Хэрэглэгч дуртай аниме дээрээ санал өгч, дүгнэн бусадтай үзэл
+              бодлоо солилцох боломж
             </li>
           </ul>
         </article>
@@ -75,29 +242,29 @@
         <h3>Багцууд</h3>
         <div class="bagts-container">
           <article>
-            <p>12 сар</p>
+            <p>1 сар</p>
             <img src="https://i.ibb.co/wp7n7RX/manga3.jpg" alt="Service" />
-            <button>Багц авах</button>
+            <button onclick="openSelectServiceVariant1()">Багц авах</button>
           </article>
           <article>
-            <p>12 сар</p>
+            <p>3 сар</p>
             <img src="https://i.ibb.co/CwHPpGD/manga5.jpg" alt="Service" />
-            <button>Багц авах</button>
+            <button onclick="openSelectServiceVariant2()">Багц авах</button>
           </article>
           <article>
-            <p>12 сар</p>
+            <p>6 сар</p>
             <img src="https://i.ibb.co/hKxjRDv/login6.jpg" alt="Service" />
-            <button>Багц авах</button>
+            <button onclick="openSelectServiceVariant3()">Багц авах</button>
           </article>
           <article>
-            <p>12 сар</p>
+            <p>1 жил</p>
             <img src="https://i.ibb.co/tLJ0jSh/manga1.jpg" alt="Service" />
-            <button>Багц авах</button>
+            <button onclick="openSelectServiceVariant4()">Багц авах</button>
           </article>
           <article>
-            <p>12 сар</p>
+            <p>2 жил</p>
             <img src="https://i.ibb.co/Gk8r4bp/manga2.jpg" alt="Service" />
-            <button>Багц авах</button>
+            <button onclick="openSelectServiceVariant5()">Багц авах</button>
           </article>
         </div>
       </section>
@@ -110,11 +277,10 @@
       </section>
     </main>
 
-
     <footer>
       <section class="footer1">
         <a href="index.html">
-          <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff"></i>
         </a>
         <em>ANIMUK.MN</em>
       </section>
@@ -130,11 +296,11 @@
           <ul>
             <li>Холбогдох дугаар: 88443062</li>
             <li>
-              <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+              <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
               <a href="#">animuk</a>
             </li>
             <li>
-              <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+              <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
               <a href="#">animuk</a>
             </li>
           </ul>
@@ -183,10 +349,9 @@
     }
   }
 
-
   .bagts-container {
     & article {
-      position: relative; 
+      position: relative;
       & button {
         position: absolute;
         bottom: 8%;
@@ -218,7 +383,7 @@
         border-radius: 16px;
         color: white;
       }
-    } 
+    }
   }
 
   .recommendation {
@@ -234,7 +399,7 @@
       padding: 8px;
       font-size: 20px;
       background-color: #ffd977;
-      color: #18404E;
+      color: #18404e;
       border: none;
       border-radius: 10px;
       width: 200px;
@@ -243,32 +408,81 @@
       cursor: pointer;
     }
   }
+  .service-info-containers article {
+    & h3 {
+      font-size: 24px;
+    }
+    & ul {
+      padding: 0px 16px;
+      & li {
+        padding: 4px;
+      }
+    }
+  }
 
-  @media (max-width: 840px) {
-    .bagts-container {
+  .overlayInfo {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+    & .overlayContainer {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      background-color: rgba(0,0,0,0.5);
+      & .overlayContent {
+        background-color: #00171f;
+        height: 50%;
+        width: 60%;
+        border-radius: 36px;
+        & h3 {
+          color: white;
+        }
+        & .price {
+          color: white;
+          text-align: center;
+          margin-bottom: 8px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .overlayBody {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & .qrCode {
+      object-fit: contain;
+      width: 200px;
+    }
+    & .overlayList {
+      font-size: 20px;
+      color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; 
-      & article {
-        margin: 16px;
-        & img {
-          height: 320px !important;
-          width: 220px !important;
-        }
+      align-items: start;
+      & li {
+        margin: 8px 0px;
+        list-style: none;
       }
     }
-    .service-info-containers article {
-      & h3 {
-        font-size: 24px;
-      }
-      & ul {
-        padding: 0px 16px;
-        & li {
-          padding: 4px;
-        }
-      }
-    }
+  }
+
+  .transactionDesc {
+    font-size: 18px;
+    color: white;
+    margin: 0px 64px;
+    margin-top: 24px !important;
+    padding: 16px;
+    border: 2px solid #6d6b6b;
+    border-radius: 16px;
   }
 
   @media (min-width: 840px) and (max-width: 1080px) {
@@ -279,4 +493,89 @@
       }
     }
   }
+
+  @media (max-width: 840px) {
+    .bagts-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & article {
+        margin: 16px;
+        & img {
+          height: 320px !important;
+          width: 220px !important;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1200px) {
+    .overlayContent {
+      width: 80% !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .overlayContent {
+      width: 80% !important;
+      height: 60% !important;
+      & .price{
+        font-size: 16px !important;
+      }
+      & h3 {
+        font-size: 20px;
+      }
+      & .overlayBody {
+        & .overlayList {
+          display: none;
+        }
+      }
+      & .transactionDesc {
+        font-size: 16px;
+      }
+    }
+  }
 </style>
+
+<script>
+  openSelectServiceVariant1 = function () {
+    document.getElementById("overlayInfo1").style.display = "block";
+  };
+
+  closeSelectServiceVariant1 = function () {
+    document.getElementById("overlayInfo1").style.display = "none";
+  };
+
+  openSelectServiceVariant2 = function () {
+    document.getElementById("overlayInfo2").style.display = "block";
+  };
+
+  closeSelectServiceVariant2 = function () {
+    document.getElementById("overlayInfo2").style.display = "none";
+  };
+
+  openSelectServiceVariant3 = function () {
+    document.getElementById("overlayInfo3").style.display = "block";
+  };
+
+  closeSelectServiceVariant3 = function () {
+    document.getElementById("overlayInfo3").style.display = "none";
+  };
+
+  openSelectServiceVariant4 = function () {
+    document.getElementById("overlayInfo4").style.display = "block";
+  };
+
+  closeSelectServiceVariant4 = function () {
+    document.getElementById("overlayInfo4").style.display = "none";
+  };
+
+  openSelectServiceVariant5 = function () {
+    document.getElementById("overlayInfo5").style.display = "block";
+  };
+
+  closeSelectServiceVariant5 = function () {
+    document.getElementById("overlayInfo5").style.display = "none";
+  };
+</script>
