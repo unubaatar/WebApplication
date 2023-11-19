@@ -262,6 +262,52 @@ animeList = [
   }
 ]
 
+const carousels = [
+  {
+  source: "https://i.ibb.co/8bYT85P/j-test.png",
+  description: "J-TEST шалгалтын тов гарлаа. "
+  },
+  {
+    source: "https://i.ibb.co/yhwdfRt/monboshu.png",
+    description: "Монбошү тэтгэлгт бүртгүүлэгчидийн анхааралд."
+  },
+  {
+      source: "https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png",
+      description: "Монгол япон соёлын өдөрлөг болно."
+  },
+] 
+
+changeCarouselImageRight = function() {
+  let nowImage = document.getElementById("carouselImage").src;
+  for(let i = 0 ; i < carousels.length ; i++) {
+    if(nowImage === carousels[i].source && i !== carousels.length -1) {
+      document.getElementById("carouselImage").src = carousels[i+1].source
+      document.getElementById("carouselDescription").innerText = carousels[i+1].description;
+      break;
+    } else if(nowImage === carousels[i].source &&  i === carousels.length -1) {
+      document.getElementById("carouselImage").src = carousels[0].source;
+      document.getElementById("carouselDescription").innerText = carousels[0].description;
+      break;
+    }
+  }
+}
+
+changeCarouselImageLeft = function() {
+  let nowImage = document.getElementById("carouselImage").src;
+  for(let i = 0 ; i < carousels.length ; i++) {
+    if(nowImage === carousels[i].source && i !== 0) {
+      document.getElementById("carouselImage").src = carousels[i-1].source
+      document.getElementById("carouselDescription").innerText = carousels[i-1].description;
+      break;
+    } else if(nowImage === carousels[i].source &&  i === 0) {
+      document.getElementById("carouselImage").src = carousels[carousels.length-1].source
+      document.getElementById("carouselDescription").innerText = carousels[carousels.length-1].description;
+      break;
+    }
+  }
+}
+
+
 
 class Anime {
   constructor(animeListItem) {

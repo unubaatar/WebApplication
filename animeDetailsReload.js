@@ -4,7 +4,6 @@ const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const animeName = urlParams.get("name");
-
     fetch(apiUrl).then(response => response.json()).then(data=> {
         let animes = data.record;
         console.log(animes);
@@ -67,9 +66,9 @@ function getAnimeById(animeName , list) {
 }
 
 function moveToShoppingPage() {
-    let nowUrl = window.location.href;
-    let newUrl = nowUrl.replace("animeDetails.html" , "shopping.html");
-    window.location.href = newUrl;
+  const nowUrl =new URL(window.location.href);
+  let newUrl = nowUrl.origin;
+  window.location.href = newUrl + "/shopping.html";
 }
 
 

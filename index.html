@@ -93,11 +93,17 @@
 
     <article class="content-info">
       <article>
-        <img
+        <div style="align-items: center; display: flex;">
+          <i class="fa-solid fa-chevron-left" id="leftClick" style="margin-right: 16px; font-size: 48px; cursor: pointer;" onclick="changeCarouselImageLeft()"></i>
+          <img
+          id="carouselImage"
           src="https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png"
           alt=""
         />
-        <p>Saturday, August 5, 2023 at 12pm - 8pm</p>
+        <i class="fa-solid fa-chevron-right" id="rightClick" style="margin-left: 16px; font-size: 48px; cursor: pointer;" onclick="changeCarouselImageRight()"></i>
+        </div>
+
+        <p id="carouselDescription">Saturday, August 5, 2023 at 12pm - 8pm</p>
       </article>
       <section class="user-status">
         <p>User status</p>
@@ -191,6 +197,8 @@
     & img {
       border-radius: 1rem;
       margin-bottom: 32px;
+      width: 600px;
+      height: 250px;
     }
     & p {
       text-align: center;
@@ -359,6 +367,8 @@
     }
   }
 </style>
+
+
 
 <script>
   const app1 = new App("malRank");
