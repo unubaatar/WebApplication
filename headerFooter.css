@@ -276,6 +276,9 @@
     border-radius: 6px;
   }
 
+  i{
+    margin-right: 8px;
+  }
 
   @media  (max-width: 600px) {
     footer {
