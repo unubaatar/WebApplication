@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
 :root {
   --main-color: white;
   --main-bg-color:  #042834;
@@ -75,7 +77,7 @@
 
   /* search box */
 
-  @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
 
   /* .search__container {
       padding-top: 64px;

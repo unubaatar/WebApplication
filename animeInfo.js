@@ -1,6 +1,6 @@
 // const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
-const apiUrl = "https://api.jsonbin.io/v3/b/655d6c2b0574da7622ca003f" 
-
+//const apiUrl = "https://api.jsonbin.io/v3/b/655d6c2b0574da7622ca003f" 
+const apiUrl = "https://api.jsonbin.io/v3/b/655d82ba54105e766fd367c6"
 animeList = [
   {
     "name": "Bleach",
@@ -290,7 +290,7 @@ const carousels = [
     description: "Монбошү тэтгэлгт бүртгүүлэгчидийн анхааралд."
   },
   {
-      source: "https://www.yolo.mn/img/content_image/cover_image/040820231691143972_1458689631.png",
+      source: "https://i.ibb.co/sHGpqYf/040820231691143972-1458689631.webp",
       description: "Монгол япон соёлын өдөрлөг болно."
   },
 ] 
