@@ -39,14 +39,14 @@
       <div class="leftMenu">
         <nav class="menu">
           <ul>
-            <li><a href="filter.html">Anime list</a></li>
-            <li><a href="shopping.html">Shopping</a></li>
-            <li><a href="service.html">Service</a></li>
+            <li><a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a></li>
+            <li><a href="shopping.html"><i class="fa-solid fa-cart-shopping"></i>Shopping</a></li>
+            <li><a href="service.html"><i class="fa-regular fa-credit-card"></i>Service</a></li>
           </ul>
         </nav>
         <nav class="btns">
-          <a href="login.html">Login</a>
-          <a href="signup.html">Sign Up</a>
+          <a href="login.html"><i class="fa-solid fa-user"></i>Login</a>
+          <a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
         </nav>
       </div>
     </header>
@@ -279,10 +279,7 @@
 
     <footer>
       <section class="footer1">
-        <a href="index.html">
-          <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff"></i>
-        </a>
-        <em>ANIMUK.MN</em>
+        <a href="index.html"><img src="https://i.ibb.co/hD8WWBT/logo-no-bck.png" alt="logo"></a>
       </section>
       <section class="footer2">
         <h4>Дэлхийн шилдэг анимуудыг танд хүргэнэ</h4>
@@ -319,12 +316,13 @@
       font-style: italic;
       text-align: center;
       padding: 20px 0px;
-      font-size: 32px;
+      font-size: 24px;
     }
     & .service-info-containers {
       display: flex;
       justify-content: center;
       padding-top: 80px;
+      margin-bottom: 2rem;
       & ul li {
         list-style: none;
         margin-bottom: 4px;
@@ -334,10 +332,6 @@
   }
 
   .bagts {
-    & h3 {
-      text-align: center;
-      font-size: 36px;
-    }
     & .bagts-container {
       display: flex;
       justify-content: space-around;
@@ -345,6 +339,7 @@
       & img {
         width: 200px;
         height: 260px;
+        border-radius: 16px;
       }
     }
   }
@@ -356,7 +351,7 @@
         position: absolute;
         bottom: 8%;
         left: 20%;
-        width: 60%;
+        width: 70%;
         height: 40px;
         background-color: white;
         border: 2px solid purple;
@@ -397,12 +392,13 @@
     }
     & button {
       padding: 8px;
+      height: 50px;
+      width: 200px;
       font-size: 20px;
       background-color: #ffd977;
-      color: #18404e;
+      color: #040d25;
       border: none;
-      border-radius: 10px;
-      width: 200px;
+      border-radius: 20px;
       max-width: 200px;
       min-width: 100px;
       cursor: pointer;
@@ -424,7 +420,7 @@
     position: fixed;
     display: none;
     width: 100%;
-    height: 100%;
+    height: 900px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     cursor: pointer;

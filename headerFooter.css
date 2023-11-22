@@ -170,6 +170,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    & img {
+      width: 220px;
+      height: 160px;
+    }
   }
 
   .footer2 {
@@ -272,6 +276,9 @@
     border-radius: 6px;
   }
 
+  i{
+    margin-right: 8px;
+  }
 
   @media  (max-width: 600px) {
     footer {
@@ -283,6 +290,10 @@
     .footer1 {
       font-size: 0.5rem;
       margin-left: 0rem;
+      & img {
+        width: 150px;
+        height: 110px;
+      }
     }
     .footer2 {
       font-size: 0.6rem;
@@ -327,7 +338,12 @@
         width: 120px;
       }
     }
+    .footer1 img {
+      width: 160px;
+      height: 110px;
+    }
   }
+
 
   @media (min-width: 960px) {
     #activator {
