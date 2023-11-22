@@ -1,4 +1,4 @@
-const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
+const apiUrl = "https://api.jsonbin.io/v3/b/655d6c2b0574da7622ca003f"
 
 // const animeList = [
 //   {
@@ -187,6 +187,7 @@ class Anime {
     this.animeImg = animeListItem.animeImg;
     this.malRank = animeListItem.malRank;
     this.category = animeListItem.category;
+    this.id = animeListItem.id;
   }
 
   getCatogeries = function () {
@@ -215,7 +216,7 @@ class Anime {
                 <p><strong>Ангийн тоо: </strong>${this.totalEpisode}</p>
                 <p><strong>Төрөл: <br></strong>${this.getCatogeries()}</p>
               </div>
-              <button class="anime-card-button" onclick= "moveToAnimeDetailPage('${this.name}')" >Дэлгэрэнгүй</button>
+              <button class="anime-card-button" onclick= "moveToAnimeDetailPage('${this.id}')" >Дэлгэрэнгүй</button>
             </div>
           </div>
         </li>
@@ -271,14 +272,10 @@ document.getElementById("animeSelection").addEventListener("change" , (event) =>
 })
 
 // enuuger anime iin delgerengu page iihe dataga url aar damjulad avn deer render dree onclick der ni zaagd ugcin
-moveToAnimeDetailPage = function(name) {
+moveToAnimeDetailPage = function(id) {
   console.log("hello");
   let currentURL = window.location.href;
   let newUrl = currentURL.replace("filter.html" , "animeDetails.html");
-  newUrl += `?name=${name}`
+  newUrl += `?id=${id}`
   window.location.href = newUrl;
 }
-
-
-
-

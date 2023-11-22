@@ -1,5 +1,5 @@
-// const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
 const apiUrl = "https://api.jsonbin.io/v3/b/655d6c2b0574da7622ca003f"
+
 // ene functionoor page ee shinechlene parameteree huleej avaad info haruulas section doo bicsn htmlee renderlesen 
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
