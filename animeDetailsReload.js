@@ -1,13 +1,13 @@
-const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
-
+// const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
+const apiUrl = "https://api.jsonbin.io/v3/b/655d6c2b0574da7622ca003f"
 // ene functionoor page ee shinechlene parameteree huleej avaad info haruulas section doo bicsn htmlee renderlesen 
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
-    const animeName = urlParams.get("name");
+    const animeId = urlParams.get("id");
     fetch(apiUrl).then(response => response.json()).then(data=> {
         let animes = data.record;
         console.log(animes);
-        const animeDetails = getAnimeById(animeName, animes);
+        const animeDetails = getAnimeById(animeId, animes);
         const animeInfoSection = document.getElementById("renderAnimeInfo");
         animeInfoSection.innerHTML = `
         <section class="animeInfo" id="renderAnimeInfo">
@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // enuuugeer jsonoo oosoo anime name r ni anime infogo avsan 
-function getAnimeById(animeName , list) {
-    return list.find(anime => anime.name == animeName);
+function getAnimeById(animeId , list) {
+    return list.find(anime => anime.id == animeId);
 }
 
 function moveToShoppingPage() {
