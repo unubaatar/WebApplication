@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const animeId = urlParams.get("id");
     fetch(apiUrl).then(response => response.json()).then(data=> {
         let animes = data.record;
-        console.log(animes);
         const animeDetails = getAnimeById(animeId, animes);
         const animeInfoSection = document.getElementById("renderAnimeInfo");
         animeInfoSection.innerHTML = `
