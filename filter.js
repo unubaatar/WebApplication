@@ -69,7 +69,7 @@ document.getElementById("animeSelection").addEventListener("change" , (event) =>
   const categoryType = event.target.value;
   const nowUrl = new URL(window.location.href);
   let newUrl = nowUrl.origin; 
-  newUrl += `/filter.html?category=${categoryType}`;
+  newUrl += `${nowUrl.pathname}?category=${categoryType}`;
   window.location.href = newUrl;
 })
 
