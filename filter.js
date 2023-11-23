@@ -7,6 +7,7 @@
 // haliunaa
 const apiUrl = "https://api.jsonbin.io/v3/b/655d82ba54105e766fd367c6"
 
+
 class Anime {
   constructor(animeListItem) {
     this.name = animeListItem.name;
@@ -59,7 +60,7 @@ for(let list of listCatogeries) {
     let categoryType = event.target.textContent
     const nowUrl = new URL(window.location.href);
     let newUrl = nowUrl.origin; 
-    newUrl += `/filter.html?category=${categoryType}`;
+    newUrl += `${nowUrl.pathname}?category=${categoryType}`;
     window.location.href = newUrl;
   })
 }
@@ -79,7 +80,6 @@ document.addEventListener("DOMContentLoaded" , async() => {
     let listOfAnime = await data.record;
     let urlParams = new URLSearchParams(window.location.search);
     let categoryType = urlParams.get("category");
-    console.log(categoryType);
     document.getElementById("filteredType").value = categoryType;
     let target = document.getElementById("filteredAnimeList");
     let selectedAnimes = listOfAnime.filter((anime) => anime.category.includes(categoryType));
@@ -93,8 +93,7 @@ document.addEventListener("DOMContentLoaded" , async() => {
 moveToAnimeDetailPage = function(id) {
   let nowUrl = new URL(window.location.href);
   let newUrl = nowUrl.origin;
-  console.log(id)
-  newUrl += `/animeDetails.html?id=${id}`
+  newUrl += `${nowUrl.pathname}.html?id=${id}`
   window.location.href = newUrl;
 }
 

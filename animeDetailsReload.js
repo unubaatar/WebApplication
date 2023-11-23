@@ -73,8 +73,10 @@ function getAnimeById(animeId , list) {
 
 function moveToShoppingPage() {
   const nowUrl =new URL(window.location.href);
-  let newUrl = nowUrl.origin;
-  window.location.href = newUrl + "/shopping.html";
+  nowUrl.search="";
+  let newUrl = nowUrl.href.replace("animeDetails.html" , "shopping.html")
+  console.log(newUrl);
+  window.location.href = newUrl;
 }
 
 
