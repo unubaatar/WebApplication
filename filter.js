@@ -93,8 +93,10 @@ document.addEventListener("DOMContentLoaded" , async() => {
 moveToAnimeDetailPage = function(id) {
   let nowUrl = new URL(window.location.href);
   let newUrl = nowUrl.origin;
-  newUrl += `${nowUrl.pathname}.html?id=${id}`
-  window.location.href = newUrl;
+  newUrl += nowUrl.pathname;
+  let lastUrl = newUrl.replace("filter.html", "animeDetails.html");
+  lastUrl += `?id=${id}`
+  window.location.href = lastUrl;
 }
 
 
