@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
 :root {
   --main-color: white;
   --main-bg-color:  #042834;
@@ -75,7 +77,7 @@
 
   /* search box */
 
-  @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
 
   /* .search__container {
       padding-top: 64px;
@@ -170,6 +172,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    & img {
+      width: 220px;
+      height: 160px;
+    }
   }
 
   .footer2 {
@@ -272,6 +278,9 @@
     border-radius: 6px;
   }
 
+  i{
+    margin-right: 8px;
+  }
 
   @media  (max-width: 600px) {
     footer {
@@ -283,6 +292,10 @@
     .footer1 {
       font-size: 0.5rem;
       margin-left: 0rem;
+      & img {
+        width: 150px;
+        height: 110px;
+      }
     }
     .footer2 {
       font-size: 0.6rem;
@@ -327,7 +340,12 @@
         width: 120px;
       }
     }
+    .footer1 img {
+      width: 160px;
+      height: 110px;
+    }
   }
+
 
   @media (min-width: 960px) {
     #activator {

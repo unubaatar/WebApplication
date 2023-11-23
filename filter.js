@@ -1,4 +1,6 @@
-const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
+// const apiUrl = "https://api.jsonbin.io/v3/b/654f4bb354105e766fce7c86"
+const apiUrl = "https://api.jsonbin.io/v3/b/655d82ba54105e766fd367c6"
+
 
 class Anime {
   constructor(animeListItem) {
@@ -8,6 +10,7 @@ class Anime {
     this.animeImg = animeListItem.animeImg;
     this.malRank = animeListItem.malRank;
     this.category = animeListItem.category;
+    this.id = animeListItem.id;
   }
 
   getCatogeries = function () {
@@ -36,14 +39,13 @@ class Anime {
                 <p><strong>Ангийн тоо: </strong>${this.totalEpisode}</p>
                 <p><strong>Төрөл: <br></strong>${this.getCatogeries()}</p>
               </div>
-              <button class="anime-card-button" onclick= "moveToAnimeDetailPage('${this.name}')" >Дэлгэрэнгүй</button>
+              <button class="anime-card-button" onclick= "moveToAnimeDetailPage('${this.id}')" >Дэлгэрэнгүй</button>
             </div>
           </div>
         </li>
           `;
   };
 }
-
 
 
 let listCatogeries =  document.getElementById("categoryList").getElementsByTagName('li');
@@ -82,18 +84,14 @@ document.addEventListener("DOMContentLoaded" , async() => {
     })
 })
 
-
 // enuuger anime iin delgerengu page iihe dataga url aar damjulad avn deer render dree onclick der ni zaagd ugcin
-moveToAnimeDetailPage = function(name) {
+moveToAnimeDetailPage = function(id) {
   let nowUrl = new URL(window.location.href);
   let newUrl = nowUrl.origin;
-  console.log(newUrl);
-  newUrl += `/animeDetails.html?name=${name}`
+  console.log(id)
+  newUrl += `/animeDetails.html?id=${id}`
   window.location.href = newUrl;
 }
-
-
-
 
 
 // const animeList = [
@@ -274,6 +272,7 @@ moveToAnimeDetailPage = function(name) {
 //     views: 112,
 //   },
 // ];
+
 
 // let listCatogeries =  document.getElementById("categoryList").getElementsByTagName('li');
 // for(let category of listCatogeries) {
