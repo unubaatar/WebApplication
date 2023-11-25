@@ -49,29 +49,26 @@
   <section class="contents">
     <h2>Categories</h2> 
       <p>Best sellers</p>    
-      <section id="bestSellerSection">
-        <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
-        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
-      </section>
+      <section id="bestSellerSection"></section>
       <p>Clothes</p>
       <section id="clothesSection">    
-        <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
-        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
+        <!-- <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i> -->
       </section>
       <p>Manga & Books</p>
       <section id="mangaSection">  
-          <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
-          <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
+          <!-- <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+          <i class="fa-solid fa-angle-down fa-2xl downAngle"></i> -->
       </section>
       <p>Accessories</p>
       <section id="accessoriesSection">     
-        <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
-        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
+        <!-- <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i> -->
       </section>
       <p>Figures</p>
       <section id="figuresSection">
-        <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
-        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i>
+        <!-- <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
+        <i class="fa-solid fa-angle-down fa-2xl downAngle"></i> -->
       </section>
   </section>
   <footer>
@@ -145,27 +142,62 @@
       & section {
           display: flex;
       }
-      & img {
-          border-radius: 1.5rem;
-          align-items: center;
-          max-width: 100%;
-          height: 15rem;
-          width: 12rem;
-          padding: 1.3rem;           
-          margin-left: 1.75rem;          
-      }
       & h3 {
           margin-top: 2.5rem;
           margin-left: 2.5rem;
       }
       & p {
           font-weight: 550;
-          margin-top: 1.25rem;
+          margin: 2.5rem 0 0.8rem 0;
+          font-size: large;
       }
       & i {
         margin: 6.25rem;
         color: var(--color);        
       }
+  }
+
+  .shop-card {
+    border-radius: 0.7rem;
+    text-align: center;
+    background: rgb(75, 76, 75);
+    margin: 0px 12px;
+    padding: 0.3rem;
+    width: 195px;
+    box-shadow: 0 4px 8px 0 rgba(203, 202, 202, 0.2);
+    & .shop-card-img {
+        border-radius: 1.5rem;
+        max-width: 100%;
+        height: 13rem;
+        width: 9.9rem;
+        padding: 0.8rem;                     
+    } 
+    & .shop-card-name {
+      text-align: center;
+      padding: 0 0.5rem 0.5rem 0.5rem;
+      
+    }
+    & button {
+      width: 80%;
+      height: 35px;
+      border-radius: 0.6rem;
+      cursor: pointer;
+      margin: 5px;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 19px;
+      background: linear-gradient(45deg, rgb(238, 131, 102), #e61a3c);
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+      &:hover {
+        background-color: #333; 
+        color: #fff; 
+      }
+    }
+    &:hover {
+      background: linear-gradient(45deg, rgb(176, 161, 156), #eeeaeb);
+    }
   }
 
   .downAngle {

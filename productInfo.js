@@ -11,8 +11,12 @@ class Product {
     }
     render = function() {
         return `
-        <article>
-            <img src="${this.img}" onclick="moveToItemDetails('${this.name}')">
+        <article class="shop-card">
+            <img src="${this.img}" class="shop-card-img" onclick="moveToItemDetails('${this.name}')">
+            <h4 class="shop-card-name">${this.name}</h4>
+            <h4>${this.price}₮</h4>
+            <button class="shop-card-shopping"><i class="fa-solid fa-cart-shopping" style="color:black;"></i></button>
+            <button class="shop-card-like"><i class="fa-solid fa-heart" style="color: #141415;"></i></button>
         </article>
         `
     }
