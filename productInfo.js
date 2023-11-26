@@ -1,4 +1,4 @@
-const apiProductUrl = "https://api.jsonbin.io/v3/b/6554eaff12a5d3765999df9e"
+const apiProductUrl = "https://api.jsonbin.io/v3/b/65634e6812a5d376599f1a7e"
  
 
 class Product {
