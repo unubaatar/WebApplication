@@ -15,13 +15,12 @@ class Product {
             <img src="${this.img}" class="shop-card-img" onclick="moveToItemDetails('${this.name}')">
             <h4 class="shop-card-name">${this.name}</h4>
             <h4>${this.price}₮</h4>
-            <button class="shop-card-shopping"><i class="fa-solid fa-cart-shopping" style="color:black;"></i></button>
+            <button onclick="clickedButton()" class="shop-card-shopping"><i class="fa-solid fa-cart-shopping" style="color:black;"></i></button>
             <button class="shop-card-like"><i class="fa-solid fa-heart" style="color: #141415;"></i></button>
         </article>
         `
     }
 }
-
 
 class App {
     constructor(target) {
@@ -42,6 +41,11 @@ class App {
 
     }
 }
+
+function clickedButton() {
+    console.log("clicked");
+}
+
 
 moveToItemDetails = function(name) {
     const nowUrl = window.location.href;
