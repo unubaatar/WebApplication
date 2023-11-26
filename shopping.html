@@ -6,50 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Anime" />
   <meta name="keywords" content="animuk.mn, animuk, Animuk.mn, Animuk">
+  <script type="module" src="./components/header.js"></script>
   <link rel="stylesheet" href="headerFooter.css">
+  <script type="module" src="./components/footer.js"></script>
+  <script type="module" src="./components/productCard.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Animuk.mn</title>
 </head>
 
 <body>
-  <header>
-    <div class="rightMenu">
-      <i class="fa-solid fa-bars sidebarActivator" id="activator" onclick="appearSideBarView()"></i>
-      <h3>
-        <a href="index.html"><img src="https://i.ibb.co/hD8WWBT/logo-no-bck.png" alt="logo" style="width: 100px; height: 68px;"></a>
-      </h3>
-      <input type="text" aria-label="Search" placeholder="Search..."/>
-        <i class="fa-solid fa-magnifying-glass" style="color: #6d6b6b"></i>
-    </div>
-    <div class="leftMenu">
-      <nav class="menu">
-        <ul>
-          <li><a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a></li>
-          <li><a href="shopping.html"><i class="fa-solid fa-cart-shopping"></i>Shopping</a></li>
-          <li><a href="service.html"><i class="fa-regular fa-credit-card"></i>Service</a></li>
-        </ul>
-      </nav>
-      <nav class="btns">          
-        <a href="login.html"><i class="fa-solid fa-user"></i>Login</a>
-        <a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
-      </nav>
-    </div>
-  </header>
-  <nav class="sidebar" id="sidebarId">
-    <ul>
-      <i class="fa-solid fa-xmark sidebarActivator" id="remover" onclick="hideSideBarView()"></i>
-      <li><a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a></li>
-      <li><a href="shopping.html"><i class="fa-solid fa-cart-shopping"></i>Shopping</a></li>
-      <li><a href="service.html"><i class="fa-regular fa-credit-card"></i>Service</a></li>
-      <li><a href="login.html"><i class="fa-solid fa-user"></i>Login</a></li>
-      <li style="border-bottom: 2px solid #00171f;"><a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a></li>
-    </ul>
-  </nav>
-
+  <header-section></header-section>
   <section class="contents">
     <h2>Categories</h2> 
-      <p>Best sellers</p>    
-      <section id="bestSellerSection"></section>
+      <!-- <p>Best sellers</p>    
+      <section id="bestSellerSection"></section> -->
       <p>Clothes</p>
       <section id="clothesSection">    
         <!-- <i class="fa-solid fa-angle-right fa-2xl upAngle"></i>
@@ -71,52 +41,7 @@
         <i class="fa-solid fa-angle-down fa-2xl downAngle"></i> -->
       </section>
   </section>
-  <footer>
-    <section class="footer1">
-      <a href="index.html"><img src="https://i.ibb.co/hD8WWBT/logo-no-bck.png" alt="logo"></a>
-    </section>
-    <section class="footer2">
-      <h4>Дэлхийн шилдэг анимуудыг танд хүргэнэ</h4>
-      <br><br>
-      <p>Copyright &copy; 2023 - All right reserved by Animuk</p>
-    </section>
-    <section class="footer3">
-      <h3>Бидэнтэй холбогдох</h3><br>
-      <nav class="footerNav">
-        <ul>
-          <li>Холбогдох дугаар: 88443062</li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
-              ></path>
-            </svg>
-            <a href="#">animuk</a>
-          </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
-              ></path>
-            </svg>
-            <a href="#">animuk</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-  </footer>
+  <footer-section></footer-section>
 </body>
 </html>
 
@@ -160,44 +85,50 @@
   .shop-card {
     border-radius: 0.7rem;
     text-align: center;
-    background: rgb(75, 76, 75);
-    margin: 0px 12px;
+    background: rgb(101, 103, 125);
+    margin: 8px 12px;
     padding: 0.3rem;
     width: 195px;
     box-shadow: 0 4px 8px 0 rgba(203, 202, 202, 0.2);
+    cursor: pointer;
     & .shop-card-img {
         border-radius: 1.5rem;
-        max-width: 100%;
         height: 13rem;
-        width: 9.9rem;
+        width: 10.5rem;
         padding: 0.8rem;                     
     } 
     & .shop-card-name {
-      text-align: center;
       padding: 0 0.5rem 0.5rem 0.5rem;
-      
+      flex-wrap: wrap;
+      overflow: hidden;
+      max-width: 70%;
+      max-height: 30%;
+      width: 150px;
+      height: 40px;
+      margin-left: 20px;
     }
     & button {
-      width: 80%;
-      height: 35px;
-      border-radius: 0.6rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       cursor: pointer;
-      margin: 5px;
+      padding: 5px;
       border: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: 19px;
-      background: linear-gradient(45deg, rgb(238, 131, 102), #e61a3c);
-      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+      margin-left: 40px;
+      background: none;
       &:hover {
-        background-color: #333; 
-        color: #fff; 
+        background-color: rgb(192, 97, 38);
       }
     }
     &:hover {
       background: linear-gradient(45deg, rgb(176, 161, 156), #eeeaeb);
     }
+  }
+  .shop-card-buttons {
+    display: flex;
   }
 
   .downAngle {
@@ -230,12 +161,12 @@
   }
 </style>  
 
-<script src="productInfo.js"></script>
+<script  src="productInfo.js"></script>
 <script src="headerFooter.js"></script>
 
 <script>
-  const app1 = new App("bestSellerSection");
-  app1.init("Clothes");
+  // const app1 = new App("bestSellerSection");
+  // app1.init("Clothes");
   const app2 = new App("clothesSection");
   app2.init("Clothes");
   const app3 = new App("mangaSection");

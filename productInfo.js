@@ -1,4 +1,5 @@
 const apiProductUrl = "https://api.jsonbin.io/v3/b/6554eaff12a5d3765999df9e"
+ 
 
 class Product {
     constructor(product) {
@@ -11,17 +12,11 @@ class Product {
     }
     render = function() {
         return `
-        <article class="shop-card">
-            <img src="${this.img}" class="shop-card-img" onclick="moveToItemDetails('${this.name}')">
-            <h4 class="shop-card-name">${this.name}</h4>
-            <h4>${this.price}₮</h4>
-            <button class="shop-card-shopping"><i class="fa-solid fa-cart-shopping" style="color:black;"></i></button>
-            <button class="shop-card-like"><i class="fa-solid fa-heart" style="color: #141415;"></i></button>
-        </article>
+        <script type="module" src="./components/productCard.js"></script>
+        <product-card img="${this.img}" name="${this.name}" price="${this.price}"></product-card>
         `
     }
 }
-
 
 class App {
     constructor(target) {
@@ -42,6 +37,11 @@ class App {
 
     }
 }
+
+function clickedButton() {
+    console.log("clicked");
+}
+
 
 moveToItemDetails = function(name) {
     const nowUrl = window.location.href;

@@ -6,43 +6,13 @@
     <meta name="description" content="Anime" />
     <meta name="keyword" content="animuk.mn, animuk, Animuk.mn, Animuk" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/footer.js"></script>
     <link rel="stylesheet" href="headerFooter.css" />
     <title>Animuk.mn</title>
   </head>
   <body>
-    <header>
-      <div class="rightMenu">
-        <i class="fa-solid fa-bars sidebarActivator" id="activator" onclick="appearSideBarView()"></i>
-        <h3>
-          <a href="index.html"><img src="https://i.ibb.co/hD8WWBT/logo-no-bck.png" alt="logo" style="width: 100px; height: 68px;"></a>
-        </h3>
-        <input type="text" aria-label="Search" placeholder="Search..."/>
-        <i class="fa-solid fa-magnifying-glass" style="color: #6d6b6b"></i>
-      </div>
-      <div class="leftMenu">
-        <nav class="menu">
-          <ul>
-            <li><a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a></li>
-            <li><a href="shopping.html"><i class="fa-solid fa-cart-shopping"></i>Shopping</a></li>
-            <li><a href="service.html"><i class="fa-regular fa-credit-card"></i>Service</a></li>
-          </ul>
-        </nav>
-        <nav class="btns">          
-          <a href="login.html"><i class="fa-solid fa-user"></i>Login</a>
-          <a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
-        </nav>
-      </div>
-    </header>
-    <nav class="sidebar" id="sidebarId">
-      <ul>
-        <i class="fa-solid fa-xmark sidebarActivator" id="remover" onclick="hideSideBarView()"></i>
-        <li><a href="filter.html"><i class="fa-solid fa-bars"></i>Anime list</a></li>
-        <li><a href="shopping.html"><i class="fa-solid fa-cart-shopping"></i>Shopping</a></li>
-        <li><a href="service.html"><i class="fa-regular fa-credit-card"></i>Service</a></li>
-        <li><a href="login.html"><i class="fa-solid fa-user"></i>Login</a></li>
-        <li style="border-bottom: 2px solid #00171f;"><a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a></li>
-      </ul>
-    </nav>
+    <header-section></header-section>
     <main>
         <section class="signUpForm">
          <h3>Шинээр бүртгэл үүсгэх</h3>
@@ -83,33 +53,7 @@
         alt=""
       />
       </main>
-  <footer>
-    <section class="footer1">
-      <a href="index.html"><img src="https://i.ibb.co/hD8WWBT/logo-no-bck.png" alt="logo"></a>
-    </section>
-    <section class="footer2">
-      <h4>Дэлхийн шилдэг анимуудыг танд хүргэнэ</h4>
-      <br /><br />
-      <p>Copyright &copy; 2023 - All right reserved by Animuk</p>
-    </section>
-    <section class="footer3">
-      <h3>Бидэнтэй холбогдох</h3>
-      <br />
-      <nav class="footerNav">
-        <ul>
-          <li>Холбогдох дугаар: 88443062</li>
-          <li>
-            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
-            <a href="#">animuk</a>
-          </li>
-          <li>
-            <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
-            <a href="#">animuk</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-  </footer>
+      <footer-section></footer-section>
 </body>
 </html>
 
