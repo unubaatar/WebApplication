@@ -1,4 +1,5 @@
 const apiProductUrl = "https://api.jsonbin.io/v3/b/6554eaff12a5d3765999df9e"
+ 
 
 class Product {
     constructor(product) {
@@ -11,15 +12,8 @@ class Product {
     }
     render = function() {
         return `
-        <article class="shop-card">
-            <img src="${this.img}" class="shop-card-img" onclick="moveToItemDetails('${this.name}')">
-            <h4 class="shop-card-name">${this.name}</h4>
-            <h4>${this.price}₮</h4>
-            <article class="shop-card-buttons">
-                <button onclick="clickedButton()" class="shop-card-shopping"><i class="fa-solid fa-cart-shopping fa-xl"></i></button>
-                <button class="shop-card-like"><i class="fa-solid fa-heart fa-xl"></i></button>
-            </article>            
-        </article>
+        <script type="module" src="./components/productCard.js"></script>
+        <product-card img="${this.img}" name="${this.name}" price="${this.price}"></product-card>
         `
     }
 }

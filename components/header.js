@@ -1,10 +1,10 @@
 class HeaderSection extends HTMLElement {
     constructor() {
         super();
+        this.#render();
     }
 
     connectedCallback() {
-        this.#render();
     }
 
     #render() {
