@@ -11,7 +11,8 @@ class ProductCard extends HTMLElement {
     connectedCallback() {
         this.myRoot.querySelectorAll("button")[0].addEventListener("click", (e) => {
             e.stopPropagation();
-            console.log("add to cart");
+            const myCart = document.querySelector("cart-info");
+            myCart.addToCart(this);
         });
     }
 

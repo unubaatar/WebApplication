@@ -2,6 +2,7 @@ class CartInfo extends HTMLElement {
     constructor() {
         super();
         this.myRoot = this.attachShadow({ mode: "open" });
+        this.productList =[];
         this.#Render();
     }
 
@@ -12,28 +13,28 @@ class CartInfo extends HTMLElement {
         }) 
     }
 
+    addToCart = function(product) {
+        this.productList.push(product);
+        this.myRoot.querySelector("#totalItems").innerText = `Total Items: ${this.productList.length}`
+        let name = product.getAttribute("name")
+        let price = product.getAttribute("price")
+        let img = product.getAttribute("img")
+        const addedProduct = `<added-product name="${name}" price="${price}" count="2" img="${img}"></added-product>`
+        this.myRoot.querySelector("#productContainer").insertAdjacentHTML("beforeend" , addedProduct);
+    }
+
     #Render() {
         this.myRoot.innerHTML = `
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
         <section id="templateSectionId" class="templateSection">
             <section class="mainCart">
-                <article class="headerContainer"><h2>Sags</h2><i style="color: black;" id="closer" class="fa-solid fa-xmark fa-xl"></i></article>
-                <section>
-                    <article class="cartContainer">
-                        <img src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-                        <div class="dataContainer">
-                            <p>product name</p>
-                            <p>product price</p>
-                            <p>product amount: <em>12</em></p>
-                            <hr>
-                            <p>total</p>
-                        </div>
-                    </article>
+                <article class="headerContainer"><h2>Cart</h2><i style="color: black;" id="closer" class="fa-solid fa-xmark fa-xl"></i></article>
+                <p id="totalItems"> Total Items: ${this.productList.length}</p>
+                <section id="productContainer">
+
                 </section>
             </section>
         </section>
-
 
         <style scoped>
             * {
