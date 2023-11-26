@@ -15,8 +15,10 @@ class Product {
             <img src="${this.img}" class="shop-card-img" onclick="moveToItemDetails('${this.name}')">
             <h4 class="shop-card-name">${this.name}</h4>
             <h4>${this.price}₮</h4>
-            <button onclick="clickedButton()" class="shop-card-shopping"><i class="fa-solid fa-cart-shopping" style="color:black;"></i></button>
-            <button class="shop-card-like"><i class="fa-solid fa-heart" style="color: #141415;"></i></button>
+            <article class="shop-card-buttons">
+                <button onclick="clickedButton()" class="shop-card-shopping"><i class="fa-solid fa-cart-shopping fa-xl"></i></button>
+                <button class="shop-card-like"><i class="fa-solid fa-heart fa-xl"></i></button>
+            </article>            
         </article>
         `
     }
