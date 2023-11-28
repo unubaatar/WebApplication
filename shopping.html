@@ -20,7 +20,7 @@
   <header-section></header-section>
   <cart-info style="display: none;"></cart-info>
   <section class="contents">
-    <article class="headerSection"><h2>Categories</h2><div class="cartContainer">🛒 Таны сагс: </div> </article>
+    <article class="headerSection"><h2>Categories</h2><div class="cartContainer">🛒 Таны сагс: <div id="totalProduct">0</div></div> </article>
       <!-- <p>Best sellers</p>    
       <section id="bestSellerSection"></section> -->
       <p>Clothes</p>
@@ -143,6 +143,12 @@
       cursor: pointer;
       padding: 8px 16px;
       border-radius: 16px;
+      display: flex;
+      align-items: center; 
+      & #totalProduct {
+        margin-top: 8px;
+        margin-left: 8px;
+      }
     }
     & .cartContainer:hover {
       background-color: antiquewhite;
@@ -175,6 +181,9 @@
     const cart = document.querySelector("cart-info");
     cart.style.display = "block";
   })
+
+
+  
   // const app1 = new App("bestSellerSection");
   // app1.init("Clothes");
   const app2 = new App("clothesSection");
