@@ -10,7 +10,12 @@ class AddedProduct extends HTMLElement {
     }
 
     connectedCallback() {
-        
+        let deleteButton = this.myRoot.querySelectorAll("button");
+        deleteButton[0].addEventListener("click" , ()=> {
+            this.style.display = "none";
+            let cartInfo = document.querySelector("cart-info");
+            cartInfo.deleteItem(this);
+        })
     }
 
     #Render() {
@@ -23,7 +28,7 @@ class AddedProduct extends HTMLElement {
                     <p>product amount: <em>${this.count}</em></p>
                     <hr>
                     <p>Total: ${this.price * this.count}</p>
-                    <button class="deleteProduct">Бараа хасах</button>
+                    <button class="deleteProduct" id="asdf">Бараа хасах</button>
                 </div>
             </article>
 
