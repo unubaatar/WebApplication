@@ -12,76 +12,7 @@
                     <p>product amount: <em>12</em></p>
                     <hr>
                     <p>total</p>
-                </div>
-            </article>
-            <article class="cartContainer">
-                <img src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-                <div class="dataContainer">
-                    <p>product name</p>
-                    <p>product price</p>
-                    <p>product amount: <em>12</em></p>
-                    <hr>
-                    <p>total</p>
-                </div>
-            </article>
-            <article class="cartContainer">
-                <img src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-                <div class="dataContainer">
-                    <p>product name</p>
-                    <p>product price</p>
-                    <p>product amount: <em>12</em></p>
-                    <hr>
-                    <p>total</p>
-                </div>
-            </article>
-            <article class="cartContainer">
-                <img src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-                <div class="dataContainer">
-                    <p>product name</p>
-                    <p>product price</p>
-                    <p>product amount: <em>12</em></p>
-                    <hr>
-                    <p>total</p>
-                </div>
-            </article>
-            <article class="cartContainer">
-                <img src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-                <div class="dataContainer">
-                    <p>product name</p>
-                    <p>product price</p>
-                    <p>product amount: <em>12</em></p>
-                    <hr>
-                    <p>total</p>
-                </div>
-            </article>
-            <article class="cartContainer">
-                <img src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-                <div class="dataContainer">
-                    <p>product name</p>
-                    <p>product price</p>
-                    <p>product amount: <em>12</em></p>
-                    <hr>
-                    <p>total</p>
-                </div>
-            </article>
-            <article class="cartContainer">
-                <img src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-                <div class="dataContainer">
-                    <p>product name</p>
-                    <p>product price</p>
-                    <p>product amount: <em>12</em></p>
-                    <hr>
-                    <p>total</p>
-                </div>
-            </article>
-            <article class="cartContainer">
-                <img src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-                <div class="dataContainer">
-                    <p>product name</p>
-                    <p>product price</p>
-                    <p>product amount: <em>12</em></p>
-                    <hr>
-                    <p>total</p>
+                    <button class="deleteProduct">Бараа хасах</button>
                 </div>
             </article>
         </section>
@@ -134,7 +65,9 @@
 
     .cartContainer {
         display: flex;
+        border: 1px solid black;
         margin: 8px 0px;
+        padding: 8px;
         & img {
             width: 200px;
         }
@@ -143,6 +76,16 @@
             margin-left: 32px;
             & p {
                 margin: 16px 0px;
+            }
+            .deleteProduct {
+                padding: 8px;
+                border-radius: 8px;
+                background-color: #DB504A;
+                color: #141434;
+                font-size: 14px;
+                font-weight: bolder;
+                border: none;
+                cursor: pointer;
             }
         }
     }

@@ -23,12 +23,15 @@ class AddedProduct extends HTMLElement {
                     <p>product amount: <em>${this.count}</em></p>
                     <hr>
                     <p>Total: ${this.price * this.count}</p>
+                    <button class="deleteProduct">Бараа хасах</button>
                 </div>
             </article>
 
             <style scoped>
             .cartContainer {
                 display: flex;
+                border: 1px solid black;
+                padding: 8px;
                 margin: 32px 0px;
                 & img {
                     width: 200px;
@@ -38,6 +41,16 @@ class AddedProduct extends HTMLElement {
                     margin-left: 32px;
                     & p {
                         margin: 16px 0px;
+                    }
+                    .deleteProduct {
+                        padding: 8px;
+                        border-radius: 8px;
+                        background-color: #DB504A;
+                        color: #141434;
+                        font-size: 14px;
+                        font-weight: bolder;
+                        border: none;
+                        cursor: pointer;
                     }
                 }
             }
