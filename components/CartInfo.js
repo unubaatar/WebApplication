@@ -43,10 +43,13 @@ class CartInfo extends HTMLElement {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <section id="templateSectionId" class="templateSection">
             <section class="mainCart">
-                <article class="headerContainer"><h2>Cart</h2><i style="color: black;" id="closer" class="fa-solid fa-xmark fa-xl"></i></article>
+                <article class="headerContainer">
+                <h2>Таны сагс</h2>
+                <i style="color: black;" id="closer" class="fa-solid fa-xmark fa-lg"></i>
+                </article>
                     <article>  
-                        <div style="display: flex">Total Items: <p id="totalItems">${this.productList.length}</p></div>
-                        <div style="display: flex">Total Price: <p id="totalPrice"> 0 </p></div> 
+                        <div style="display: flex">Барааны тоо: <p id="totalItems">${this.productList.length}</p></div>
+                        <div style="display: flex">Нийт үнэ: <p id="totalPrice"> 0 </p> </div> 
                     </article>
                 <section id="productContainer">
 

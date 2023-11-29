@@ -14,7 +14,6 @@ class ProductCard extends HTMLElement {
             const myCart = document.querySelector("cart-info");
             myCart.addToCart(this);
             document.getElementById("totalProduct").innerText = myCart.productList.length;
-            window.alert("baraa sagsand amjiltaai nemegdlee");
         });
     }
 
