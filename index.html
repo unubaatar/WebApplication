@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Anime" />
     <meta name="keywords" content="animuk.mn, animuk, Animuk.mn, Animuk" />
+    <!-- font-awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -13,15 +14,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet"/>
     <!-- for header and footer of page -->
     <script type="module" src="./components/header.js"></script>
     <script type="module" src="./components/footer.js"></script>
+    
     <link rel="stylesheet" href="headerFooter.css" />
     <title>Animuk.mn</title>
   </head>
@@ -31,38 +31,38 @@
     <article class="content-info">
       <article>
         <div style="align-items: center; display: flex;">
-          <i class="fa-solid fa-chevron-left" id="leftClick" style="margin-right: 16px; font-size: 48px; cursor: pointer;" onclick="changeCarouselImageLeft()"></i>
+          <i class="fa-solid fa-chevron-left fa-2xl" id="leftClick" style="margin-right: 16px; cursor: pointer; opacity: 0.4;" onclick="changeCarouselImageLeft()"></i>
           <img
           id="carouselImage"
           src="https://i.ibb.co/sHGpqYf/040820231691143972-1458689631.webp"
           alt=""
         />
-        <i class="fa-solid fa-chevron-right" id="rightClick" style="margin-left: 16px; font-size: 48px; cursor: pointer;" onclick="changeCarouselImageRight()"></i>
+        <i class="fa-solid fa-chevron-right fa-2xl" id="rightClick" style="margin-left: 16px; cursor: pointer; opacity: 0.4;" onclick="changeCarouselImageRight()"></i>
         </div>
 
         <p id="carouselDescription">Saturday, August 5, 2023 at 12pm - 8pm</p>
       </article>
       <section class="user-status">
-        <p>User status</p>
+        <p>Таны мэдээлэл</p>
         <ul>
           <li>
-            <i class="fa-solid fa-play"></i>Үзсэн аниме тоо: <strong>10</strong>
+            <i class="fa-solid fa-play"></i>Үзсэн аниме тоо: <strong style="padding-left: 50px;">10</strong>
           </li>
           <li>
             <i class="fa-solid fa-heart"></i>Дуртай төрөл:
-            <strong>Action</strong>
+            <strong style="padding-left: 70px;">Action</strong>
           </li>
           <li>
             <i class="fa-solid fa-comment"></i>Нийт сэтгэгдлийн тоо:
-            <strong>9</strong>
+            <strong style="padding-left: 10px;">9</strong>
           </li>
           <li>
             <i class="fa-solid fa-star"></i>Дуртай аниме:
-            <strong>Bleach</strong>
+            <strong style="padding-left: 65px;">Bleach</strong>
           </li>
           <li>
             <i class="fa-solid fa-music"></i>Дуртай дууны төрөл:
-            <strong>Rock</strong>
+            <strong style="padding-left: 20px;">Rock</strong>
           </li>
         </ul>
       </section>
@@ -103,10 +103,10 @@
     align-items: center;
     flex-wrap: wrap;
     & img {
-      border-radius: 1rem;
-      margin-bottom: 32px;
-      width: 600px;
-      height: 250px;
+      border-radius: 0.3rem;
+      margin-bottom: 15px;
+      width: 550px;
+      height: 270px;
     }
     & p {
       text-align: center;
@@ -115,13 +115,12 @@
     & .user-status {
       display: flex;
       flex-direction: column;
-      text-align: left;
+      /* text-align: left; */
       & ul {
         & li {
           list-style: none;
-          margin: 28px 0px;
+          margin: 25px 0px;
           display: flex;
-          justify-content: space-between;
         }
       }
       & p {
@@ -147,7 +146,7 @@
         & img {
           height: 300px;
           width: 200px;
-          border-radius: 16px;
+          border-radius: 10px;
         }
       }
     }
@@ -169,7 +168,7 @@
     width: 200px;
     cursor: pointer;
     border: none;
-    border-radius: 16px;
+    border-radius: 10px;
   }
   .anime-card:hover {
     transform: rotateY(180deg);
@@ -191,7 +190,7 @@
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: 16px;
+    border-radius: 10px;
   }
   .anime-card-front {
     overflow: hidden;
