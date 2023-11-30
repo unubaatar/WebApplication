@@ -5,6 +5,7 @@ class ProductCard extends HTMLElement {
         this.productImage = this.getAttribute("img") ?? "https://i.ibb.co/9hLBbbc/ichigo-figure.webp";
         this.productName = this.getAttribute("name") ?? "No Data";
         this.price = this.getAttribute("price") ?? "No Data";
+        this.count = 1;
         this.#Render();
     }
 
@@ -13,7 +14,7 @@ class ProductCard extends HTMLElement {
             e.stopPropagation();
             const myCart = document.querySelector("cart-info");
             myCart.addToCart(this);
-            document.getElementById("totalProduct").innerText = myCart.productList.length;
+            document.getElementById("totalProduct").innerText = myCart.getTotalCount();
         });
     }
 

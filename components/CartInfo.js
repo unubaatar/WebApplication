@@ -11,44 +11,60 @@ class CartInfo extends HTMLElement {
         this.myRoot.querySelector("i").addEventListener("click" , () => {
             this.style.display = "none";
         }) 
-        this.myRoot.getElementById("totalItems").innerText = this.productList.length;
+        this.myRoot.getElementById("totalItems").innerText = this.getTotalCount();
         this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
     }
 
 
     addToCart = function(product) {
-        this.productList.push(product);
+        let willAdd = true;
+        for(let item of this.productList) {
+            console.log(item);
+            if(item?.productName === product?.productName) {
+                willAdd = false;
+                item.count += 1;
+                break;
+            }
+        }
+        if(willAdd) {
+            this.productList.push(product);
+        }
         localStorage.setItem("productList" , JSON.stringify(this.productList));
-        console.log(this.productList);
-        console.log(localStorage);
         this.#Render();
-        document.getElementById("totalProduct").innerText = this.productList.length;
-        this.myRoot.getElementById("totalItems").innerText = this.productList.length;
+        document.getElementById("totalProduct").innerText = this.getTotalCount();
+        this.myRoot.getElementById("totalItems").innerText = this.getTotalCount();
         this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
+        console.log(this.productList);
     }
 
     deleteItem = function(product) {
         this.productList.pop(product);
         localStorage.setItem("productList" , JSON.stringify(this.productList));
-        console.log(this.productList);
-        console.log(localStorage);
         this.#Render();
-        document.getElementById("totalProduct").innerText = this.productList.length;
-        this.myRoot.getElementById("totalItems").innerText = this.productList.length;
+        document.getElementById("totalProduct").innerText = this.getTotalCount();
+        this.myRoot.getElementById("totalItems").innerText = this.getTotalCount();
         this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
+    }
+
+    getTotalCount() {
+        let totalCount = 0;
+        for(let item of this.productList) {
+            totalCount += item.count;
+        }
+        return totalCount;
     }
 
     getTotalPrice = function() {
         let totalPrice = 0;
         for(let item of this.productList) {
-            totalPrice += parseInt(item?.price);
+            totalPrice += parseInt(item?.price) * item.count;
         }
         return totalPrice;
     }
 
     renderCartProduct = function() {
         for(let product of this.productList) {
-            const addedProduct = `<added-product name="${product?.productName}" price="${product?.price}" count="1" img="${product?.productImage}"></added-product>`
+            const addedProduct = `<added-product name="${product?.productName}" price="${product?.price}" count="${product?.count}" img="${product?.productImage}"></added-product>`
             this.myRoot.querySelector("#productContainer").insertAdjacentHTML("beforeend" , addedProduct);
         }
     }
