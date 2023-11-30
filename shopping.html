@@ -5,76 +5,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Anime" />
-  <meta name="keywords" content="animuk.mn, animuk, Animuk.mn, Animuk">
+  <meta name="keywords" content="animuk.mn, animuk, Animuk.mn, Animuk" />
   <script type="module" src="./components/header.js"></script>
-  <link rel="stylesheet" href="headerFooter.css">
+  <link rel="stylesheet" href="headerFooter.css" />
   <script type="module" src="./components/footer.js"></script>
   <script type="module" src="./components/productCard.js"></script>
   <script type="module" src="./components/CartInfo.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script type="module" src="./components/AddedProduct.js"></script>
   <title>Animuk.mn</title>
 </head>
 
 <body>
   <header-section></header-section>
-  <cart-info style="display: none;"></cart-info>
+  <cart-info style="display: none"></cart-info>
   <section class="contents">
-    <article class="headerSection"><h2>Categories</h2><div class="cartContainer">🛒 Таны сагс: <div id="totalProduct">0</div></div> </article>
-      <!-- <p>Best sellers</p>    
+    <article class="headerSection">
+      <h2>Categories</h2>
+      <div class="cartContainer">
+        🛒 Таны сагс:
+        <div id="totalProduct"></div>
+      </div>
+    </article>
+    <!-- <p>Best sellers</p>    
       <section id="bestSellerSection"></section> -->
-      <p>Clothes</p>
-      <section id="clothesSection">    
-      </section>
-      <p>Manga & Books</p>
-      <section id="mangaSection">  
-      </section>
-      <p>Accessories</p>
-      <section id="accessoriesSection">     
-      </section>
-      <p>Figures</p>
-      <section id="figuresSection">
-      </section>
+    <p>Clothes</p>
+    <section id="clothesSection"></section>
+    <p>Manga & Books</p>
+    <section id="mangaSection"></section>
+    <p>Accessories</p>
+    <section id="accessoriesSection"></section>
+    <p>Figures</p>
+    <section id="figuresSection"></section>
   </section>
   <footer-section></footer-section>
 </body>
+
 </html>
 
-  <style>
+<style>
   * {
-      margin: 0;
-      padding: 0;
+    margin: 0;
+    padding: 0;
   }
+
   :root {
     --color: white;
-    --back-color: #00171F;
+    --back-color: #00171f;
   }
 
   body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--color);
-      background-color: var(--back-color);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color);
+    background-color: var(--back-color);
   }
+
   .contents {
-      padding-top: 6.5rem;
-      padding-left: 4rem;
-      margin-bottom: 6.25rem;
-      & section {
-          display: flex;
-      }
-      & h3 {
-          margin-top: 2.5rem;
-          margin-left: 2.5rem;
-      }
-      & p {
-          font-weight: 550;
-          margin: 2.5rem 0 0.8rem 0;
-          font-size: large;
-      }
-      & i {
-        margin: 6.25rem;
-        color: var(--color);        
-      }
+    padding-top: 6.5rem;
+    padding-left: 4rem;
+    margin-bottom: 6.25rem;
+
+    & section {
+      display: flex;
+    }
+
+    & h3 {
+      margin-top: 2.5rem;
+      margin-left: 2.5rem;
+    }
+
+    & p {
+      font-weight: 550;
+      margin: 2.5rem 0 0.8rem 0;
+      font-size: large;
+    }
+
+    & i {
+      margin: 6.25rem;
+      color: var(--color);
+    }
   }
 
   /* .shop-card {
@@ -130,54 +139,63 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     & .cartContainer {
       font-size: 36px;
       cursor: pointer;
       padding: 8px 16px;
       border-radius: 16px;
       display: flex;
-      align-items: center; 
+      align-items: center;
+
       & #totalProduct {
         margin-top: 8px;
         margin-left: 8px;
       }
     }
+
     & .cartContainer:hover {
       background-color: antiquewhite;
     }
   }
 
-
   @media (max-width: 1200px) {
-    .contents{
-        & section {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: center;
-        }
-        & h2 {
-            text-align: center;
-        }
-        & p {
-          text-align: center;
-        }
-    } 
-  }
-</style>  
+    .contents {
+      & section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+      }
 
-<script  src="productInfo.js"></script>
+      & h2 {
+        text-align: center;
+      }
+
+      & p {
+        text-align: center;
+      }
+    }
+  }
+</style>
+
+<script src="productInfo.js"></script>
 <script src="headerFooter.js"></script>
 
 <script>
-  document.querySelector(".cartContainer").addEventListener("click" , () => {
+  if (localStorage.getItem("productList") === null || localStorage.getItem("productList") === undefined) {
+    console.log("local deer item bairluullaa");
+    let array = [];
+    localStorage.setItem("productList", JSON.stringify(array));
+  } else {
+    console.log("local deer ugiin item baina");
+  }
+
+  document.querySelector(".cartContainer").addEventListener("click", () => {
     const cart = document.querySelector("cart-info");
     cart.style.display = "block";
-  })
+  });
 
-
-  
-  // const app1 = new App("bestSellerSection");
-  // app1.init("Clothes");
+  document.querySelector("#totalProduct").textContent = JSON.parse(localStorage.getItem("productList")).length;
   const app2 = new App("clothesSection");
   app2.init("Clothes");
   const app3 = new App("mangaSection");

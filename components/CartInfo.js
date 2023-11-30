@@ -2,7 +2,7 @@ class CartInfo extends HTMLElement {
     constructor() {
         super();
         this.myRoot = this.attachShadow({ mode: "open" });
-        this.productList =[];
+        this.productList = JSON.parse(localStorage.getItem("productList"));
         this.total = 0;
         this.#Render();
     }
@@ -11,21 +11,29 @@ class CartInfo extends HTMLElement {
         this.myRoot.querySelector("i").addEventListener("click" , () => {
             this.style.display = "none";
         }) 
+        this.myRoot.getElementById("totalItems").innerText = this.productList.length;
+        this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
     }
+
 
     addToCart = function(product) {
         this.productList.push(product);
-        let name = product.getAttribute("name")
-        let price = product.getAttribute("price")
-        let img = product.getAttribute("img")
-        const addedProduct = `<added-product name="${name}" price="${price}" count="1" img="${img}"></added-product>`
-        this.myRoot.querySelector("#productContainer").insertAdjacentHTML("beforeend" , addedProduct);
+        localStorage.setItem("productList" , JSON.stringify(this.productList));
+        console.log(this.productList);
+        console.log(localStorage);
+        this.#Render();
+        document.getElementById("totalProduct").innerText = this.productList.length;
         this.myRoot.getElementById("totalItems").innerText = this.productList.length;
         this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
     }
 
     deleteItem = function(product) {
         this.productList.pop(product);
+        localStorage.setItem("productList" , JSON.stringify(this.productList));
+        console.log(this.productList);
+        console.log(localStorage);
+        this.#Render();
+        document.getElementById("totalProduct").innerText = this.productList.length;
         this.myRoot.getElementById("totalItems").innerText = this.productList.length;
         this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
     }
@@ -36,6 +44,13 @@ class CartInfo extends HTMLElement {
             totalPrice += parseInt(item?.price);
         }
         return totalPrice;
+    }
+
+    renderCartProduct = function() {
+        for(let product of this.productList) {
+            const addedProduct = `<added-product name="${product?.productName}" price="${product?.price}" count="1" img="${product?.productImage}"></added-product>`
+            this.myRoot.querySelector("#productContainer").insertAdjacentHTML("beforeend" , addedProduct);
+        }
     }
 
     #Render() {
@@ -116,6 +131,10 @@ class CartInfo extends HTMLElement {
             }
         </style>
     `;
+    this.myRoot.querySelector("i").addEventListener("click" , () => {
+        this.style.display = "none";
+    }) 
+    this.renderCartProduct();
     }
 
     // closeCartSection = function() {
