@@ -45,18 +45,22 @@
 
 <style scoped>
   :root {
-      --main-color: white;
-      --main-bg-color: #042834;
-      --secondary-bg-color: #18404e;
+    --dark-blue: #00171f;
+    --white: #fff;
+
+    --background-color-dark: var(--dark-blue);
+    --text-color-dark: var(--white);
+    --background-color-light: rgb(102, 165, 188);
+    --text-color-light: #232020;
   }
   main {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
     height: 60vh;
     padding-top: 8rem;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
-    background-color: #00171F;
-    color: var(--main-color);
   }
 
   .filter{
@@ -264,6 +268,12 @@
   @media(min-width: 1060px) and (max-width: 1320px) {
     main {
       height: 60vh;
+    }
+  }
+  @media(prefers-color-scheme: light){
+    main {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
     }
   }
 </style>

@@ -21,13 +21,17 @@
     <!-- for header and footer of page -->
     <script type="module" src="./components/header.js"></script>
     <script type="module" src="./components/footer.js"></script>
-    
+
+    <!-- for dark and light mode -->
+    <script type="module" src="./components/darkLightMode.js"></script>
+
     <link rel="stylesheet" href="headerFooter.css" />
     <title>Animuk.mn</title>
   </head>
 
   <body>
     <header-section></header-section>
+
     <article class="content-info">
       <article>
         <div style="align-items: center; display: flex;">
@@ -89,11 +93,20 @@
     padding: 0;
     box-sizing: border-box;
   }
+  :root {
+    --dark-blue: #00171f;
+    --white: #fff;
+
+    --background-color-dark: var(--dark-blue);
+    --text-color-dark: var(--white);
+    --background-color-light: rgb(102, 165, 188);
+    --text-color-light: #232020;
+  }
 
   body {
-    background-color: #00171f;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
     font-family: "Inter", sans-serif;
-    color: white;
   }
 
   .content-info {
@@ -276,6 +289,13 @@
           margin-top: 16px;
         }
       }
+    }
+  }
+
+  @media(prefers-color-scheme: light){
+    body {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
     }
   }
 </style>

@@ -67,17 +67,24 @@
 <script src="headerFooter.js"></script>
 
 <style scoped>
-  body {
-    background-color: #00171f;
+    :root {
+      --dark-blue: #00171f;
+      --white: #fff;
+      
+      --background-color-dark: var(--dark-blue);
+      --text-color-dark: var(--white);
+      --background-color-light: rgb(102, 165, 188);
+      --text-color-light: #232020;
   }
+
   main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 72vh;
     padding: 5rem 0rem;
-    background-color: #00171f;
-    color: aliceblue;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
   }
   .formContainer {
     margin-right: 12.5rem;
@@ -143,5 +150,11 @@
 
   @media (min-width: 1080px) {
 
+  }
+  @media(prefers-color-scheme: light){
+      main {
+        background-color: var(--background-color-light);
+        color: var(--text-color-light);
+      }
   }
 </style>

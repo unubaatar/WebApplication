@@ -223,9 +223,18 @@
 <script src="headerFooter.js"></script>
 
 <style scoped>
+  :root {
+    --dark-blue: #00171f;
+    --white: #fff;
+
+    --background-color-dark: var(--dark-blue);
+    --text-color-dark: var(--white);
+    --background-color-light: rgb(102, 165, 188);
+    --text-color-light: #232020;
+  }
   main {
-    background-color: #00171f;
-    color: aliceblue;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
     & h3 {
       font-style: italic;
       text-align: center;
@@ -444,6 +453,12 @@
       & .transactionDesc {
         font-size: 16px;
       }
+    }
+  }
+  @media(prefers-color-scheme: light){
+    main {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
     }
   }
 </style>

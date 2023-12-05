@@ -60,16 +60,23 @@
 <script src="headerFooter.js"></script>
 
 <style scoped>
-  body {
-    background-color: #00171f;
+    :root {
+    --dark-blue: #00171f;
+    --white: #fff;
+
+    --background-color-dark: var(--dark-blue);
+    --text-color-dark: var(--white);
+    --background-color-light: rgb(102, 165, 188);
+    --text-color-light: #232020;
   }
+  
   main {
-    background-color: #00171f;
+    background-color: var(--background-color-dark);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 6rem 0rem;
-    color: aliceblue;
+    color: var(--text-color-dark);
     height: 72vh;
   }
   .signUpForm {
@@ -165,5 +172,11 @@
     .signUpForm {
       margin: auto;
     }
+  }
+  @media(prefers-color-scheme: light){
+      main {
+        background-color: var(--background-color-light);
+        color: var(--text-color-light);
+      }
   }
 </style>

@@ -78,14 +78,19 @@
     padding: 0;
   }
   :root {
-    --color: white;
-    --back-color: #00171F;
+    --dark-blue: #00171f;
+    --white: #fff;
+
+    --background-color-dark: var(--dark-blue);
+    --text-color-dark: var(--white);
+    --background-color-light: rgb(102, 165, 188);
+    --text-color-light: #232020;
   }
 
   body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--color);
-      background-color: var(--back-color);
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    font-family: "Inter", sans-serif;
   }
 
   /* Main nav style */
@@ -99,7 +104,7 @@
       padding-top: 80px;
       width: 100%;
       & li {
-      width: 100%;
+      width: 80%;
       color: white;
       padding: 20px;
       font-size: 14px;
@@ -252,6 +257,12 @@
         max-width: 240px;
         min-width: 150px;
       }
+    }
+  }
+  @media(prefers-color-scheme: light){
+    body {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
     }
   }
 </style>
