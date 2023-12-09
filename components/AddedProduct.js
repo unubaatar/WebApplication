@@ -6,14 +6,19 @@ class AddedProduct extends HTMLElement {
         this.productName = this.getAttribute("name")
         this.price = this.getAttribute("price");
         this.count =  this.getAttribute("count");
-        this.#Render();
     }
 
     connectedCallback() {
+        this.#Render();
         let deleteButton = this.myRoot.querySelectorAll("button");
         deleteButton[0].addEventListener("click" , ()=> {
-            this.style.display = "none";
             let cartInfo = document.querySelector("cart-info");
+            for(let item of cartInfo.productList) {
+                if(item.productName === this.productName) {
+                    item.count = 1;
+                    break;
+                }
+            }
             cartInfo.deleteItem(this);
         })
     }

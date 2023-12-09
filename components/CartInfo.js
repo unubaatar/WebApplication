@@ -19,7 +19,6 @@ class CartInfo extends HTMLElement {
     addToCart = function(product) {
         let willAdd = true;
         for(let item of this.productList) {
-            console.log(item);
             if(item?.productName === product?.productName) {
                 willAdd = false;
                 item.count += 1;
@@ -34,11 +33,14 @@ class CartInfo extends HTMLElement {
         document.getElementById("totalProduct").innerText = this.getTotalCount();
         this.myRoot.getElementById("totalItems").innerText = this.getTotalCount();
         this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
-        console.log(this.productList);
     }
 
     deleteItem = function(product) {
-        this.productList.pop(product);
+        for(let i = 0; i < this.productList.length ; i++) {
+            if(this.productList[i].productName === product.productName) {
+                this.productList.splice(i , 1);
+            }
+        }
         localStorage.setItem("productList" , JSON.stringify(this.productList));
         this.#Render();
         document.getElementById("totalProduct").innerText = this.getTotalCount();
