@@ -77,8 +77,8 @@ class CartInfo extends HTMLElement {
         <section id="templateSectionId" class="templateSection">
             <section class="mainCart">
                 <article class="headerContainer">
-                <h2>Таны сагс</h2>
-                <i style="color: black;" id="closer" class="fa-solid fa-xmark fa-lg"></i>
+                    <h2>Таны сагс</h2>
+                    <i style="color: black;" id="closer" class="fa-solid fa-xmark fa-sm"></i>
                 </article>
                     <article>  
                         <div style="display: flex">Барааны тоо: <p id="totalItems">${this.productList.length}</p></div>
@@ -111,11 +111,14 @@ class CartInfo extends HTMLElement {
                     padding-top: 64px;
                     & i {
                         cursor: pointer;
-                        padding: 24px 16px;
-                        border-radius: 16px;
+                        padding: 17px 13px;
+                        border-radius: 50%;
                     }
                     & i:hover {
-                        background-color: antiquewhite;
+                        background-color: orange;
+                    }
+                    & h2 {
+                        font-size: 20px;
                     }
                 }
             }
@@ -125,7 +128,7 @@ class CartInfo extends HTMLElement {
                 overflow-y: scroll;
                 position: fixed;
                 padding: 16px;
-                background-color: aqua;
+                background-color: white;
                 z-index: 4;
                 width: 400px;
                 & h2 {
