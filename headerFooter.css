@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700,900");
 
 :root {
   --main-color: white;
@@ -6,7 +6,7 @@
   --secondary-bg-color: #18404e;
   --menu-font-size: 1.2rem;
   --margin-padding: 1.2rem;
-  --header-height:
+  --header-height: ;
 }
 
 * {
@@ -74,10 +74,7 @@ header h3 a {
   align-items: center;
 }
 
-
 /* search box */
-
-
 
 /* .search__container {
       padding-top: 64px;
@@ -120,7 +117,6 @@ header h3 a {
       border-radius: 0;
       background-position: 100% center;
   } */
-
 
 .rightMenu input {
   height: 1.875rem;
@@ -346,7 +342,7 @@ i {
   }
 }
 
-@media (min-width: 600px) and (max-width:960px) {
+@media (min-width: 600px) and (max-width: 960px) {
   .leftMenu {
     display: none;
   }
@@ -362,7 +358,6 @@ i {
     height: 110px;
   }
 }
-
 
 @media (min-width: 960px) {
   #activator {
