@@ -1,7 +1,7 @@
 class ProductCard extends HTMLElement {
     constructor() {
         super();
-        this.myRoot = this.attachShadow({ mode: "open" });
+        this.myRoot = this.attachShadow({ mode: "closed" });
         this.productImage = this.getAttribute("img") ?? "https://i.ibb.co/9hLBbbc/ichigo-figure.webp";
         this.productName = this.getAttribute("name") ?? "No Data";
         this.price = this.getAttribute("price") ?? "No Data";
