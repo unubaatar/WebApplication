@@ -1,9 +1,7 @@
-const apiProductUrl = "https://api.jsonbin.io/v3/b/65791b331f5677401f0d116d?fbclid=IwAR1CXmKMucliI1e-KASrIFtZmHuXwb_j_A5GS_WL-SZqYv8peHop-GAUaIs"
+//const apiProductUrl = "https://api.jsonbin.io/v3/b/65634e6812a5d376599f1a7e"
+const apiProductUrl = "https://api.jsonbin.io/v3/b/65791b331f5677401f0d116d"
  
-// import Product from "./product";
-
-
- class Product {
+class Product {
     constructor(product) {
         this.name = product.name;
         this.img = product.img;
