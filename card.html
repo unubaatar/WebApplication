@@ -1,115 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: beige;
+      }
+      .card {
+        border-radius: 10%;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        height: 300px;
+        background-color: white;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 3px 3px rgb(100, 98, 98);
+        &:hover {
+          box-shadow: 3px 3px 10px rgba(205, 205, 128, 0.3),
+            3px 3px 50px rgba(198, 198, 121, 0.3),
+            3px 3px 100px rgba(178, 126, 126, 0.3);
         }
-        body {
-            background-color: beige;
+      }
+      .card-img {
+        height: 200px;
+        width: 200px;
+      }
+      .card-bottom {
+        display: flex;
+        margin-top: 30px;
+      }
+      .card-bottom-p {
+        margin: 0 25px;
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      button {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: rgb(226, 119, 43);
         }
-        .card {
-            border-radius: 10%;
-            position: absolute;
-            top: 40%;
-            left: 40%;
-            height: 300px;
-            background-color: white;
-            width: 200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-            box-shadow: 3px 3px rgb(100, 98, 98);
-            &:hover {
-                box-shadow: 3px 3px 10px rgba(205, 205, 128, 0.3),
-                            3px 3px 50px rgba(198, 198, 121, 0.3),
-                            3px 3px 100px rgba(178, 126, 126, 0.3);
-            }
-        }
-        .card-img {
-            height: 200px;
-            width: 200px;
-        }
-        .card-bottom {
-            display: flex;
-            margin-top: 30px;
-            
-        }
-        .card-bottom-p {
-            margin: 0 25px;
-            text-align: center;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        button {
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            border: none;
-            border-radius: 50%;
-            background: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            &:hover {
-                background-color: rgb(226, 119, 43);
-            }
-        }
-        .card-bottom-p-p2 {
-            font-weight: 700;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding-top: 7px;
-        }
-        .card-bottom-p-p1 {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            max-width: 80%;
-            max-height: 20px;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 400;
-        }
+      }
+      .card-bottom-p-p2 {
+        font-weight: 700;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 7px;
+      }
+      .card-bottom-p-p1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 80%;
+        max-height: 20px;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+      }
 
-        .dataContainer {
-            & p {
-                margin: 12px 0px;
-            }
+      .dataContainer {
+        & p {
+          margin: 12px 0px;
         }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <article class="card">
-        <img src="/img/accessories1.webp" alt="image" class="card-img">
-        <p class="card-bottom-p-p1">Lorem ipsum dolor sit amet consectetur.</p>
-        <article class="card-bottom">
-            <button><i class="fa-regular fa-heart fa-xl"></i></button>
-            <article class="card-bottom-p">             
-                <p class="card-bottom-p-p2">$499</p>
-            </article>
-            <button><i class="fa-solid fa-cart-shopping fa-xl"></i></button>
+      <img src="/img/accessories1.webp" alt="image" class="card-img" />
+      <p class="card-bottom-p-p1">Lorem ipsum dolor sit amet consectetur.</p>
+      <article class="card-bottom">
+        <button><i class="fa-regular fa-heart fa-xl"></i></button>
+        <article class="card-bottom-p">
+          <p class="card-bottom-p-p2">$499</p>
         </article>
+        <button><i class="fa-solid fa-cart-shopping fa-xl"></i></button>
+      </article>
     </article>
 
-    <section style="width: 500px; background-color: aqua; padding: 32px;">
-        <h2 style="text-align: center;">Таны сагс</h2>
-        <article style="display: flex; align-items: center;">
-            <img style="width: 200px; margin-right: 32px;" src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp" alt="">
-            <div class="dataContainer">
-                <p>name</p>
-                <p>too shirheg</p>
-                <p>une</p>
-                <hr>
-                <p>total</p>
-            </div>
-        </article>
+    <section style="width: 500px; background-color: aqua; padding: 32px">
+      <h2 style="text-align: center">Таны сагс</h2>
+      <article style="display: flex; align-items: center">
+        <img
+          style="width: 200px; margin-right: 32px"
+          src="https://i.ibb.co/9hLBbbc/ichigo-figure.webp"
+          alt=""
+        />
+        <div class="dataContainer">
+          <p>name</p>
+          <p>too shirheg</p>
+          <p>une</p>
+          <hr />
+          <p>total</p>
+        </div>
+      </article>
     </section>
-</body>
+  </body>
 </html>

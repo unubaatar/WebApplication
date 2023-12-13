@@ -1,14 +1,13 @@
 class HeaderSection extends HTMLElement {
-    constructor() {
-        super();
-        this.#render();
-    }
+  constructor() {
+    super();
+    this.#render();
+  }
 
-    connectedCallback() {
-    }
+  connectedCallback() {}
 
-    #render() {
-        this.innerHTML = `
+  #render() {
+    this.innerHTML = `
         <header>
         <div class="rightMenu">
           <i class="fa-solid fa-bars sidebarActivator" id="activator" onclick="appearSideBarView()"></i>
@@ -40,8 +39,8 @@ class HeaderSection extends HTMLElement {
           <li style="border-bottom: 2px solid #00171f;"><a href="signup.html"><i class="fa-solid fa-user-plus"></i>Sign Up</a></li>
         </ul>
       </nav>
-    `
-    }
+    `;
+  }
 }
 
-window.customElements.define('header-section', HeaderSection);
+window.customElements.define("header-section", HeaderSection);

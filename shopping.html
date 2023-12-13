@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Anime" />
+    <meta name="keywords" content="animuk.mn, animuk, Animuk.mn, Animuk" />
+    <script type="module" src="./components/header.js"></script>
+    <link rel="stylesheet" href="headerFooter.css" />
+    <script type="module" src="./components/footer.js"></script>
+    <script type="module" src="./components/productCard.js"></script>
+    <script type="module" src="./components/CartInfo.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script type="module" src="./components/AddedProduct.js"></script>
+    <title>Animuk.mn</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Anime" />
-  <meta name="keywords" content="animuk.mn, animuk, Animuk.mn, Animuk" />
-  <script type="module" src="./components/header.js"></script>
-  <link rel="stylesheet" href="headerFooter.css" />
-  <script type="module" src="./components/footer.js"></script>
-  <script type="module" src="./components/productCard.js"></script>
-  <script type="module" src="./components/CartInfo.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <script type="module" src="./components/AddedProduct.js"></script>
-  <title>Animuk.mn</title>
-</head>
-
-<body>
-  <header-section></header-section>
-  <cart-info style="display: none"></cart-info>
-  <section class="contents">
-    <article class="headerSection">
-      <h2>Categories</h2>
-      <div class="cartContainer">
-        🛒 Таны сагс:
-        <div id="totalProduct"></div>
-      </div>
-    </article>
-    <!-- <p>Best sellers</p>    
+  <body>
+    <header-section></header-section>
+    <cart-info style="display: none"></cart-info>
+    <section class="contents">
+      <article class="headerSection">
+        <h2>Categories</h2>
+        <div class="cartContainer">
+          🛒 Таны сагс:
+          <div id="totalProduct"></div>
+        </div>
+      </article>
+      <!-- <p>Best sellers</p>    
       <section id="bestSellerSection"></section> -->
-    <p>Clothes</p>
-    <section id="clothesSection"></section>
-    <p>Manga & Books</p>
-    <section id="mangaSection"></section>
-    <p>Accessories</p>
-    <section id="accessoriesSection"></section>
-    <p>Figures</p>
-    <section id="figuresSection"></section>
-  </section>
-  <footer-section></footer-section>
-</body>
-
+      <p>Clothes</p>
+      <section id="clothesSection"></section>
+      <p>Manga & Books</p>
+      <section id="mangaSection"></section>
+      <p>Accessories</p>
+      <section id="accessoriesSection"></section>
+      <p>Figures</p>
+      <section id="figuresSection"></section>
+    </section>
+    <footer-section></footer-section>
+  </body>
 </html>
 
 <style>
@@ -181,7 +182,7 @@
       }
     }
   }
-  @media(prefers-color-scheme: light){
+  @media (prefers-color-scheme: light) {
     body {
       background-color: var(--background-color-light);
       color: var(--text-color-light);
@@ -193,10 +194,10 @@
 <script src="headerFooter.js"></script>
 
 <script>
-
-  
-
-  if (localStorage.getItem("productList") === null || localStorage.getItem("productList") === undefined) {
+  if (
+    localStorage.getItem("productList") === null ||
+    localStorage.getItem("productList") === undefined
+  ) {
     console.log("local deer item bairluullaa");
     let array = [];
     localStorage.setItem("productList", JSON.stringify(array));
@@ -209,12 +210,14 @@
     cart.style.display = "block";
   });
 
-  document.querySelector("#totalProduct").textContent = JSON.parse(localStorage.getItem("productList")).length;
+  document.querySelector("#totalProduct").textContent = JSON.parse(
+    localStorage.getItem("productList")
+  ).length;
 
   let tempList = JSON.parse(localStorage.getItem("productList"));
   let totalCount = 0;
-  for(let item of tempList) {
-      totalCount += item.count;
+  for (let item of tempList) {
+    totalCount += item.count;
   }
   document.querySelector("#totalProduct").textContent = totalCount;
 

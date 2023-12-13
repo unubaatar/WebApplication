@@ -17,7 +17,10 @@
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <!-- for header and footer of page -->
     <script type="module" src="./components/header.js"></script>
     <script type="module" src="./components/footer.js"></script>
@@ -34,14 +37,24 @@
 
     <article class="content-info">
       <article>
-        <div style="align-items: center; display: flex;">
-          <i class="fa-solid fa-chevron-left fa-2xl" id="leftClick" style="margin-right: 16px; cursor: pointer; opacity: 0.4;" onclick="changeCarouselImageLeft()"></i>
+        <div style="align-items: center; display: flex">
+          <i
+            class="fa-solid fa-chevron-left fa-2xl"
+            id="leftClick"
+            style="margin-right: 16px; cursor: pointer; opacity: 0.4"
+            onclick="changeCarouselImageLeft()"
+          ></i>
           <img
-          id="carouselImage"
-          src="https://i.ibb.co/sHGpqYf/040820231691143972-1458689631.webp"
-          alt=""
-        />
-        <i class="fa-solid fa-chevron-right fa-2xl" id="rightClick" style="margin-left: 16px; cursor: pointer; opacity: 0.4;" onclick="changeCarouselImageRight()"></i>
+            id="carouselImage"
+            src="https://i.ibb.co/sHGpqYf/040820231691143972-1458689631.webp"
+            alt=""
+          />
+          <i
+            class="fa-solid fa-chevron-right fa-2xl"
+            id="rightClick"
+            style="margin-left: 16px; cursor: pointer; opacity: 0.4"
+            onclick="changeCarouselImageRight()"
+          ></i>
         </div>
 
         <p id="carouselDescription">Saturday, August 5, 2023 at 12pm - 8pm</p>
@@ -50,23 +63,24 @@
         <p>Таны мэдээлэл</p>
         <ul>
           <li>
-            <i class="fa-solid fa-play"></i>Үзсэн аниме тоо: <strong style="padding-left: 50px;">10</strong>
+            <i class="fa-solid fa-play"></i>Үзсэн аниме тоо:
+            <strong style="padding-left: 50px">10</strong>
           </li>
           <li>
             <i class="fa-solid fa-heart"></i>Дуртай төрөл:
-            <strong style="padding-left: 70px;">Action</strong>
+            <strong style="padding-left: 70px">Action</strong>
           </li>
           <li>
             <i class="fa-solid fa-comment"></i>Нийт сэтгэгдлийн тоо:
-            <strong style="padding-left: 10px;">9</strong>
+            <strong style="padding-left: 10px">9</strong>
           </li>
           <li>
             <i class="fa-solid fa-star"></i>Дуртай аниме:
-            <strong style="padding-left: 65px;">Bleach</strong>
+            <strong style="padding-left: 65px">Bleach</strong>
           </li>
           <li>
             <i class="fa-solid fa-music"></i>Дуртай дууны төрөл:
-            <strong style="padding-left: 20px;">Rock</strong>
+            <strong style="padding-left: 20px">Rock</strong>
           </li>
         </ul>
       </section>
@@ -292,7 +306,7 @@
     }
   }
 
-  @media(prefers-color-scheme: light){
+  @media (prefers-color-scheme: light) {
     body {
       background-color: var(--background-color-light);
       color: var(--text-color-light);
@@ -306,9 +320,9 @@
   const app1 = new App("malRank");
   app1.init("MalRank");
   const app2 = new App("target");
-  app2.init("RecentlyAdded"); 
+  app2.init("RecentlyAdded");
   const app3 = new App("mostViews");
-  app3.init("MostViews"); 
+  app3.init("MostViews");
   const app4 = new App("recentlyAdded");
   app4.init("RecentlyAdded");
 </script>
