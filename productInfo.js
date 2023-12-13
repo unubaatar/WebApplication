@@ -1,7 +1,9 @@
-const apiProductUrl = "https://api.jsonbin.io/v3/b/65634e6812a5d376599f1a7e"
+const apiProductUrl = "https://api.jsonbin.io/v3/b/65791b331f5677401f0d116d?fbclid=IwAR1CXmKMucliI1e-KASrIFtZmHuXwb_j_A5GS_WL-SZqYv8peHop-GAUaIs"
  
+// import Product from "./product";
 
-class Product {
+
+ class Product {
     constructor(product) {
         this.name = product.name;
         this.img = product.img;
@@ -18,11 +20,13 @@ class Product {
     }
 }
 
+
 class App {
     constructor(target) {
         this.target = target;
         this.apiProductUrl = apiProductUrl;
     }
+    
     init = function(productType) {
         fetch(apiProductUrl).then(response => response.json()).then(data => {
             let productsInfo = data.record;
