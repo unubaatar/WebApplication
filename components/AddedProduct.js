@@ -13,6 +13,7 @@ class AddedProduct extends HTMLElement {
         let deleteButton = this.myRoot.querySelectorAll("button");
         deleteButton[0].addEventListener("click" , ()=> {
             let cartInfo = document.querySelector("cart-info");
+            console.log(cartInfo);
             for(let item of cartInfo.productList) {
                 if(item.productName === this.productName) {
                     item.count = 1;

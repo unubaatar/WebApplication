@@ -15,18 +15,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <script type="module" src="./components/AddedProduct.js"></script>
+    <script type="module" src="./components/favoriteIcon.js"></script>
+    <script type="module" src="./components/favoriteItem.js"></script>
     <title>Animuk.mn</title>
   </head>
 
   <body>
     <header-section></header-section>
     <cart-info style="display: none"></cart-info>
+    <favorite-list style="display: none;"></favorite-list>
     <section class="contents">
       <article class="headerSection">
         <h2>Categories</h2>
         <div class="cartContainer">
           🛒 Таны сагс:
           <div id="totalProduct"></div>
+        </div>
+
+        <div style="font-size: 24px; cursor: pointer; padding: 16px; display: flex; text-align: center;" class="favorite"; >
+          ❤️ total:
+          <div id="testCount" style="margin-left: 12px;">0</div>
         </div>
       </article>
       <!-- <p>Best sellers</p>    
@@ -92,55 +100,6 @@
     }
   }
 
-  /* .shop-card {
-    border-radius: 0.7rem;
-    text-align: center;
-    background: rgb(101, 103, 125);
-    margin: 8px 12px;
-    padding: 0.3rem;
-    width: 195px;
-    box-shadow: 0 4px 8px 0 rgba(203, 202, 202, 0.2);
-    cursor: pointer;
-    & .shop-card-img {
-        border-radius: 1.5rem;
-        height: 13rem;
-        width: 10.5rem;
-        padding: 0.8rem;                     
-    } 
-    & .shop-card-name {
-      padding: 0 0.5rem 0.5rem 0.5rem;
-      flex-wrap: wrap;
-      overflow: hidden;
-      max-width: 70%;
-      max-height: 30%;
-      width: 150px;
-      height: 40px;
-      margin-left: 20px;
-    }
-    & button {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      padding: 5px;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 40px;
-      background: none;
-      &:hover {
-        background-color: rgb(192, 97, 38);
-      }
-    }
-    &:hover {
-      background: linear-gradient(45deg, rgb(176, 161, 156), #eeeaeb);
-    }
-  }
-  .shop-card-buttons {
-    display: flex;
-  } */
-
   .headerSection {
     display: flex;
     justify-content: space-around;
@@ -182,6 +141,11 @@
       }
     }
   }
+
+  .favorite:hover {
+    background-color: antiquewhite;
+  }
+
   @media (prefers-color-scheme: light) {
     body {
       background-color: var(--background-color-light);
@@ -205,9 +169,15 @@
     console.log("local deer ugiin item baina");
   }
 
+
   document.querySelector(".cartContainer").addEventListener("click", () => {
     const cart = document.querySelector("cart-info");
     cart.style.display = "block";
+  });
+
+  document.querySelector(".favorite").addEventListener("click", () => {
+    const favorite = document.querySelector("favorite-list");
+    favorite.style.display = "block";
   });
 
   document.querySelector("#totalProduct").textContent = JSON.parse(

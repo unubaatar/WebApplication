@@ -6,9 +6,7 @@ class ProductCard extends HTMLElement {
         this.productName = this.getAttribute("name") ?? "No Data";
         this.price = this.getAttribute("price") ?? "No Data";
         this.count = 1;
-        // this.id=this.getAttribute("id");
         this.#Render();
-
     }
 
     connectedCallback() {
@@ -20,6 +18,19 @@ class ProductCard extends HTMLElement {
             // window.dispatchEvent(evt);
             document.getElementById("totalProduct").innerText = myCart.getTotalCount();
         });
+
+        this.myRoot.querySelectorAll("button")[1].addEventListener("click" , (e) => {
+            e.stopPropagation();
+            const event = new CustomEvent("favorite" , {
+                bubbles: true,
+                composed: true,
+                detail: {
+                    name : this.productName,
+                    img: this.productImage
+                }
+            })
+            document.dispatchEvent(event);
+        } )
     }
 
     #Render() {
