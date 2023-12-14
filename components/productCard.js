@@ -94,7 +94,7 @@ class ProductCard extends HTMLElement {
         <article class="shop-card" onclick="moveToItemDetails('${this.productName}')">
         <img src="${this.productImage}" class="shop-card-img">
         <h4 class="shop-card-name">${this.productName}</h4>
-        <h4>${this.price}₮</h4>
+        <h4>${parseInt(this.price).toLocaleString()}₮</h4>
         <article class="shop-card-buttons">
         <button class="shop-card-shopping role="cart" ><i class="fa-solid fa-cart-shopping fa-xl"></i></button>
         <button class="shop-card-like role="favorite"><i class="fa-solid fa-heart fa-xl"></i></button>

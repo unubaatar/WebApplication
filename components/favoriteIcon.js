@@ -130,6 +130,12 @@ class FavoriteIcon extends HTMLElement {
                     }
                 }
             }
+
+            @media(max-width: 600px) {
+                .mainCart {
+                    width: 360px;
+                }
+            }
         </style>
     `;
     this.myRoot.querySelector("i").addEventListener("click" , () => {

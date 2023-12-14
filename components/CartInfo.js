@@ -157,8 +157,14 @@ class CartInfo extends HTMLElement {
                     margin-left: 6px; 
                     color: black;
                     font-weight: 600;
-                    font-size: 20px;
+                    font-size: 20px;g
                     margin-top: -4px;
+                }
+            }
+
+            @media(max-width: 600px) {
+                .mainCart {
+                    width: 360px;
                 }
             }
         </style>
