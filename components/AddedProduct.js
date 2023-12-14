@@ -24,24 +24,26 @@ class AddedProduct extends HTMLElement {
         })
     }
 
+
     #Render() {
         this.myRoot.innerHTML = `
             <article class="cartContainer">
             <img src="${this.productImage}" alt="">
                 <div class="dataContainer">
-                    <p>${this.productName}</p>
-                    <p>${this.price}</p>
-                    <p>product amount: <em>${this.count}</em></p>
+                    <p style="color: gray;">${this.productName}</p>
+                    <p style="font-weight: bold;">${parseInt(this.price).toLocaleString()}₮</p>
+                    <p style="color: gray;"> Тоо ширхэг: <em style="font-weight: bold; color: black;">${this.count}</em></p>
                     <hr>
-                    <p>Total: ${this.price * this.count}</p>
-                    <button class="deleteProduct" id="asdf">Бараа хасах</button>
+                    <p style="color: gray;">Total: <em style="color: black; font-weight: bold; font-size: 20px; color: red;">${parseInt(this.price * this.count).toLocaleString()}</em> ₮</p>
+                    <button class="deleteProduct">Бараа хасах</button>
                 </div>
             </article>
 
             <style scoped>
             .cartContainer {
                 display: flex;
-                border: 1px solid black;
+                border: 2px solid black;
+                border-radius: 8px;
                 padding: 8px;
                 margin: 32px 0px;
                 & img {
@@ -62,6 +64,8 @@ class AddedProduct extends HTMLElement {
                         font-weight: bolder;
                         border: none;
                         cursor: pointer;
+                        margin-top: 12px;
+                        margin-bottom: 4px;
                     }
                 }
             }

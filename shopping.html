@@ -28,12 +28,12 @@
       <article class="headerSection">
         <h2>Categories</h2>
         <div class="cartContainer">
-          🛒 Таны сагс:
+          🛒<div class="cartTitle">Таны сагс:</div>
           <div id="totalProduct"></div>
         </div>
 
-        <div class="favorite"; >
-          ❤️ Favorite items: 
+        <div class="favorite">
+          ❤️ <div class="cartTitle">Таалагдсан бараанууд: </div>
           <div id="testCount" style="margin-left: 8px; font-size: 24px; margin-top: 4px;">0</div>
         </div>
       </article>
@@ -124,6 +124,11 @@
     }
   }
 
+  .cartTitle {
+    margin-left: 4px; 
+    margin-top: 4px;
+  }
+
   @media (max-width: 1200px) {
     .contents {
       & section {
@@ -140,6 +145,12 @@
         text-align: center;
       }
     }
+  }
+
+  @media (max-width: 960px) {
+      .cartTitle {
+        display: none;
+      }
   }
 
   .favorite {

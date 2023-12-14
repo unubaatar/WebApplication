@@ -12,7 +12,7 @@ class CartInfo extends HTMLElement {
             this.style.display = "none";
         }) 
         this.myRoot.getElementById("totalItems").innerText = this.getTotalCount();
-        this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
+        this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice().toLocaleString();
     }
 
 
@@ -32,7 +32,7 @@ class CartInfo extends HTMLElement {
         this.#Render();
         document.getElementById("totalProduct").innerText = this.getTotalCount();
         this.myRoot.getElementById("totalItems").innerText = this.getTotalCount();
-        this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
+        this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice().toLocaleString();
     }
 
     deleteItem = function(product) {
@@ -45,7 +45,7 @@ class CartInfo extends HTMLElement {
         this.#Render();
         document.getElementById("totalProduct").innerText = this.getTotalCount();
         this.myRoot.getElementById("totalItems").innerText = this.getTotalCount();
-        this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice();
+        this.myRoot.getElementById("totalPrice").innerText = this.getTotalPrice().toLocaleString();
     }
 
     getTotalCount() {
@@ -80,14 +80,13 @@ class CartInfo extends HTMLElement {
                     <h2>Таны сагс</h2>
                     <i style="color: black;" id="closer" class="fa-solid fa-xmark fa-sm"></i>
                 </article>
-                    <article>  
-                        <div style="display: flex">Барааны тоо: <p id="totalItems">${this.productList.length}</p></div>
-                        <div style="display: flex">Нийт үнэ: <p id="totalPrice"> 0 </p> </div> 
+                    <article class="cartTotalData">  
+                        <div style="display: flex; color: gray;">Барааны тоо: <p class="innerData" id="totalItems">${this.productList.length}</p></div>
+                        <div style="display: flex; color: gray;">Нийт үнэ: <p style="color: red" class="innerData" id="totalPrice"> ${this.getTotalPrice.toLocaleString()} </p>₮ </div> 
                     </article>
                 <section id="productContainer">
 
                 </section>
-
             </section>
         </section>
 
@@ -96,7 +95,6 @@ class CartInfo extends HTMLElement {
                 margin: 0;
                 padding: 0;
             }
-
 
             .templateSection {
                 height: 100%;
@@ -148,6 +146,19 @@ class CartInfo extends HTMLElement {
                     & p {
                         margin: 16px 0px;
                     }
+                }
+            }
+
+            .cartTotalData {
+                display: flex !important;
+                justify-content: space-between;
+                margin-top: 8px;
+                & .innerData {
+                    margin-left: 6px; 
+                    color: black;
+                    font-weight: 600;
+                    font-size: 20px;
+                    margin-top: -4px;
                 }
             }
         </style>

@@ -25,11 +25,38 @@ class FavoriteItem extends HTMLElement {
 
     #Render() {
         this.myRoot.innerHTML = `
-        <section style="display: flex; justify-content: space-around; align-items: center; padding: 16px; background-color: antiquewhite;">
+        <section class="container">
         <p>${this.name}</p>
-        <img src="${this.image}" alt="" style="height: 50px;">
-        <button style="height: 50px;">delete</button>
+        <img src="${this.image}" alt="" style="height: 80px;">
+        <button><i class="fa-solid fa-trash"></i></button>
         </section>
+        <style scoped>
+            .container {
+                border: 2px solid black;
+                border-radius: 8px;
+                display: flex; 
+                justify-content: space-around; 
+                align-items: center; 
+                padding: 16px; 
+                margin: 8px 0px;
+                & button {
+                    height: 50px;
+                    width: 50px;
+                    font-size: 18px;
+                    border: none;
+                    color: white;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    color: #042834;
+                    background-color: red;
+                    font-weight: 550;
+                }
+                & p {
+                    font-size: 18px;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         `
     }
 }
