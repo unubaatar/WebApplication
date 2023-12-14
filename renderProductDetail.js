@@ -1,4 +1,5 @@
-const apiProductUrl = "https://api.jsonbin.io/v3/b/65791b331f5677401f0d116d";
+// const apiProductUrl = "https://api.jsonbin.io/v3/b/65791b331f5677401f0d116d";
+const apiProductUrl = "https://api.jsonbin.io/v3/b/657b00cb1f5677401f0dbb4f"
 
 document.addEventListener("DOMContentLoaded" , function() {
     const urlParams = new URLSearchParams(window.location.search);

@@ -10,11 +10,18 @@ class FavoriteItem extends HTMLElement {
         this.#Render();
         let deleteButton = this.myRoot.querySelectorAll("button");
         deleteButton[0].addEventListener("click" , ()=> {
-            const favoriteList = document.querySelector("favorite-list");
-            console.log(favoriteList);
-            favoriteList.deleteItem(this.name);
+            const event = new CustomEvent("removeFavorite" , {
+                bubbles: true,
+                composed: true,
+                detail: {
+                    name : this.name,
+                }
+            })
+            document.dispatchEvent(event);
         })
     }
+
+    
 
     #Render() {
         this.myRoot.innerHTML = `

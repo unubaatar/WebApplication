@@ -9,7 +9,7 @@ class FavoriteIcon extends HTMLElement {
     constructor() {
         super();
         this.myRoot = this.attachShadow({mode: "open"});
-        this.itemList = [];
+        this.itemList = JSON.parse(localStorage.getItem("itemList"));
         this.#Render();
     }
 
@@ -21,7 +21,7 @@ class FavoriteIcon extends HTMLElement {
             let item = new testObject(event.detail);
             let hasThisItem = false;
             for(let product of this.itemList) {
-                if(product?.name === item.name) {
+                if(product.name === item.name) {
                     hasThisItem = true;
                     break;
                 }
@@ -29,7 +29,11 @@ class FavoriteIcon extends HTMLElement {
             if(!hasThisItem) {
                 this.itemList.push(item);
             }
+            localStorage.setItem("itemList" , JSON.stringify(this.itemList));
             this.#Render();
+        })
+        document.addEventListener("removeFavorite" , (event) => {
+            this.deleteItem(event.detail.name);
         })
     }
 
@@ -47,6 +51,7 @@ class FavoriteIcon extends HTMLElement {
             if(this.itemList[i].name === name) {
                 this.itemList.splice(i , 1);
             }
+        localStorage.setItem("itemList" , JSON.stringify(this.itemList));
         }
         this.#Render();
     }
@@ -130,6 +135,7 @@ class FavoriteIcon extends HTMLElement {
     this.myRoot.querySelector("i").addEventListener("click" , () => {
         this.style.display = "none";
     }) 
+    document.getElementById("testCount").innerText = this.itemList.length;
     this.renderCartProduct();
     }
 }

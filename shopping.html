@@ -32,9 +32,9 @@
           <div id="totalProduct"></div>
         </div>
 
-        <div style="font-size: 24px; cursor: pointer; padding: 16px; display: flex; text-align: center;" class="favorite"; >
-          ❤️ total:
-          <div id="testCount" style="margin-left: 12px;">0</div>
+        <div class="favorite"; >
+          ❤️ Favorite items: 
+          <div id="testCount" style="margin-left: 8px; font-size: 24px; margin-top: 4px;">0</div>
         </div>
       </article>
       <!-- <p>Best sellers</p>    
@@ -142,8 +142,17 @@
     }
   }
 
+  .favorite {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+  }
+
   .favorite:hover {
-    background-color: antiquewhite;
+    background-color: rgb(206, 130, 37);
   }
 
   @media (prefers-color-scheme: light) {
@@ -158,6 +167,7 @@
 <script src="headerFooter.js"></script>
 
 <script>
+
   if (
     localStorage.getItem("productList") === null ||
     localStorage.getItem("productList") === undefined
@@ -169,6 +179,16 @@
     console.log("local deer ugiin item baina");
   }
 
+  if (
+    localStorage.getItem("itemList") === null ||
+    localStorage.getItem("itemList") === undefined
+  ) {
+    console.log("local deer item bairluullaa");
+    let array = [];
+    localStorage.setItem("itemList", JSON.stringify(array));
+  } else {
+    console.log("local deer ugiin item baina");
+  }
 
   document.querySelector(".cartContainer").addEventListener("click", () => {
     const cart = document.querySelector("cart-info");

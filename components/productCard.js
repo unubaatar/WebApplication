@@ -14,8 +14,6 @@ class ProductCard extends HTMLElement {
             e.stopPropagation();
             const myCart = document.querySelector("cart-info");
             myCart.addToCart(this);
-            // const evt= new CustomEvent("my-event",{bubble}});
-            // window.dispatchEvent(evt);
             document.getElementById("totalProduct").innerText = myCart.getTotalCount();
         });
 
